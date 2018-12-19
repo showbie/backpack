@@ -234,7 +234,7 @@ const colors = {
   nepal: '#94b2c1',
 };
 
-export const colorScale = {
+const colorScale = {
   blue: {
     100: colors['alice-blue'],
     200: colors['pattens-blue'],
@@ -253,10 +253,10 @@ export const colorScale = {
     500: colors['silver-sand-light'],
     600: colors['silver-sand'],
     700: colors['gull-gray'],
-    800: colors['regent-gray'],
-    900: colors['oslo-gray'],
-    100: colors['rolling-stone'],
-    100: colors['gray-chateau'],
+    725: colors['regent-gray'],
+    775: colors['oslo-gray'],
+    800: colors['rolling-stone'],
+    900: colors['gray-chateau'],
   },
   red: {
     100: colors.cinderella,
@@ -264,3 +264,5 @@ export const colorScale = {
     300: colors['red-orange'],
   },
 };
+
+module.exports = colorScale;
