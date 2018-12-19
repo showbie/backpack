@@ -1,0 +1,14 @@
+#import "UIColor+Showbie.h"
+#import "UIColor+HexColor.h"
+#import "UIDevice+BlurSupport.h"
+
+@implementation UIColor (Showbie)
+
+{{#each colors as |hue|}}
+
+{{#each hue.scale as |value label|}}
++ (UIColor *)sb_{{hue.name}}_{{label}} {
+    return [UIColor colorWithARGB:0x{{alphahex value}}];
+}
+{{/each}}
+{{/each}}

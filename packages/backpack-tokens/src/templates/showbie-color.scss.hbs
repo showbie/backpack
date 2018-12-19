@@ -1,0 +1,9 @@
+{{#each colors as |hue|}}
+
+///
+/// {{hue.name}}
+///
+{{#each hue.scale as |value label|}}
+$sb-{{hue.name}}-{{label}}: {{value}};
+{{/each}}
+{{/each}}
