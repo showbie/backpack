@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "node lib/index.js",
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,7 +15,8 @@
     "@showbie/eslint-config": "^0.1.1",
     "chroma-js": "^2.0.2",
     "eslint": "^5.10.0",
-    "handlebars": "^4.0.12"
+    "handlebars": "^4.0.12",
+    "vuepress": "^1.0.0-alpha.30"
   },
   "prettier": {
     "arrowParens": "always",
