@@ -4,6 +4,13 @@ const path = require('path');
 const chroma = require('chroma-js');
 const Handlebars = require('handlebars');
 
+/**
+ * Get the alpha value of a supplied colour and return the hex value,
+ * prepended to the hex of the colour.
+ *
+ * @param {String} hex
+ * @returns {String}
+ */
 function alphaHex(hex) {
   let alpha = chroma(hex).alpha();
   return `${Math.ceil(alpha * 255).toString(16)}${hex.substring(1)}`;
