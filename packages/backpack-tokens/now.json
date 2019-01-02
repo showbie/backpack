@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "backpack-tokens",
+  "alias": "backpack-tokens",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ]
+}
