@@ -2,8 +2,8 @@
   <div class="swatch fl mt2 mr4 mb4 w-33 br2">
     <div class="h4 br2" :style="bgStyle"></div>
     <div class="flex justify-around mt2">
-      <span class="dib f6 b pa2 br1" :style="bgStyle">{{ bgScore }}</span>
-      <span class="dib f6 b pa2 br1" :style="fgStyle">{{ fgScore }}</span>
+      <span class="dib f6 b pa2 br1" :style="bgStyle">{{ bgContrast }}</span>
+      <span class="dib f6 b pa2 br1" :style="fgStyle">{{ fgContrast }}</span>
     </div>
     <div class="swatch-details ph2 pt3 pb3 f6">
       <dl class="flex justify-between ma0">
@@ -28,7 +28,10 @@ const nearestColor = require('nearest-color');
 const COLORS = require('../../../src/color');
 
 /**
- * @todo Add case for `AA Large` contrast score (greater than 3)
+ * Get an a11y rating score based on a contrast value.
+ *
+ * @param {Number} contrast
+ * @returns {String}
  */
 function score(contrast) {
   let score;
@@ -37,7 +40,9 @@ function score(contrast) {
     score = 'AAA';
   } else if (contrast >= 4.5) {
     score = 'AA';
-  } else if (contrast < 4.5) {
+  } else if (contrast >= 3) {
+    score = 'AA Large';
+  } else if (contrast < 3) {
     score = 'Fail';
   } else {
     score = 'Unknown';
@@ -58,13 +63,6 @@ export default {
     },
   },
 
-  /**
-   * @todo
-   *    - [ ] Change `color` prop from hex to colour scale val (ie: blue.600)
-   *    - [ ] Add colour value lookup utility
-   *    - [x] Add colour name value
-   *    - [ ] Rename `score` to `contrast` (more explicit)
-   */
   computed: {
     colorHex: function() {
       return COLORS[this.hue][this.scale];
@@ -93,19 +91,19 @@ export default {
     },
 
     // Contrast score when used as a background-color.
-    bgScore: function() {
+    bgContrast: function() {
       let contrast = chroma.contrast(this.colorHex, this.foreground);
-      let a11yscore = score(contrast);
+      let contrastScore = score(contrast);
 
-      return a11yscore;
+      return contrastScore;
     },
 
     // Contrast score when used as a foreground colour on white.
-    fgScore: function() {
+    fgContrast: function() {
       let contrast = chroma.contrast(this.colorHex, '#fff');
-      let a11yscore = score(contrast);
+      let contrastScore = score(contrast);
 
-      return a11yscore;
+      return contrastScore;
     },
 
     bgStyle: function() {
