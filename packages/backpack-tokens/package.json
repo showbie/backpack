@@ -14,8 +14,10 @@
   "devDependencies": {
     "@showbie/eslint-config": "^0.1.1",
     "chroma-js": "^2.0.2",
+    "color-name-list": "^3.52.1",
     "eslint": "^5.10.0",
     "handlebars": "^4.0.12",
+    "nearest-color": "^0.4.4",
     "vuepress": "^1.0.0-alpha.30"
   },
   "prettier": {

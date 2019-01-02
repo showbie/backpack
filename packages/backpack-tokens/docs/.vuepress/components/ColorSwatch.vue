@@ -1,5 +1,5 @@
 <template>
-  <div class="swatch w-33 br2">
+  <div class="swatch fl mt2 mr4 mb4 w-33 br2">
     <div class="h4 br2" :style="bgStyle"></div>
     <div class="flex justify-around mt2">
       <span class="dib f6 b pa2 br1" :style="bgStyle">{{ bgScore }}</span>
@@ -8,7 +8,7 @@
     <div class="swatch-details ph2 pt3 pb3 f6">
       <dl class="flex justify-between ma0">
         <dt class="b ttu">Name</dt>
-        <dd>Name goes here</dd>
+        <dd>{{ colorName }}</dd>
       </dl>
       <dl class="flex justify-between mt2 mb0">
         <dt class="f6 b ttu">Value</dt>
@@ -21,7 +21,9 @@
 </template>
 
 <script>
+import namedColors from 'color-name-list';
 const chroma = require('chroma-js');
+const nearestColor = require('nearest-color');
 
 /**
  * @todo Add case for `AA Large` contrast score (greater than 3)
@@ -54,10 +56,26 @@ export default {
    * @todo
    *    - [ ] Change `color` prop from hex to colour scale val (ie: blue.600)
    *    - [ ] Add colour value lookup utility
-   *    - [ ] Add colour name value
+   *    - [x] Add colour name value
    *    - [ ] Rename `score` to `contrast` (more explicit)
    */
   computed: {
+    /**
+     * Get a unique colour name for the supplied hex value, or for the
+     * closest hex value for which a name exists.
+     *
+     * @see https://github.com/meodai/color-names#closest-named-color
+     */
+    colorName: function() {
+      let colorNames = namedColors.reduce(
+        (o, { name, hex }) => Object.assign(o, { [name]: hex }),
+        {}
+      );
+      let nearest = nearestColor.from(colorNames);
+
+      return nearest(this.color).name;
+    },
+
     // Determine best foreground colour to use on `color` background.
     foreground: function() {
       let lum = chroma(this.color).luminance();

@@ -2018,6 +2018,11 @@ color-convert@^1.3.0, color-convert@^1.9.0:
   dependencies:
     color-name "1.1.3"
 
+color-name-list@^3.52.1:
+  version "3.52.1"
+  resolved "https://registry.yarnpkg.com/color-name-list/-/color-name-list-3.52.1.tgz#e4f202212573081ad1671a18191db53c000aa609"
+  integrity sha512-kbECyJU3pEJS6s0916GHo0us3Q7d87A6JoLAOFUlq5VuojtPktmy9DVVAGT41iyQ/vImOTF7Acj84ZQ3vv8sVg==
+
 color-name@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
@@ -5141,6 +5146,11 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
+
+nearest-color@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/nearest-color/-/nearest-color-0.4.4.tgz#fb812072b511f4f09a0a316903332e09fa5d7f1d"
+  integrity sha512-orhcaIORC10tf41Ld2wwlcC+FaAavHG87JHWB3eHH5p7v2k9Tzym2XNEZzLAm5YJwGv6Q38WWc7SOb+Qfu/4NQ==
 
 needle@^2.2.1:
   version "2.2.4"
