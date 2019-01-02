@@ -1,7 +1,22 @@
 <template>
-  <div class="score">
-    <span :style="bgStyle">{{ bgScore }}</span>
-    <span :style="fgStyle">{{ fgScore }}</span>
+  <div class="w-33 br2">
+    <div class="h4 br2" :style="bgStyle"></div>
+    <div class="flex justify-around mt2">
+      <span class="dib f6 b pa2 br1" :style="bgStyle">{{ bgScore }}</span>
+      <span class="dib f6 b pa2 br1" :style="fgStyle">{{ fgScore }}</span>
+    </div>
+    <div class="swatch-details mt2">
+      <dl class="flex justify-between">
+        <dt class="f6 b ttu">Name</dt>
+        <dd>Name goes here</dd>
+      </dl>
+      <dl class="flex justify-between mt1">
+        <dt class="f6 b ttu">Value</dt>
+        <dd>
+          <code>{{ color }}</code>
+        </dd>
+      </dl>
+    </div>
   </div>
 </template>
 
