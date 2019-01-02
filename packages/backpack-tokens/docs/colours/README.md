@@ -14,7 +14,7 @@ Show an overview of the blue scale here.
 
 #### Alice Blue
 
-<ColorSwatch color="#f1faff" />
+<ColorSwatch hue="blue" scale="100" />
 
 A super-super-light blue used in:
   - panel background for pending group invites
@@ -36,7 +36,7 @@ A super-super-light blue used in:
 
 #### Picton Blue
 
-<ColorSwatch color="#009fe8" />
+<ColorSwatch hue="blue" scale="600" />
 
 ### Greys
 

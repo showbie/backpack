@@ -13,7 +13,7 @@
       <dl class="flex justify-between mt2 mb0">
         <dt class="f6 b ttu">Value</dt>
         <dd>
-          <code>{{ color }}</code>
+          <code>{{ colorHex }}</code>
         </dd>
       </dl>
     </div>
@@ -24,6 +24,8 @@
 import namedColors from 'color-name-list';
 const chroma = require('chroma-js');
 const nearestColor = require('nearest-color');
+
+const COLORS = require('../../../src/color');
 
 /**
  * @todo Add case for `AA Large` contrast score (greater than 3)
@@ -46,7 +48,11 @@ function score(contrast) {
 
 export default {
   props: {
-    color: {
+    hue: {
+      type: String,
+      required: true,
+    },
+    scale: {
       type: String,
       required: true,
     },
@@ -60,6 +66,10 @@ export default {
    *    - [ ] Rename `score` to `contrast` (more explicit)
    */
   computed: {
+    colorHex: function() {
+      return COLORS[this.hue][this.scale];
+    },
+
     /**
      * Get a unique colour name for the supplied hex value, or for the
      * closest hex value for which a name exists.
@@ -73,18 +83,18 @@ export default {
       );
       let nearest = nearestColor.from(colorNames);
 
-      return nearest(this.color).name;
+      return nearest(this.colorHex).name;
     },
 
     // Determine best foreground colour to use on `color` background.
     foreground: function() {
-      let lum = chroma(this.color).luminance();
+      let lum = chroma(this.colorHex).luminance();
       return lum < 0.5 ? 'white' : 'black';
     },
 
     // Contrast score when used as a background-color.
     bgScore: function() {
-      let contrast = chroma.contrast(this.color, this.foreground);
+      let contrast = chroma.contrast(this.colorHex, this.foreground);
       let a11yscore = score(contrast);
 
       return a11yscore;
@@ -92,18 +102,18 @@ export default {
 
     // Contrast score when used as a foreground colour on white.
     fgScore: function() {
-      let contrast = chroma.contrast(this.color, '#fff');
+      let contrast = chroma.contrast(this.colorHex, '#fff');
       let a11yscore = score(contrast);
 
       return a11yscore;
     },
 
     bgStyle: function() {
-      return `background-color:${this.color}; color:${this.foreground}`;
+      return `background-color:${this.colorHex}; color:${this.foreground}`;
     },
 
     fgStyle: function() {
-      return `background-color: #fff; color: ${this.color}`;
+      return `background-color: #fff; color: ${this.colorHex}`;
     },
   },
 };
