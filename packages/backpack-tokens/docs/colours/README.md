@@ -64,6 +64,50 @@ A super-super-light blue used in:
 
 ### Greys
 
+#### 100
+
+<ColorSwatch hue="grey" scale="100" />
+
+#### 200
+
+<ColorSwatch hue="grey" scale="200" />
+
+#### 300
+
+<ColorSwatch hue="grey" scale="300" />
+
+#### 400
+
+<ColorSwatch hue="grey" scale="400" />
+
+#### 500
+
+<ColorSwatch hue="grey" scale="500" />
+
+#### 600
+
+<ColorSwatch hue="grey" scale="600" />
+
+#### 700
+
+<ColorSwatch hue="grey" scale="700" />
+
+#### 725
+
+<ColorSwatch hue="grey" scale="725" />
+
+#### 775
+
+<ColorSwatch hue="grey" scale="775" />
+
+#### 800
+
+<ColorSwatch hue="grey" scale="800" />
+
+#### 900
+
+<ColorSwatch hue="grey" scale="900" />
+
 ### Reds
 
 ### Brands
