@@ -16,7 +16,12 @@ function alphaHex(hex) {
   return `${Math.ceil(alpha * 255).toString(16)}${hex.substring(1)}`;
 }
 
+function hexNum(hex) {
+  return hex.substring(1);
+}
+
 Handlebars.registerHelper('alphahex', (a) => alphaHex(a));
+Handlebars.registerHelper('hexnum', (a) => hexNum(a));
 
 class BaseBuilder {
   constructor(colors, version) {

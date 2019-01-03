@@ -12,3 +12,6 @@ colorBuilder.build('showbie-color.scss', [
 colorBuilder.build('showbie-color.m', [
   path.join(__dirname, '..', 'dist', 'showbie-color.m'),
 ]);
+colorBuilder.build('showbie-color.swift', [
+  path.join(__dirname, '..', 'dist', 'showbie-color.swift'),
+]);
