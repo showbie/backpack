@@ -110,6 +110,18 @@ A super-super-light blue used in:
 
 ### Reds
 
+#### 100
+
+<ColorSwatch hue="red" scale="100" />
+
+#### 200
+
+<ColorSwatch hue="red" scale="200" />
+
+#### 300
+
+<ColorSwatch hue="red" scale="300" />
+
 ### Brands
 
 ## Socrative colours
