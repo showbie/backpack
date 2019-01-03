@@ -12,4 +12,7 @@ module.exports = {
       },
     ],
   ],
+  chainWebpack: (config, isServer) => {
+    config.resolve.symlinks(false);
+  },
 };
