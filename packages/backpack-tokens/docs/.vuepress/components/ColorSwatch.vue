@@ -1,18 +1,31 @@
 <template>
   <div class="swatch fl mt2 mr4 mb4 w-33 br2">
-    <div class="h4 br2" :style="bgStyle"></div>
-    <div class="flex justify-around mt2">
-      <span class="dib f6 b pa2 br1" :style="bgStyle">{{ bgContrast }}</span>
-      <span class="dib f6 b pa2 br1" :style="fgStyle">{{ fgContrast }}</span>
+    <div class="h4 br2 flex items-end" :style="bgStyle">
+      <div class="w-100 flex justify-around mb2">
+        <span class="dib f6 b pa2 br1" :style="bgStyle">{{ bgContrast }}</span>
+        <span class="dib f6 b pa2 br1" :style="fgStyle">{{ fgContrast }}</span>
+      </div>
     </div>
-    <div class="swatch-details ph2 pt3 pb3 f6">
-      <dl class="flex justify-between ma0">
-        <dt class="b ttu">Name</dt>
-        <dd>{{ colorName }}</dd>
+    <div class="swatch-details ph2 pt3 pb3">
+      <dl class="ma0">
+        <dt class="f6 fw6 ttu">Name</dt>
+        <dd class="f5 mt1 ml0">{{ colorName }}</dd>
       </dl>
-      <dl class="flex justify-between mt2 mb0">
-        <dt class="f6 b ttu">Value</dt>
-        <dd>
+      <dl class="flex justify-between mt3 mb0">
+        <dt class="f6 fw6 ttu">Value</dt>
+        <dd class="f5 ml0">
+          <code>{{ colorHex }}</code>
+        </dd>
+      </dl>
+      <dl class="flex justify-between mt3 mb0">
+        <dt class="f6 fw6 ttu">SCSS</dt>
+        <dd class="f5 ml0">
+          <code>{{ colorHex }}</code>
+        </dd>
+      </dl>
+      <dl class="flex justify-between mt3 mb0">
+        <dt class="f6 fw6 ttu">Swift</dt>
+        <dd class="f5 ml0">
           <code>{{ colorHex }}</code>
         </dd>
       </dl>
