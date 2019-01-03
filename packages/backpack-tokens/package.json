@@ -2,13 +2,12 @@
   "name": "@showbie/backpack-tokens",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "node lib/index.js",
     "deploy:docs": "now && now alias",
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
-    "now-build": "npm run docs:build && mv docs/.vuepress/dist dist",
+    "now-build": "npm run docs:build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
