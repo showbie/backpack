@@ -4,24 +4,24 @@ const path = require('path');
 const chroma = require('chroma-js');
 const Handlebars = require('handlebars');
 
+const { swiftVarName } = require('./utils/string');
+
 /**
- * Get the alpha value of a supplied colour and return the hex value,
- * prepended to the hex of the colour.
+ * Get floating-point values for each colour channel and return a
+ * string for `UIColor()` in Swift.
  *
  * @param {String} hex
  * @returns {String}
  */
-function alphaHex(hex) {
-  let alpha = chroma(hex).alpha();
-  return `${Math.ceil(alpha * 255).toString(16)}${hex.substring(1)}`;
+function rgbFloat(hex) {
+  let vals = chroma(hex).gl();
+  return `red: ${vals[0]}, green: ${vals[1]}, blue: ${vals[2]}, alpha: ${
+    vals[3]
+  }`;
 }
 
-function hexNum(hex) {
-  return hex.substring(1);
-}
-
-Handlebars.registerHelper('alphahex', (a) => alphaHex(a));
-Handlebars.registerHelper('hexnum', (a) => hexNum(a));
+Handlebars.registerHelper('rgbfloat', (a) => rgbFloat(a));
+Handlebars.registerHelper('swiftvar', (a, b) => swiftVarName(a, b));
 
 class BaseBuilder {
   constructor(colors, version) {

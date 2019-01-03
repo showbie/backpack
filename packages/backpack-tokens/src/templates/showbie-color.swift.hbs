@@ -1,12 +1,11 @@
 import UIKit
 
+@objc
 extension UIColor {
-    struct Backpack {
 {{#each colors as |hue|}}
 {{#each hue.scale as |value label|}}
-        static let sb_{{hue.name}}_{{label}} = UIColor(rgb: 0x{{hexnum value}})
+    static let {{swiftvar hue.name label}} = UIColor({{rgbfloat value}})
 {{/each}}
 
 {{/each}}
-    }
 }

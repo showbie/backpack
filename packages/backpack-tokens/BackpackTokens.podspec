@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.license = { :type => 'ISC' }
   s.source = { :git => 'git@github.com:showbie/backpack-tokens.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
-  s.source_files = 'dist/showbie-color.m'
+  s.source_files = 'dist/showbie-color.swift'
   s.swift_version = '4.2'
 end
