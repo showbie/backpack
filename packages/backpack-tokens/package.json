@@ -8,7 +8,7 @@
     "deploy:docs": "now && now alias",
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
-    "now-build": "npm run build && mv docs/.vuepress/dist dist",
+    "now-build": "npm run docs:build && mv docs/.vuepress/dist dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
