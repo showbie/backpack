@@ -126,9 +126,7 @@ Used as a background-color for the PostList form component.
 For the Add Files/Cancel button, use a 33% whiter variation. It
 should work out to `#f2f3f4`.
 
-```scss
-background-color: tint($color-porcelain, 33%);
-```
+`background-color: tint($color-porcelain, 33%);`
 
 #### 400
 
@@ -163,7 +161,7 @@ The standard opaque colour for grey secondary text labels.
 Used exclusively for text colours, no fills. The current
 definition works best over white or almost-white backgrounds.
 
-::: Todo
+::: tip Todo
 We might consider replacing this with a dark-and-
 transparent rgba colour for more consistent contrast on
 varying background colours.
