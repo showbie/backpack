@@ -1,32 +1,32 @@
 <template>
-  <div class="swatch fl mt2 mr4 mb4 w-33 br2">
-    <div class="h4 br2 flex items-end" :style="bgStyle">
-      <div class="w-100 flex justify-around mb2">
+  <div class="swatch fl mt2 mr4 mb4 w-40 br2 overflow-hidden">
+    <div class="h4 flex items-end" :style="bgStyle">
+      <div class="w-100 flex justify-around mb3">
         <span class="dib f6 b pa2 br1" :style="bgStyle">{{ bgContrast }}</span>
         <span class="dib f6 b pa2 br1" :style="fgStyle">{{ fgContrast }}</span>
       </div>
     </div>
-    <div class="swatch-details ph2 pt3 pb3">
-      <dl class="ma0">
-        <dt class="f6 fw6 ttu">Name</dt>
-        <dd class="f5 mt1 ml0">{{ colorName }}</dd>
+    <div class="swatch-details ph4 pv3">
+      <dl class="flex justify-between items-center ma0">
+        <dt class="f7 fw6 lh-copy ttu">Name</dt>
+        <dd class="f5 tr mt1 ml2">{{ colorName }}</dd>
       </dl>
-      <dl class="flex justify-between mt3 mb0">
-        <dt class="f6 fw6 ttu">Value</dt>
+      <dl class="flex justify-between items-center mt4 mb0">
+        <dt class="f7 fw6 ttu">Value</dt>
         <dd class="f5 ml0">
           <code>{{ colorHex }}</code>
         </dd>
       </dl>
-      <dl class="flex justify-between mt3 mb0">
-        <dt class="f6 fw6 ttu">SCSS</dt>
+      <dl class="flex justify-between items-center mt4 mb0">
+        <dt class="f7 fw6 ttu">SCSS</dt>
         <dd class="f5 ml0">
-          <code>{{ colorHex }}</code>
+          <code>$sb-{{ hue }}-{{ scale }}</code>
         </dd>
       </dl>
-      <dl class="flex justify-between mt3 mb0">
-        <dt class="f6 fw6 ttu">Swift</dt>
+      <dl class="flex justify-between items-center mt4 mb0">
+        <dt class="f7 fw6 ttu">Swift</dt>
         <dd class="f5 ml0">
-          <code>{{ colorHex }}</code>
+          <code>{{ swiftVar }}</code>
         </dd>
       </dl>
     </div>
@@ -39,6 +39,7 @@ const chroma = require('chroma-js');
 const nearestColor = require('nearest-color');
 
 const COLORS = require('../../../src/color');
+const { swiftVarName } = require('../../../lib/utils/string');
 
 /**
  * Get an a11y rating score based on a contrast value.
@@ -95,6 +96,10 @@ export default {
       let nearest = nearestColor.from(colorNames);
 
       return nearest(this.colorHex).name;
+    },
+
+    swiftVar: function() {
+      return swiftVarName(this.hue, this.scale);
     },
 
     // Determine best foreground colour to use on `color` background.
