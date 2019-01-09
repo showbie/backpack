@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Showbie Design Tokens',
+  title: 'Backpack Design Tokens',
   themeConfig: {
     nav: [{ text: 'Colours', link: '/colours/' }],
   },

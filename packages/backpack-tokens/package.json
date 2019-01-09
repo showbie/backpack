@@ -1,28 +1,35 @@
 {
   "name": "@showbie/backpack-tokens",
+  "description": "Design tokens for Showbie Backpack",
+  "license": "ISC",
+  "author": "Showbie (https://www.showbie.com)",
+  "maintainers": [
+    "Jeff Nelson @stormwarning (https://www.showbie.com)"
+  ],
+  "homepage": "https://backpack-tokens.now.sh",
+  "repository": "showbie/backpack-tokens",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
     "build": "node lib/index.js",
     "deploy:docs": "now && now alias",
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
+    "lint": "prettier-eslint '**/*.js' --list-different",
     "now-build": "npm run docs:build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@showbie/eslint-config": "^0.1.1",
+    "@showbie/eslint-config": "^0.2.0",
     "chroma-js": "^2.0.2",
     "color-name-list": "^3.52.1",
-    "eslint": "^5.10.0",
+    "eslint": "^5.12.0",
     "handlebars": "^4.0.12",
     "nearest-color": "^0.4.4",
     "vuepress": "^1.0.0-alpha.30"
   },
   "prettier": {
     "arrowParens": "always",
+    "semi": true,
     "singleQuote": true,
     "trailingComma": "es5"
   }
