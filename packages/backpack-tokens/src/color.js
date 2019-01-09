@@ -134,6 +134,11 @@ const colorScale = {
     200: colors.froly,
     300: colors['red-orange'],
   },
+  brand: {
+    feide: '#068f8d',
+    google: '#dc4e41',
+    showbie: colors.cerulean,
+  },
 };
 
 module.exports = colorScale;
