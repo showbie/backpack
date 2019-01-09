@@ -10,7 +10,7 @@ Intro to colours.
 
 ### Blues
 
-Show an overview of the blue scale here.
+<ColorScale hue="blue" />
 
 #### 100
 
