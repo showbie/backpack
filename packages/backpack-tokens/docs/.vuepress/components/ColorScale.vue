@@ -1,8 +1,8 @@
 <template>
-  <div class="scale">
+  <div class="scale cf mt2">
     <div class="scale-chip fl w-20 ph2 mb3" v-for="(color, label) in colors">
       <div class="h3 br2" :style="{ backgroundColor: color }"></div>
-      <div class="f7 fw6 ttu o-9">{{ hue }}-{{ label }}</div>
+      <div class="mt1 f7 fw6 ttu o-80">{{ hue }}-{{ label }}</div>
     </div>
   </div>
 </template>
@@ -32,6 +32,7 @@ export default {
 
 <style>
 .scale {
-  margin: 0 -0.5rem;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 }
 </style>

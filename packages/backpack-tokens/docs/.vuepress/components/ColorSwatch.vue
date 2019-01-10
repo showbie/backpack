@@ -6,7 +6,7 @@
         <span class="dib f6 b pa2 br1" :style="fgStyle">{{ fgContrast }}</span>
       </div>
     </div>
-    <div class="swatch-details ph4 pv3">
+    <div class="swatch-details ph4 pv3 bt b--black-025">
       <dl class="flex justify-between items-center ma0">
         <dt class="f7 fw6 lh-copy ttu">Name</dt>
         <dd class="f5 tr mt1 ml2">{{ colorName }}</dd>
