@@ -1,7 +1,10 @@
 module.exports = {
   title: 'Backpack Design Tokens',
   themeConfig: {
-    nav: [{ text: 'Colours', link: '/colours/' }],
+    nav: [
+      { text: 'Colours', link: '/colours/' },
+      { text: 'GitHub', link: 'https://github.com/showbie/backpack-tokens' },
+    ],
   },
   head: [
     [
@@ -12,6 +15,11 @@ module.exports = {
       },
     ],
   ],
+
+  /**
+   * Required for custom components that use both `import`s and
+   * `require`s.
+   */
   chainWebpack: (config, isServer) => {
     config.resolve.symlinks(false);
   },
