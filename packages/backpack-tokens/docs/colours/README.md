@@ -4,36 +4,46 @@ sidebar: auto
 
 # Colours
 
-Intro to colours.
+> In visual perception a color is almost never seen as it really is —
+> as it physically is. This fact makes color the most relative medium
+> in art. \
+> — *Josef Albers*
 
 ## Showbie colours
 
-### Blues
+Here’s an overview of the full Showbie colour palette. View the
+individual swatches for details and usage notes.
 
 <ColorScale hue="blue" />
 
-#### 100
+<ColorScale hue="grey" />
+
+<ColorScale hue="red" />
+
+### Blues
+
+#### Blue 100
 
 <ColorSwatch hue="blue" scale="100" />
 
 A super-super-light blue used in:
 
 - panel background for pending group invites
-- header background for post list headers
-  e.g. announcements-only, new live-update posts
+- header background for post list headers (e.g. announcements-only,
+  new live-update posts)
 - hover, active, and focused state of text box `.handle`, in
   slightly transparentized form.
 
 ##### Notes:
 
-- hover variant was decided during dev (not spec'd via PSD) so
-  could be easily expressed as SCSS function relative to main
-  definition.
-- use in `.handle` states was decided during dev. Use here is not
-  closely coupled with the other two contexts. Debatable
-  whether the addition of transparency makes sense (default
-  state of handles is opaque), and whether hover state is
-  needed, given that the cursor also changes on hover.
+Hover variant was decided during dev (not spec'd via PSD) so it could
+be easily expressed as SCSS function relative to main definition.
+
+Use in `.handle` states was decided during dev. Use here is not
+closely coupled with the other two contexts. Debatable whether the
+addition of transparency makes sense (default state of handles is
+opaque), and whether hover state is needed, given that the cursor also
+changes on hover.
 
 #### 200
 
@@ -148,9 +158,15 @@ Used less widely and less consistently than color-secondary-dark.
 
 ##### Notes
 
-- text colour for empty folder titles is incorrect, should use color-secondary-dark instead (although the icon colour is supposed to be lighter than the text)
-- group invite wizard checkmark colour is different from the iOS mockup colour. CW to investigate what standard colour def would be best for this element.
-- sign-up TOC footer link is incorrect, should be color-secondary-dark
+Text colour for empty folder titles is incorrect, should use
+`color-secondary-dark` instead (although the icon colour is supposed
+to be lighter than the text).
+
+Group invite wizard checkmark colour is different from the iOS mockup
+colour. CW to investigate what standard colour def would be best for
+this element.
+
+Sign-up TOC footer link is incorrect, should be `color-secondary-dark`.
 
 #### 600
 
@@ -173,7 +189,8 @@ varying background colours.
 
 Colour for grey buttons in the document previewer.
 
-Note that grey text labels should use a slightly darker grey not defined here: `#748d97`.
+Note that grey text labels should use a slightly darker grey not
+defined here: `#748d97`.
 
 #### 725
 
