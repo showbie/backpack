@@ -5,6 +5,17 @@ module.exports = {
       { text: 'Colours', link: '/colours/' },
       { text: 'GitHub', link: 'https://github.com/showbie/backpack-tokens' },
     ],
+
+    sidebar: {
+      '/colours/': [
+        {
+          title: 'Colours',
+          collapsable: false,
+          children: ['', 'socrative', 'brands'],
+        },
+        { title: 'Exploration', collapsable: false, children: ['hell'] },
+      ],
+    },
   },
   head: [
     [
