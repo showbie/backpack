@@ -57,7 +57,7 @@ export default {
           '#009fe8',
           '#0084c2',
         ],
-        greens: ['#64bc74'],
+        greens: ['#5dbe6e'],
         yellows: ['#faf0a6', '#f7df68', 'rgb(221, 198, 42)'],
         reds: ['#fce5e5', '#f07f7f', '#fc3d39'],
         others: ['#90a8b2', '#e5f8ff', '#94b2c1'],
