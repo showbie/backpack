@@ -134,6 +134,9 @@ const colorScale = {
     200: colors.froly,
     300: colors['red-orange'],
   },
+  green: {
+    500: '#5dbe6e',
+  },
   brand: {
     feide: '#068f8d',
     google: '#dc4e41',
