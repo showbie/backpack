@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@showbie/eslint-config": "^0.2.0",
-    "chroma-js": "^2.0.2",
+    "chroma-js": "^2.0.3",
     "color-name-list": "^3.52.1",
     "eslint": "^5.15.0",
     "handlebars": "^4.1.0",
