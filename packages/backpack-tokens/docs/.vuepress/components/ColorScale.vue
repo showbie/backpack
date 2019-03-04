@@ -19,6 +19,10 @@ export default {
   },
 
   computed: {
+    /**
+     * @todo Need to handle error here if the colour doesn't exist
+     *       in the main list.
+     */
     colors: function() {
       return COLORS[this.hue];
     },

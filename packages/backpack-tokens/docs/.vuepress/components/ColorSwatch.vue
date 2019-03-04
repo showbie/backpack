@@ -35,6 +35,7 @@
 
 <script>
 import namedColors from 'color-name-list';
+
 const chroma = require('chroma-js');
 const nearestColor = require('nearest-color');
 
@@ -78,6 +79,10 @@ export default {
   },
 
   computed: {
+    /**
+     * @todo Need to handle error here if the colour doesn't exist
+     *       in the main list.
+     */
     colorHex: function() {
       return COLORS[this.hue][this.scale];
     },
