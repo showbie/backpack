@@ -27,4 +27,10 @@ extension UIColor {
     static let sbRed200 = UIColor(red: 0.9411764705882353, green: 0.4980392156862745, blue: 0.4980392156862745, alpha: 1)
     static let sbRed300 = UIColor(red: 0.9882352941176471, green: 0.23921568627450981, blue: 0.2235294117647059, alpha: 1)
 
+    static let sbGreen500 = UIColor(red: 0.36470588235294116, green: 0.7450980392156863, blue: 0.43137254901960786, alpha: 1)
+
+    static let sbBrandFeide = UIColor(red: 0.023529411764705882, green: 0.5607843137254902, blue: 0.5529411764705883, alpha: 1)
+    static let sbBrandGoogle = UIColor(red: 0.8627450980392157, green: 0.3058823529411765, blue: 0.2549019607843137, alpha: 1)
+    static let sbBrandShowbie = UIColor(red: 0, green: 0.6235294117647059, blue: 0.9098039215686274, alpha: 1)
+
 }
