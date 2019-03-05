@@ -19,7 +19,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@showbie/eslint-config": "^0.2.0",
+    "@showbie/eslint-config": "^0.3.0",
     "chroma-js": "^2.0.3",
     "color-name-list": "^3.56.0",
     "eslint": "^5.15.0",
