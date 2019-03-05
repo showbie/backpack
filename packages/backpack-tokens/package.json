@@ -21,7 +21,7 @@
   "devDependencies": {
     "@showbie/eslint-config": "^0.2.0",
     "chroma-js": "^2.0.3",
-    "color-name-list": "^3.52.1",
+    "color-name-list": "^3.56.0",
     "eslint": "^5.15.0",
     "handlebars": "^4.1.0",
     "nearest-color": "^0.4.4",
