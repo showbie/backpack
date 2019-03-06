@@ -140,6 +140,7 @@ const colorScale = {
   brand: {
     feide: '#068f8d',
     google: '#dc4e41',
+    microsoft: '#07a6f0',
     showbie: colors.cerulean,
   },
 };
