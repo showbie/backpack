@@ -33,7 +33,6 @@ export default {
           '#8c97a1',
           '#e9e9eb',
           '#ecedee',
-          '#b9bbbd',
           '#cac9cd',
           '#545454',
           '#7a8184',
@@ -45,22 +44,35 @@ export default {
           '#989fa6',
           '#898f95',
           '#070b12',
-          '#c4c4c4',
+          '#c4c4ca', // blessed
+          '#b9bbbd', // blessed
+        ],
+        slate: [
+          '#94b2c1',
+          '#8aa4af', // blessed
+          '#90a8b2',
         ],
         blues: [
-          '#f1faff',
+          '#e5f8ff',
           '#dcf3ff',
-          '#cbeeff',
           '#bae8ff',
           '#8ad8ff',
-          '#29b1f0',
-          '#009fe8',
+          '#f1faff', // blessed
+          '#cbeeff', // blessed
+          '#29b1f0', // blessed
+          '#009fe8', // blessed
           '#0084c2',
         ],
-        greens: ['#5dbe6e'],
+        greens: [
+          '#5dbe6e', // blessed
+        ],
         yellows: ['#faf0a6', '#f7df68', 'rgb(221, 198, 42)'],
-        reds: ['#fce5e5', '#f07f7f', '#fc3d39'],
-        others: ['#90a8b2', '#e5f8ff', '#94b2c1'],
+        reds: [
+          '#fce5e5', // blessed
+          '#f07f7f', // blessed
+          '#fc3d39',
+          '#e10000', // blessed
+        ],
       },
     };
   },
