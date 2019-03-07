@@ -43,9 +43,22 @@ export default {
           '#f0f0f0',
           '#989fa6',
           '#898f95',
-          '#070b12',
+          '#070b12', // unused
           '#c4c4ca', // blessed
           '#b9bbbd', // blessed
+        ],
+        grey: [
+          '#f8f8f8', // 50
+          '#ecedee', // 100
+          '#e9e9eb', // replace with 100?
+          // 200
+          // 300
+          '#c4c4ca', // 400 blessed
+          '#b9bbbd', // 500 blessed
+          '#989fa6', // 600
+          '#7a8184', // 700
+          '#545454', // 800
+          // 900
         ],
         slate: [
           '#94b2c1',
