@@ -22,7 +22,7 @@
     "@showbie/eslint-config": "^0.3.0",
     "chroma-js": "^2.0.3",
     "color-name-list": "^3.75.0",
-    "eslint": "^5.15.2",
+    "eslint": "^5.15.3",
     "handlebars": "^4.1.1",
     "nearest-color": "^0.4.4",
     "vuepress": "^1.0.0-alpha.44"
