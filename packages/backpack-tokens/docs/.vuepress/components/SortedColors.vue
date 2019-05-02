@@ -29,24 +29,6 @@ export default {
       luminanceGroups: [1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1],
 
       colors: {
-        greys: [
-          '#8c97a1',
-          '#e9e9eb',
-          '#ecedee',
-          '#cac9cd',
-          '#545454',
-          '#7a8184',
-          '#fcfcfc',
-          '#f8f8f8',
-          '#f2f5f5',
-          '#b5b7ba',
-          '#f0f0f0',
-          '#989fa6',
-          '#898f95',
-          '#070b12', // unused
-          '#c4c4ca', // blessed
-          '#b9bbbd', // blessed
-        ],
         grey: [
           '#f8f8f8', // 50
           '#ecedee', // 100
