@@ -2,7 +2,7 @@ module.exports = {
   title: 'Backpack Design Tokens',
   themeConfig: {
     nav: [
-      { text: 'Colours', link: '/colours/' },
+      { text: 'Colours', link: '/colours/showbie/' },
       { text: 'GitHub', link: 'https://github.com/showbie/backpack-tokens' },
     ],
 
@@ -11,7 +11,7 @@ module.exports = {
         {
           title: 'Colours',
           collapsable: false,
-          children: ['', 'socrative', 'brands'],
+          children: ['showbie/', 'socrative/', 'brands/'],
         },
         { title: 'Exploration', collapsable: false, children: ['hell'] },
       ],

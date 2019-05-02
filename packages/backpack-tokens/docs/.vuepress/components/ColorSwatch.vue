@@ -36,6 +36,9 @@
 <script>
 import namedColors from 'color-name-list';
 
+import { colors as SHOWBIE_COLORS } from '../../../src/backpack-showbie';
+import { colors as SOCRATIVE_COLORS } from '../../../src/backpack-socrative';
+
 const chroma = require('chroma-js');
 const nearestColor = require('nearest-color');
 
@@ -68,6 +71,10 @@ function score(contrast) {
 
 export default {
   props: {
+    theme: {
+      type: String,
+      required: true,
+    },
     hue: {
       type: String,
       required: true,
@@ -84,7 +91,10 @@ export default {
      *       in the main list.
      */
     colorHex: function() {
-      return COLORS[this.hue][this.scale];
+      let source =
+        this.theme === 'socrative' ? SOCRATIVE_COLORS : SHOWBIE_COLORS;
+
+      return source[this.hue][this.scale];
     },
 
     /**

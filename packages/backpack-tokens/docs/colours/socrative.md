@@ -1,3 +1,0 @@
-# Socrative colours
-
-Coming soon.
