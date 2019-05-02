@@ -94,7 +94,7 @@ export default {
       let source =
         this.theme === 'socrative' ? SOCRATIVE_COLORS : SHOWBIE_COLORS;
 
-      return source[this.hue][this.scale];
+      return source[this.hue][this.scale] || '#ff00ff';
     },
 
     /**
