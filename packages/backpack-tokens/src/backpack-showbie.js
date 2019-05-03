@@ -1,8 +1,12 @@
+/**
+ * Colours marked "blessed" are in use and confirmed accurate by the
+ * design team. Other colours are found in production but unconfirmed.
+ */
 export const colors = {
   grey: {
     50: '#f8f8f8',
     100: '#ecedee',
-    '1xx': '#e9e9eb', // replace with 100?
+    xx1: '#e9e9eb', // replace with 100?
     200: '',
     300: '',
     400: '#c4c4ca', // blessed
@@ -17,19 +21,17 @@ export const colors = {
     50: '',
     200: '',
     500: '#94b2c1',
-    '5xx': '#90a8b2',
+    xx5: '#90a8b2',
     600: '#8aa4af', // blessed
     800: '',
   },
 
   blue: {
     50: '#f1faff', // blessed
-    xx1: '#e5f8ff',
-    xx2: '#dcf3ff',
-    100: '#cbeeff', // blessed
-    200: '#bae8ff',
-    300: '#8ad8ff',
-    400: '',
+    100: '#dcf3ff', // blessed
+    200: '#cbeeff', // blessed
+    300: '#bae8ff',
+    400: '#8ad8ff',
     500: '#29b1f0', // blessed
     600: '#009fe8', // blessed
     700: '#0084c2',

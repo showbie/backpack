@@ -1,35 +1,35 @@
 <template>
-  <div class="swatch fl mt2 mr4 mb4 w-40 br2 overflow-hidden">
-    <div class="h4 flex items-end" :style="bgStyle">
+  <div class="swatch flex mt2 mb4 br2 overflow-hidden">
+    <div class="w4 h4 flex-shrink-0 flex items-end" :style="bgStyle">
       <div class="w-100 flex justify-around mb3">
         <span class="dib f6 b pa2 br1" :style="bgStyle">{{ bgContrast }}</span>
         <span class="dib f6 b pa2 br1" :style="fgStyle">{{ fgContrast }}</span>
       </div>
     </div>
-    <div class="swatch-details ph4 pv3 bt b--black-025">
-      <dl class="flex justify-between items-center ma0">
+    <dl class="swatch-details flex flex-wrap items-center ma0 ph4 pv3 bl b--black-025">
+      <div class="w-100 mh2">
         <dt class="f7 fw6 lh-copy ttu">Name</dt>
-        <dd class="f5 tr mt1 ml2">{{ colorName }}</dd>
-      </dl>
-      <dl class="flex justify-between items-center mt4 mb0">
-        <dt class="f7 fw6 ttu">Value</dt>
+        <dd class="f5 ml0">{{ colorName }}</dd>
+      </div>
+      <div class="mh2">
+        <dt class="f7 fw6 lh-copy ttu">Value</dt>
         <dd class="f5 ml0">
           <code>{{ colorHex }}</code>
         </dd>
-      </dl>
-      <dl class="flex justify-between items-center mt4 mb0">
-        <dt class="f7 fw6 ttu">SCSS</dt>
+      </div>
+      <div class="mh2">
+        <dt class="f7 fw6 lh-copy ttu">SCSS</dt>
         <dd class="f5 ml0">
           <code>$sb-{{ hue }}-{{ scale }}</code>
         </dd>
-      </dl>
-      <dl class="flex justify-between items-center mt4 mb0">
-        <dt class="f7 fw6 ttu">Swift</dt>
+      </div>
+      <div class="mh2">
+        <dt class="f7 fw6 lh-copy ttu">Swift</dt>
         <dd class="f5 ml0">
           <code>{{ swiftVar }}</code>
         </dd>
-      </dl>
-    </div>
+      </div>
+    </dl>
   </div>
 </template>
 
@@ -73,7 +73,7 @@ export default {
   props: {
     theme: {
       type: String,
-      required: true,
+      default: 'showbie',
     },
     hue: {
       type: String,

@@ -1,5 +1,8 @@
 # Socrative colours
 
+> Colour is my day-long obsession, joy, and torment. \
+> — *Claude Monet*
+
 <ColorScale theme="socrative" hue="grey" />
 
 <ColorScale theme="socrative" hue="cyan" />

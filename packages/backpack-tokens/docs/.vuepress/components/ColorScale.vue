@@ -17,7 +17,7 @@ export default {
   props: {
     theme: {
       type: String,
-      required: true,
+      default: 'showbie',
     },
     hue: {
       type: String,
