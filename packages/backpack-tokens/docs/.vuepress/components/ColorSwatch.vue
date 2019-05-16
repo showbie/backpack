@@ -83,6 +83,9 @@ export default {
       type: String,
       required: true,
     },
+    hex: {
+      type: String,
+    },
   },
 
   computed: {
@@ -94,7 +97,7 @@ export default {
       let source =
         this.theme === 'socrative' ? SOCRATIVE_COLORS : SHOWBIE_COLORS;
 
-      return source[this.hue][this.scale] || '#ff00ff';
+      return this.hex || source[this.hue][this.scale] || '#ff00ff';
     },
 
     /**
