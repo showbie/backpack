@@ -61,12 +61,13 @@ export default {
         greens: [
           '#5dbe6e', // blessed
         ],
-        yellows: ['#faf0a6', '#f7df68', 'rgb(221, 198, 42)'],
+        yellows: ['#faf0a6', '#f7df68', '#f4d842', 'rgb(221, 198, 42)'],
         reds: [
           '#fce5e5', // blessed
           '#f07f7f', // blessed
           '#fc3d39',
           '#e10000', // blessed
+          '#de0a17',
         ],
       },
     };
