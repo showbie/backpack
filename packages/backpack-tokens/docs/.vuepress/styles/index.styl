@@ -1,4 +1,18 @@
-h1, h2, h3, h4, .custom-block { clear: both; }
+.feature {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.feature:link:hover,
+.feature:link:focus { background-color: rgba(44, 62, 80, 0.05); }
+
+.feature h2 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  line-height: 2rem;
+}
+
+.feature p { margin-bottom: 0; }
 
 h2 .badge {
   display: inline-flex !important
