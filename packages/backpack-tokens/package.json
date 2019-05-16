@@ -23,7 +23,7 @@
     "chroma-js": "^2.0.3",
     "color-name-list": "^4.4.0",
     "eslint": "^5.16.0",
-    "handlebars": "^4.1.1",
+    "handlebars": "^4.1.2",
     "nearest-color": "^0.4.4",
     "vuepress": "^1.0.0-alpha.48"
   },
