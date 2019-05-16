@@ -13,7 +13,11 @@ module.exports = {
           collapsable: false,
           children: ['showbie/', 'socrative/', 'brands/'],
         },
-        { title: 'Exploration', collapsable: false, children: ['hell'] },
+        {
+          title: 'Exploration',
+          collapsable: false,
+          children: ['hell', 'graveyard/'],
+        },
       ],
     },
   },
