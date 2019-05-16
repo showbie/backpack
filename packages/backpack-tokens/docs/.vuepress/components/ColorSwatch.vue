@@ -77,11 +77,11 @@ export default {
     },
     hue: {
       type: String,
-      required: true,
+      // required: true,
     },
     scale: {
       type: String,
-      required: true,
+      // required: true,
     },
     hex: {
       type: String,

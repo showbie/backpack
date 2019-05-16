@@ -31,6 +31,15 @@ module.exports = {
     ],
   ],
 
+  plugins: [
+    [
+      'register-components',
+      {
+        componentsDir: 'components',
+      },
+    ],
+  ],
+
   /**
    * Required for custom components that use both `import`s and
    * `require`s.
