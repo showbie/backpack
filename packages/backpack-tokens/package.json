@@ -25,7 +25,7 @@
     "eslint": "^5.16.0",
     "handlebars": "^4.1.1",
     "nearest-color": "^0.4.4",
-    "vuepress": "^1.0.0-alpha.47"
+    "vuepress": "^1.0.0-alpha.48"
   },
   "prettier": {
     "arrowParens": "always",
