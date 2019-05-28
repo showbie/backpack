@@ -24,8 +24,9 @@ Handlebars.registerHelper('rgbfloat', (a) => rgbFloat(a));
 Handlebars.registerHelper('swiftvar', (a, b) => swiftVarName(a, b));
 
 class BaseBuilder {
-  constructor(colors, version) {
+  constructor(colors, prefix = '', version) {
     this.colors = colors;
+    this.prefix = prefix;
     this.version = version;
   }
 
@@ -35,6 +36,7 @@ class BaseBuilder {
 class ColorBuilder extends BaseBuilder {
   constructor(
     colors,
+    prefix,
     version,
     templatesDir = path.join(__dirname, '..', 'src', 'templates')
   ) {
@@ -43,17 +45,28 @@ class ColorBuilder extends BaseBuilder {
     this.templatesDir = templatesDir;
     this.colorsArray = Object.keys(colors)
       .filter((name) => typeof colors[name] !== 'string')
-      .map((name) => ({ name, scale: colors[name] }));
+      .map((name) => {
+        let scale = colors[name];
+
+        Object.keys(scale).forEach(function(key) {
+          if (scale[key] === '') {
+            delete scale[key];
+          }
+        });
+
+        return { name, scale };
+      });
   }
 
   build(file, outputPaths, extraData = {}) {
-    const template = fs.readFileSync(
+    let template = fs.readFileSync(
       path.join(this.templatesDir, `${file}.hbs`),
       { encoding: 'utf8' }
     );
-    const compile = Handlebars.compile(template);
+    let compile = Handlebars.compile(template);
 
-    const compiled = compile({
+    let compiled = compile({
+      prefix: this.prefix,
       version: this.version,
       colors: this.colorsArray,
       filter: extraData.filter ? extraData.filter : (color) => color,
