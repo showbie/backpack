@@ -3,8 +3,8 @@ function capitalize(text) {
   return text[0].toUpperCase() + text.slice(1);
 }
 
-function swiftVarName(name, label) {
-  return `sb${capitalize(name)}${capitalize(label)}`;
+function swiftVarName(prefix, name, label) {
+  return `${prefix}${capitalize(name)}${capitalize(label)}`;
 }
 
 module.exports = {

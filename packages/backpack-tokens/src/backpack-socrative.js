@@ -49,5 +49,6 @@ export const colors = {
 };
 
 export default {
+  prefix: 'soc',
   colors: colors,
 };

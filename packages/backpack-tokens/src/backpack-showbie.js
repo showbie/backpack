@@ -50,7 +50,7 @@ export const colors = {
   yellow: {
     100: '#faf0a6',
     200: '#f7df68',
-    500: 'rgb(221, 198, 42)',
+    500: '#ddc62a', // aka 'rgb(221, 198, 42)',
     600: '',
     800: '',
   },
@@ -72,5 +72,6 @@ export const colors = {
 };
 
 export default {
+  prefix: 'sbe',
   colors: colors,
 };
