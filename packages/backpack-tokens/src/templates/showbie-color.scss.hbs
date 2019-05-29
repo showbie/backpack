@@ -5,7 +5,7 @@
 {{#each colors as |hue|}}
 
 ///
-/// {{hue.name}}
+/// {{capitalize hue.name}}
 ///
 {{#each hue.scale as |value label|}}
 ${{hue.prefix}}-{{hue.name}}-{{label}}: {{value}};

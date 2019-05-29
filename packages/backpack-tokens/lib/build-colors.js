@@ -4,7 +4,7 @@ const path = require('path');
 const chroma = require('chroma-js');
 const Handlebars = require('handlebars');
 
-const { swiftVarName } = require('./utils/string');
+const { capitalize, swiftVarName } = require('./utils/string');
 
 /**
  * Get floating-point values for each colour channel and return a
@@ -20,6 +20,7 @@ function rgbFloat(hex) {
   }`;
 }
 
+Handlebars.registerHelper('capitalize', (a) => capitalize(a));
 Handlebars.registerHelper('rgbfloat', (a) => rgbFloat(a));
 Handlebars.registerHelper('swiftvar', (a, b, c) => swiftVarName(a, b, c));
 
