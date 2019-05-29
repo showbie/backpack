@@ -1,11 +1,19 @@
+////
+///   BACKPACK COLOURS
+///   v{{version}}
+////
+
 import UIKit
 
 @objc
 extension UIColor {
-{{#each colors as |hue|}}
-{{#each hue.scale as |value label|}}
-    static let {{swiftvar hue.name label}} = UIColor({{rgbfloat value}})
-{{/each}}
+{{~#each colors as |hue|}}
 
+    ///
+    /// {{hue.name}}
+    ///
+{{#each hue.scale as |value label|}}
+    static let {{swiftvar hue.prefix hue.name label}} = UIColor({{rgbfloat value}})
+{{/each}}
 {{/each}}
 }

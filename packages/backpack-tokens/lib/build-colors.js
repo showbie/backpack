@@ -21,7 +21,7 @@ function rgbFloat(hex) {
 }
 
 Handlebars.registerHelper('rgbfloat', (a) => rgbFloat(a));
-Handlebars.registerHelper('swiftvar', (a, b) => swiftVarName(a, b));
+Handlebars.registerHelper('swiftvar', (a, b, c) => swiftVarName(a, b, c));
 
 class BaseBuilder {
   constructor(colors, prefix = '', version) {
@@ -54,7 +54,7 @@ class ColorBuilder extends BaseBuilder {
           }
         });
 
-        return { name, scale };
+        return { name, scale, prefix: this.prefix };
       });
   }
 
