@@ -1,14 +1,32 @@
+import SHOWBIE from '../src/backpack-showbie';
+import SOCRATIVE from '../src/backpack-socrative';
+
 const path = require('path');
 
-const ColorBuilder = require('./build-colors');
-const COLORS = require('../src/color');
 const pkg = require('../package.json');
+const ColorBuilder = require('./build-colors');
 
-const colorBuilder = new ColorBuilder(COLORS, pkg.version);
+const ShowbieColors = new ColorBuilder(
+  SHOWBIE.colors,
+  SHOWBIE.prefix,
+  pkg.version
+);
+const SocrativeColors = new ColorBuilder(
+  SOCRATIVE.colors,
+  SOCRATIVE.prefix,
+  pkg.version
+);
 
-colorBuilder.build('showbie-color.scss', [
+ShowbieColors.build('showbie-color.scss', [
   path.join(__dirname, '..', 'dist', 'showbie-color.scss'),
 ]);
-colorBuilder.build('showbie-color.swift', [
+ShowbieColors.build('showbie-color.swift', [
   path.join(__dirname, '..', 'dist', 'showbie-color.swift'),
+]);
+
+SocrativeColors.build('showbie-color.less', [
+  path.join(__dirname, '..', 'dist', 'socrative-color.less'),
+]);
+SocrativeColors.build('showbie-color.swift', [
+  path.join(__dirname, '..', 'dist', 'socrative-color.swift'),
 ]);
