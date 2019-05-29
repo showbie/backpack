@@ -9,14 +9,18 @@
   "homepage": "https://backpack-tokens.now.sh",
   "repository": "showbie/backpack-tokens",
   "version": "1.0.0",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": "node -r esm lib/index.js",
+    "deploy": "np",
     "deploy:docs": "now && now alias",
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
     "lint": "prettier-eslint '**/*.js' --list-different",
     "now-build": "npm run docs:build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@showbie/eslint-config": "^0.3.0",
