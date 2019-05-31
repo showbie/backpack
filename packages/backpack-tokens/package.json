@@ -8,7 +8,7 @@
   ],
   "homepage": "https://backpack-tokens.now.sh",
   "repository": "showbie/backpack-tokens",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "files": [
     "dist/"
   ],
