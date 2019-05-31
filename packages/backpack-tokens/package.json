@@ -20,7 +20,9 @@
     "docs:dev": "vuepress dev docs",
     "lint": "prettier-eslint '**/*.js' --list-different",
     "now-build": "npm run docs:build",
-    "prepublishOnly": "yarn build"
+    "podspec:ver": "replace 's\\.version = \\'\\d+\\.\\d+\\.\\d+\\'' 's.version = \\'$npm_package_version\\'' ./BackpackTokens.podspec",
+    "podspec:tag": "replace 'v\\d+\\.\\d+\\.\\d+' 'v$npm_package_version' ./BackpackTokens.podspec",
+    "version": "yarn build && yarn podspec:tag && yarn podspec:ver && git add -A dist BackpackTokens.podspec"
   },
   "devDependencies": {
     "@showbie/eslint-config": "^0.3.0",
@@ -30,6 +32,7 @@
     "esm": "^3.2.25",
     "handlebars": "^4.1.2",
     "nearest-color": "^0.4.4",
+    "replace": "^1.1.0",
     "vuepress": "^1.0.0-alpha.48"
   },
   "prettier": {
