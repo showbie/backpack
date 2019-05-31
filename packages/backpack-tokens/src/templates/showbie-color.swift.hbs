@@ -13,6 +13,7 @@ extension UIColor {
     /// {{capitalize hue.name}}
     ///
 {{#each hue.scale as |value label|}}
+    // {{value}}
     static let {{swiftvar hue.prefix hue.name label}} = UIColor({{rgbfloat value}})
 {{/each}}
 {{/each}}
