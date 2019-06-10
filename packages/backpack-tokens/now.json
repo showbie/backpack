@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "backpack-tokens",
-  "alias": "backpack-tokens",
+  "alias": "design.showbie.com",
   "builds": [
     {
       "src": "package.json",
