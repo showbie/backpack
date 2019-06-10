@@ -15,7 +15,7 @@
   "scripts": {
     "build": "node -r esm lib/index.js",
     "deploy": "np",
-    "deploy:docs": "now && now alias",
+    "deploy:docs": "now && now --target production",
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
     "lint": "prettier-eslint '**/*.js' --list-different",
