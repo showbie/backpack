@@ -33,7 +33,7 @@
     "handlebars": "^4.1.2",
     "nearest-color": "^0.4.4",
     "replace": "^1.1.0",
-    "vuepress": "^1.0.0-alpha.48"
+    "vuepress": "^1.0.1"
   },
   "prettier": {
     "arrowParens": "always",
