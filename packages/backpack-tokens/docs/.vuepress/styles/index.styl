@@ -1,6 +1,10 @@
-.feature {
+.home .features .feature {
   padding: 1rem;
   border-radius: 0.5rem;
+
+  @media (max-width: 719px) {
+    padding: 1rem;
+  }
 }
 .feature:link:hover,
 .feature:link:focus { background-color: rgba(44, 62, 80, 0.05); }
@@ -18,4 +22,5 @@ h2 .badge {
   display: inline-flex !important
   align-items: center;
   height: 36px !important;
+  margin-right: 0.5rem;
 }
