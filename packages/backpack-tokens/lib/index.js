@@ -27,6 +27,9 @@ ShowbieColors.build('showbie-color.swift', [
 SocrativeColors.build('showbie-color.less', [
   path.join(__dirname, '..', 'dist', 'socrative-color.less'),
 ]);
+SocrativeColors.build('showbie-color.scss', [
+  path.join(__dirname, '..', 'dist', 'socrative-color.scss'),
+]);
 SocrativeColors.build('showbie-color.swift', [
   path.join(__dirname, '..', 'dist', 'socrative-color.swift'),
 ]);

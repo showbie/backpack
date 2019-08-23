@@ -68,6 +68,7 @@ export const colors = {
     google: '#dc4e41',
     microsoft: '#07a6f0',
     showbie: '#009fe8',
+    socrative: '#ff602b',
   },
 };
 
