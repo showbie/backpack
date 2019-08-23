@@ -20,7 +20,7 @@
       <div class="mh2">
         <dt class="f7 fw6 lh-copy ttu">SCSS</dt>
         <dd class="f5 ml0">
-          <code>$sb-{{ hue }}-{{ scale }}</code>
+          <code>${{ variablePrefix }}-{{ hue }}-{{ scale }}</code>
         </dd>
       </div>
       <div class="mh2">
@@ -36,8 +36,8 @@
 <script>
 import namedColors from 'color-name-list';
 
-import { colors as SHOWBIE_COLORS } from '../../../src/backpack-showbie';
-import { colors as SOCRATIVE_COLORS } from '../../../src/backpack-socrative';
+import SHOWBIE from '../../../src/backpack-showbie';
+import SOCRATIVE from '../../../src/backpack-socrative';
 
 const chroma = require('chroma-js');
 const nearestColor = require('nearest-color');
@@ -95,9 +95,13 @@ export default {
      */
     colorHex: function() {
       let source =
-        this.theme === 'socrative' ? SOCRATIVE_COLORS : SHOWBIE_COLORS;
+        this.theme === 'socrative' ? SOCRATIVE.colors : SHOWBIE.colors;
 
       return this.hex || source[this.hue][this.scale] || '#ff00ff';
+    },
+
+    variablePrefix: function() {
+      return this.theme === 'socrative' ? SOCRATIVE.prefix : SHOWBIE.prefix;
     },
 
     /**
@@ -117,7 +121,7 @@ export default {
     },
 
     swiftVar: function() {
-      return swiftVarName(this.hue, this.scale);
+      return swiftVarName(this.variablePrefix, this.hue, this.scale);
     },
 
     // Determine best foreground colour to use on `color` background.
