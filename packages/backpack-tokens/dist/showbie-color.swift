@@ -1,6 +1,6 @@
 ////
 ///   BACKPACK COLOURS
-///   v0.1.3
+///   v0.2.0
 ////
 
 import UIKit
@@ -96,4 +96,6 @@ extension UIColor {
     static let sbeBrandMicrosoft = UIColor(red: 0.027450980392156862, green: 0.6509803921568628, blue: 0.9411764705882353, alpha: 1)
     // #009fe8
     static let sbeBrandShowbie = UIColor(red: 0, green: 0.6235294117647059, blue: 0.9098039215686274, alpha: 1)
+    // #ff602b
+    static let sbeBrandSocrative = UIColor(red: 1, green: 0.3764705882352941, blue: 0.16862745098039217, alpha: 1)
 }
