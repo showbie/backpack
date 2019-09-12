@@ -15,14 +15,14 @@
   "scripts": {
     "build": "node -r esm lib/index.js",
     "deploy": "np",
-    "deploy:docs": "now && now --target production",
     "docs:build": "vuepress build docs",
+    "docs:deploy": "now && now --target production",
     "docs:dev": "vuepress dev docs",
     "lint": "prettier-eslint '**/*.js' --list-different",
     "now-build": "npm run docs:build",
     "podspec:ver": "replace \"s\\.version = '\\d+\\.\\d+\\.\\d+'\" \"s.version = '$npm_package_version'\" ./BackpackTokens.podspec",
-    "podspec:tag": "replace \"v\\d+\\.\\d+\\.\\d+\" \"v$npm_package_version\" ./BackpackTokens.podspec",
-    "version": "yarn build && yarn podspec:tag && yarn podspec:ver && git add -A dist BackpackTokens.podspec"
+    "postpublish": "pod repo push showbie",
+    "version": "yarn build && yarn podspec:ver && git add -A dist BackpackTokens.podspec"
   },
   "devDependencies": {
     "@showbie/eslint-config": "^0.3.1",
