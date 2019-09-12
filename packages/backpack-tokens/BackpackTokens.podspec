@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name = 'BackpackTokens'
   s.version = '0.2.0'
-  s.license = { :type => 'ISC' }
+  s.license = { :type => 'ISC', :file => 'LICENSE.txt' }
   s.homepage = 'https://design.showbie.com'
-  s.authors = { 'Jeff Nelson' => 'jeff@showbie.com' }
+  s.author = 'Showbie Inc.'
   s.summary = 'Design tokens for the Backpack design system at Showbie'
   s.source = { :git => 'https://github.com/showbie/backpack-tokens.git', :tag => 'v0.2.0' }
   s.swift_version = '4.2'
