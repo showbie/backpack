@@ -14,14 +14,14 @@
   ],
   "scripts": {
     "build": "node -r esm lib/index.js",
-    "deploy": "np",
+    "deploy": "np && yarn podspec:deploy",
     "docs:build": "vuepress build docs",
     "docs:deploy": "now && now --target production",
     "docs:dev": "vuepress dev docs",
     "lint": "prettier-eslint '**/*.js' --list-different",
     "now-build": "npm run docs:build",
+    "podspec:deploy": "pod repo push showbie",
     "podspec:ver": "replace \"s\\.version = '\\d+\\.\\d+\\.\\d+'\" \"s.version = '$npm_package_version'\" ./BackpackTokens.podspec",
-    "postpublish": "pod repo push showbie",
     "version": "yarn build && yarn podspec:ver && git add -A dist BackpackTokens.podspec"
   },
   "devDependencies": {
