@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "build": "node -r esm lib/index.js",
-    "deploy": "np --no-release-draft && yarn podspec:deploy",
+    "deploy": "np --no-release-draft && yarn podspec:deploy && yarn docs:deploy",
     "docs:build": "vuepress build docs",
     "docs:deploy": "now && now --target production",
     "docs:dev": "vuepress dev docs",
