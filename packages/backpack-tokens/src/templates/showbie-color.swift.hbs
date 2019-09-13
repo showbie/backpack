@@ -6,7 +6,7 @@
 import UIKit
 
 @objc
-extension UIColor {
+public extension UIColor {
 {{~#each colors as |hue|}}
 
     ///
@@ -14,7 +14,7 @@ extension UIColor {
     ///
 {{#each hue.scale as |value label|}}
     // {{value}}
-    static let {{swiftvar hue.prefix hue.name label}} = UIColor({{rgbfloat value}})
+    public static let {{swiftvar hue.prefix hue.name label}} = UIColor({{rgbfloat value}})
 {{/each}}
 {{/each}}
 }
