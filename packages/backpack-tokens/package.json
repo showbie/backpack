@@ -28,7 +28,7 @@
     "@showbie/eslint-config": "^0.4.1",
     "chroma-js": "^2.0.6",
     "color-name-list": "^4.10.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.3.0",
     "esm": "^3.2.25",
     "handlebars": "^4.1.2",
     "nearest-color": "^0.4.4",
