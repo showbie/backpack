@@ -4,24 +4,24 @@
  */
 export const colors = {
   grey: {
-    50: '#f8f8f8',
-    100: '#ecedee',
-    xx1: '#e9e9eb', // replace with 100?
+    // 50: '#f8f8f8',
+    // 100: '#ecedee',
+    // xx1: '#e9e9eb', // replace with 100?
     200: '',
     300: '',
     400: '#c4c4ca', // blessed
     500: '#b9bbbd', // blessed
-    600: '#989fa6',
-    700: '#7a8184',
-    800: '#545454',
+    // 600: '#989fa6',
+    // 700: '#7a8184',
+    // 800: '#545454',
     900: '',
   },
 
   slate: {
     50: '',
     200: '',
-    500: '#94b2c1',
-    xx5: '#90a8b2',
+    // 500: '#94b2c1',
+    // xx5: '#90a8b2',
     600: '#8aa4af', // blessed
     800: '',
   },
@@ -30,8 +30,8 @@ export const colors = {
     50: '#f1faff', // blessed
     100: '#dcf3ff', // blessed
     200: '#cbeeff', // blessed
-    300: '#bae8ff',
-    400: '#8ad8ff',
+    // 300: '#bae8ff',
+    // 400: '#8ad8ff',
     500: '#29b1f0', // blessed
     600: '#009fe8', // blessed
     700: '#0084c2',
@@ -48,9 +48,9 @@ export const colors = {
   },
 
   yellow: {
-    100: '#faf0a6',
-    200: '#f7df68',
-    500: '#ddc62a', // aka 'rgb(221, 198, 42)',
+    // 100: '#faf0a6',
+    // 200: '#f7df68',
+    // 500: '#ddc62a', // aka 'rgb(221, 198, 42)',
     600: '',
     800: '',
   },
@@ -59,7 +59,7 @@ export const colors = {
     100: '#fce5e5', // blessed
     200: '',
     500: '#f07f7f', // blessed
-    600: '#fc3d39',
+    // 600: '#fc3d39',
     800: '#e10000', // blessed
   },
 
