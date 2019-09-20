@@ -1,26 +1,29 @@
 /**
  *    BACKPACK COLOURS
- *    v0.2.4
+ *    v0.3.0
  */
 
 var colors = {
   grey: {
     50: '#f8f8f8',
-    100: '#e6e5e7',
-    200: '#cdccd0',
-    300: '#b9bbbd',
+    100: '#f1f0f2',
+    200: '#e6e5e7',
+    300: '#cdccd0',
+    400: '#b9bbbd',
   },
 
   orange: {
     50: '#fff7e5',
-    100: '#ffe9b7',
+    100: '#fff0ce',
+    200: '#ffe9b7',
     500: '#ffc857',
     600: '#efa946',
   },
 
   green: {
     50: '#e7f6ea',
-    100: '#c9e9cf',
+    100: '#daf0de',
+    200: '#c9e9cf',
     500: '#5dbe6e',
   },
 
