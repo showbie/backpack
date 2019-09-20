@@ -9,6 +9,7 @@
   "homepage": "https://design.showbie.com",
   "repository": "showbie/backpack-tokens",
   "version": "0.2.4",
+  "main": "dist/index.js",
   "files": [
     "dist/"
   ],

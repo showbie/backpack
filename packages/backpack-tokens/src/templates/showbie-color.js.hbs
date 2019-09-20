@@ -1,0 +1,17 @@
+/**
+ *    BACKPACK COLOURS
+ *    v{{version}}
+ */
+
+var colors = {
+{{~#each colors as |hue|}}
+
+  {{hue.name}}: {
+{{#each hue.scale as |value label|}}
+    {{label}}: '{{value}}',
+{{/each}}
+  },
+{{/each}}
+}
+
+exports.colors = colors;
