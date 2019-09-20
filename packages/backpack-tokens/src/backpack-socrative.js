@@ -1,10 +1,10 @@
 export const colors = {
   grey: {
     50: '#f8f8f8',
-    100: '#e6e5e7',
-    200: '#cdccd0',
-    300: '#b9bbbd',
-    400: '',
+    100: '#f1f0f2',
+    200: '#e6e5e7',
+    300: '#cdccd0',
+    400: '#b9bbbd',
     500: '',
     600: '',
     700: '',
@@ -14,8 +14,8 @@ export const colors = {
 
   orange: {
     50: '#fff7e5',
-    100: '#ffe9b7',
-    200: '',
+    100: '#fff0ce',
+    200: '#ffe9b7',
     300: '',
     400: '',
     500: '#ffc857',
@@ -27,8 +27,8 @@ export const colors = {
 
   green: {
     50: '#e7f6ea',
-    100: '#c9e9cf',
-    200: '',
+    100: '#daf0de',
+    200: '#c9e9cf',
     300: '',
     400: '',
     500: '#5dbe6e',
@@ -40,7 +40,7 @@ export const colors = {
 
   cyan: {
     50: '#e4fbff',
-    100: '',
+    100: '#d8f8ff',
     200: '',
     300: '',
     400: '',
