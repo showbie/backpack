@@ -1,45 +1,60 @@
 <template>
   <div class="swatch flex mt2 mb4 br2 overflow-hidden">
-    <div class="w4 h4 flex-shrink-0 flex items-end" :style="bgStyle">
+    <div class="w4 flex-shrink-0 flex items-end" :style="bgStyle" style="min-height: 8rem">
       <div class="w-100 flex justify-around mb3">
-        <span class="dib f6 b pa2 br1" :style="bgStyle">{{ bgContrast }}</span>
-        <span class="dib f6 b pa2 br1" :style="fgStyle">{{ fgContrast }}</span>
+        <span class="dib f6 b pa2 br1" :style="blackContrastStyle">{{ blackContrast }}</span>
+        <span class="dib f6 b pa2 br1" :style="whiteContrastStyle">{{ whiteContrast }}</span>
       </div>
     </div>
     <dl class="swatch-details flex flex-wrap items-center ma0 ph4 pv3 bl b--black-025">
-      <div class="w-100 mh2">
+      <div class="w-100 mv2 mh2">
         <dt class="f7 fw6 lh-copy ttu">Name</dt>
         <dd class="f5 ml0">{{ colorName }}</dd>
       </div>
-      <div class="mh2">
+      <div class="mv2 mh2">
         <dt class="f7 fw6 lh-copy ttu">Value</dt>
         <dd class="f5 ml0">
           <code>{{ colorHex }}</code>
         </dd>
       </div>
-      <div class="mh2">
+      <div class="mv2 mh2">
         <dt class="f7 fw6 lh-copy ttu">SCSS</dt>
         <dd class="f5 ml0">
           <code>${{ variablePrefix }}-{{ hue }}-{{ scale }}</code>
         </dd>
       </div>
-      <div class="mh2">
+      <div class="mv2 mh2">
         <dt class="f7 fw6 lh-copy ttu">Swift</dt>
         <dd class="f5 ml0">
           <code>{{ swiftVar }}</code>
         </dd>
+      </div>
+      <div class="flex">
+        <div class="mv2 mh2">
+          <dt class="f7 fw6 lh-copy ttu">RGB</dt>
+          <dd class="f5 ml0">
+            <code>{{ colorRGB }}</code>
+          </dd>
+        </div>
+        <div class="mv2 mh2">
+          <dt class="f7 fw6 lh-copy ttu">HSL</dt>
+          <dd class="f5 ml0">
+            <code>{{ colorHSL }}</code>
+          </dd>
+        </div>
       </div>
     </dl>
   </div>
 </template>
 
 <script>
+import chroma from 'chroma-js';
 import namedColors from 'color-name-list';
 
 import SHOWBIE from '../../../src/backpack-showbie';
 import SOCRATIVE from '../../../src/backpack-socrative';
 
-const chroma = require('chroma-js');
+// const chroma = require('chroma-js');
 const nearestColor = require('nearest-color');
 
 const COLORS = require('../../../src/color');
@@ -100,6 +115,22 @@ export default {
       return this.hex || source[this.hue][this.scale] || '#ff00ff';
     },
 
+    colorRGB: function() {
+      return chroma(this.colorHex)
+        .rgb()
+        .join(', ');
+    },
+
+    colorHSL: function() {
+      let hsl = [
+        Math.round(chroma(this.colorHex).get('hsl.h')),
+        Math.round(chroma(this.colorHex).get('hsl.s') * 100),
+        Math.round(chroma(this.colorHex).get('hsl.l') * 100),
+      ];
+
+      return hsl.join(', ');
+    },
+
     variablePrefix: function() {
       return this.theme === 'socrative' ? SOCRATIVE.prefix : SHOWBIE.prefix;
     },
@@ -130,16 +161,16 @@ export default {
       return lum < 0.5 ? 'white' : 'black';
     },
 
-    // Contrast score when used as a background-color.
-    bgContrast: function() {
-      let contrast = chroma.contrast(this.colorHex, this.foreground);
+    // Contrast score against black.
+    blackContrast() {
+      let contrast = chroma.contrast(this.colorHex, '#000');
       let contrastScore = score(contrast);
 
       return contrastScore;
     },
 
-    // Contrast score when used as a foreground colour on white.
-    fgContrast: function() {
+    // Contrast score against white.
+    whiteContrast() {
       let contrast = chroma.contrast(this.colorHex, '#fff');
       let contrastScore = score(contrast);
 
@@ -150,8 +181,12 @@ export default {
       return `background-color:${this.colorHex}; color:${this.foreground}`;
     },
 
-    fgStyle: function() {
-      return `background-color: #fff; color: ${this.colorHex}`;
+    blackContrastStyle: function() {
+      return `color: #000; background-color: ${this.colorHex}`;
+    },
+
+    whiteContrastStyle: function() {
+      return `color: #fff; background-color: ${this.colorHex}`;
     },
   },
 };
