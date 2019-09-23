@@ -26,15 +26,15 @@
     "version": "yarn build && yarn podspec:ver && git add -A dist BackpackTokens.podspec"
   },
   "devDependencies": {
-    "@showbie/eslint-config": "^0.4.1",
-    "chroma-js": "^2.0.6",
-    "color-name-list": "^4.10.0",
-    "eslint": "^6.3.0",
-    "esm": "^3.2.25",
-    "handlebars": "^4.1.2",
-    "nearest-color": "^0.4.4",
-    "replace": "^1.1.1",
-    "vuepress": "^1.0.4"
+    "@showbie/eslint-config": "0.4.x",
+    "chroma-js": "2.0.x",
+    "color-name-list": "4.10.x",
+    "eslint": "6.4.x",
+    "esm": "3.2.x",
+    "handlebars": "4.2.x",
+    "nearest-color": "0.4.x",
+    "replace": "1.1.x",
+    "vuepress": "1.1.x"
   },
   "prettier": {
     "arrowParens": "always",
