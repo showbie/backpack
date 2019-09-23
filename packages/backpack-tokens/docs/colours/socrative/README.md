@@ -93,6 +93,10 @@
 
 <ColorSwatch theme="socrative" hue="cyan" scale="600" />
 
+### Cyan 700
+
+<ColorSwatch theme="socrative" hue="cyan" scale="700" />
+
 ## Blues
 
 ### Blue 900
