@@ -4,7 +4,7 @@
  */
 export const colors = {
   grey: {
-    // 50: '#f8f8f8',
+    50: '#f8f8f8', // blessed
     // 100: '#ecedee',
     // xx1: '#e9e9eb', // replace with 100?
     200: '',

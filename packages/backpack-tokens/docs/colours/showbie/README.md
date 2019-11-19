@@ -51,7 +51,7 @@ And this??
 
 #### Notes
 
-When it's used as a hover state, it has the same appearance as rgba(0,0,0,0.3)
+When it's used as a hover state, it has the same appearance as `rgba(0,0,0,0.3)`
 over a white background. This transparent version is used in some other
 places like the wrench menu items. Might consider standardizing on one of the
 two approaches.
