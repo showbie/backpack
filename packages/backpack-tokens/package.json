@@ -17,7 +17,7 @@
     "build": "node -r esm lib/index.js",
     "deploy": "np --no-release-draft && yarn podspec:deploy && yarn docs:deploy",
     "docs:build": "vuepress build docs",
-    "docs:deploy": "now && now --target production",
+    "docs:deploy": "now --prod",
     "docs:dev": "vuepress dev docs",
     "test": "prettier-eslint '**/*.js' --ignore 'dist/*.js' --list-different",
     "now-build": "npm run docs:build",
