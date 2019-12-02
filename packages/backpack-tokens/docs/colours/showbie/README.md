@@ -182,9 +182,22 @@ stroke, icons). Also used in AudioNote component controls.
 
 ## Green
 
+### Green 100
+
+<ColorSwatch hue="green" scale="100" />
+
+Background colour for positive notification messages.
+
 ### Green 500
 
 <ColorSwatch hue="green" scale="500" />
+
+### Green 600
+
+<ColorSwatch hue="green" scale="600" />
+
+Used for text or icons against a background colour of `green-100`. Added
+for async notifications.
 
 ## Yellow
 
@@ -218,6 +231,9 @@ during recording.
 ### Red 600
 
 <ColorSwatch hue="red" scale="600" />
+
+Used for text or icons against a background colour of `red-100`. Added
+for async notifications.
 
 ### Red 800
 

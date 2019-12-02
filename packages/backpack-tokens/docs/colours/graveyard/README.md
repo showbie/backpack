@@ -57,6 +57,25 @@ this element.
 
 Sign-up TOC footer link is incorrect, should be `color-secondary-dark`.
 
+### Apricot†
+
+::: warning
+Replace this with `#f07f7f`.
+:::
+
+<ColorSwatch hex="#ec8183" theme="showbie" />
+
+### Red-orange
+
+::: warning
+Replacement unavailable. Evaluate usage and replace with either
+`red-800` or a new `red-700` value.
+:::
+
+<ColorSwatch hex="#fc3d39" theme="showbie" />
+
+A hover/focus state for $color-apricot.
+
 ## Socrative
 
 All of them.
