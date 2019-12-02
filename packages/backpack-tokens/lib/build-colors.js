@@ -31,7 +31,7 @@ class BaseBuilder {
     this.version = version;
   }
 
-  build(file, outputPaths, extraData = {}) {}
+  // build(file, outputPaths, extraData = {}) {}
 }
 
 class ColorBuilder extends BaseBuilder {

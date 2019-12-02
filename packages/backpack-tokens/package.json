@@ -19,7 +19,7 @@
     "docs:build": "vuepress build docs",
     "docs:deploy": "now --prod",
     "docs:dev": "vuepress dev docs",
-    "test": "prettier-eslint '**/*.js' --ignore 'dist/*.js' --list-different",
+    "test": "eslint '**/*.js' --ignore 'dist/*.js'",
     "now-build": "npm run docs:build",
     "podspec:deploy": "pod repo push showbie --allow-warnings",
     "podspec:ver": "replace \"s\\.version = '\\d+\\.\\d+\\.\\d+'\" \"s.version = '$npm_package_version'\" ./BackpackTokens.podspec",
