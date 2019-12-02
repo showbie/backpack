@@ -34,7 +34,7 @@
     "handlebars": "4.5.x",
     "nearest-color": "0.4.x",
     "replace": "1.1.x",
-    "vuepress": "1.1.x"
+    "vuepress": "1.2.x"
   },
   "prettier": {
     "arrowParens": "always",
