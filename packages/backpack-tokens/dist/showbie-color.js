@@ -1,6 +1,6 @@
 /**
  *    BACKPACK COLOURS
- *    v0.5.0
+ *    v0.6.0
  */
 
 var colors = {
@@ -24,7 +24,9 @@ var colors = {
   },
 
   green: {
+    100: '#def2e1',
     500: '#5dbe6e',
+    600: '#49af5b',
   },
 
   yellow: {
@@ -33,6 +35,7 @@ var colors = {
   red: {
     100: '#fce5e5',
     500: '#f07f7f',
+    600: '#eb5f5f',
     800: '#e10000',
   },
 
