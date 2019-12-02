@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@showbie/eslint-config": "0.4.x",
-    "chroma-js": "2.0.x",
+    "chroma-js": "2.1.x",
     "color-name-list": "4.10.x",
     "eslint": "6.7.x",
     "esm": "3.2.x",
