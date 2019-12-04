@@ -1,6 +1,6 @@
 /**
  *    BACKPACK COLOURS
- *    v0.6.0
+ *    v0.6.1
  */
 
 var colors = {
@@ -25,6 +25,7 @@ var colors = {
     100: '#daf0de',
     200: '#c9e9cf',
     500: '#5dbe6e',
+    600: '#49af5b',
   },
 
   cyan: {
