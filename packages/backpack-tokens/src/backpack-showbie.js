@@ -40,7 +40,7 @@ export const colors = {
   },
 
   green: {
-    100: '#def2e1', // blessed
+    100: '#daf0de', // blessed
     200: '',
     500: '#5dbe6e', // blessed
     600: '#49af5b', // blessed

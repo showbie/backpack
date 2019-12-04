@@ -75,6 +75,10 @@
 
 <ColorSwatch theme="socrative" hue="green" scale="500" />
 
+### Green 600
+
+<ColorSwatch theme="socrative" hue="green" scale="600" />
+
 ## Cyans
 
 ### Cyan 50
