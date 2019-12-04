@@ -16,7 +16,7 @@ module.exports = {
         {
           title: 'Exploration',
           collapsable: false,
-          children: ['grid/', 'graveyard/'],
+          children: ['unconfirmed/', 'graveyard/', 'grid/'],
         },
       ],
     },
