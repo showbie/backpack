@@ -35,6 +35,18 @@
 
 <ColorSwatch theme="socrative" hue="grey" scale="400" />
 
+### Grey 500
+
+<ColorSwatch theme="socrative" hue="grey" scale="500" />
+
+### Grey 600
+
+<ColorSwatch theme="socrative" hue="grey" scale="600" />
+
+### Grey 700
+
+<ColorSwatch theme="socrative" hue="grey" scale="700" />
+
 ## Oranges
 
 ### Orange 50
