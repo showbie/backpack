@@ -1,15 +1,18 @@
 /**
  *    BACKPACK COLOURS
- *    v0.6.1
+ *    v1.0.0
  */
 
 var colors = {
   grey: {
-    50: '#f8f8f8',
-    100: '#f1f0f2',
-    200: '#e6e5e7',
-    300: '#cdccd0',
-    400: '#b9bbbd',
+    50: '#f5f7f8',
+    100: '#eff3f5',
+    200: '#e7edf0',
+    300: '#dde5ea',
+    400: '#d3dce1',
+    500: '#c2cbd2',
+    600: '#abb4bd',
+    700: '#8c97a1',
   },
 
   orange: {
