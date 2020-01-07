@@ -19,10 +19,10 @@
     "docs:build": "vuepress build docs",
     "docs:deploy": "now --prod",
     "docs:dev": "vuepress dev docs",
-    "test": "eslint '**/*.js' --ignore 'dist/*.js'",
     "now-build": "npm run docs:build",
     "podspec:deploy": "pod repo push showbie --allow-warnings",
     "podspec:ver": "replace \"s\\.version = '\\d+\\.\\d+\\.\\d+'\" \"s.version = '$npm_package_version'\" ./BackpackTokens.podspec",
+    "test": "eslint '**/*.js' --ignore 'dist/*.js'",
     "version": "yarn build && yarn podspec:ver && git add -A dist BackpackTokens.podspec"
   },
   "devDependencies": {
@@ -35,6 +35,9 @@
     "nearest-color": "0.4.x",
     "replace": "1.1.x",
     "vuepress": "1.2.x"
+  },
+  "engines": {
+    "node": "12.x"
   },
   "prettier": {
     "arrowParens": "always",
