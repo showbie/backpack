@@ -56,6 +56,10 @@ over a white background. This transparent version is used in some other
 places like the wrench menu items. Might consider standardizing on one of the
 two approaches.
 
+### Grey 200
+
+<ColorSwatch hue="grey" scale="200" />
+
 ### Grey 500
 
 <ColorSwatch hue="grey" scale="500" />

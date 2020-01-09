@@ -29,6 +29,14 @@ Replace this with `#e6e5e7`
 
 Good old comment bubble colours.
 
+### Windswept beach
+
+::: warning
+Replace this with `#e6e5e7`
+:::
+
+<ColorSwatch hex="#e3e4e6" theme="showbie" />
+
 ### Silver-sand-light†
 
 ::: warning
