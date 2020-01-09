@@ -31,7 +31,7 @@
     "color-name-list": "4.11.x",
     "eslint": "6.8.x",
     "esm": "3.2.x",
-    "handlebars": "4.5.x",
+    "handlebars": "4.6.x",
     "nearest-color": "0.4.x",
     "replace": "1.1.x",
     "vuepress": "1.2.x"
