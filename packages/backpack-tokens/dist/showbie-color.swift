@@ -1,6 +1,6 @@
 ////
 ///   BACKPACK COLOURS
-///   v1.1.0
+///   v1.2.0
 ////
 
 import UIKit
@@ -24,6 +24,10 @@ public extension UIColor {
     ///
     // #8aa4af
     static let sbeSlate600 = UIColor(red: 0.5411764705882353, green: 0.6431372549019608, blue: 0.6862745098039216, alpha: 1)
+    // #152024
+    static let sbeSlate900 = UIColor(red: 0.08235294117647059, green: 0.12549019607843137, blue: 0.1411764705882353, alpha: 1)
+    // rgba(21,32,36,0.95)
+    static let sbeSlate900_95 = UIColor(red: 0.08235294117647059, green: 0.12549019607843137, blue: 0.1411764705882353, alpha: 0.95)
 
     ///
     /// Blue
