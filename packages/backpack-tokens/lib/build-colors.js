@@ -15,14 +15,14 @@ const { capitalize, swiftVarName } = require('./utils/string');
  */
 function rgbFloat(hex) {
   let vals = chroma(hex).gl();
-  return `red: ${vals[0]}, green: ${vals[1]}, blue: ${vals[2]}, alpha: ${
-    vals[3]
-  }`;
+  return `red: ${vals[0]}, green: ${vals[1]}, blue: ${vals[2]}, alpha: ${vals[3]}`;
 }
 
 Handlebars.registerHelper('capitalize', (a) => capitalize(a));
 Handlebars.registerHelper('rgbfloat', (a) => rgbFloat(a));
-Handlebars.registerHelper('swiftvar', (a, b, c) => swiftVarName(a, b, c));
+Handlebars.registerHelper('swiftvar', (a, b, c) =>
+  swiftVarName(a, b, c.replace(/-+/g, '_'))
+);
 
 class BaseBuilder {
   constructor(colors, prefix = '', version) {

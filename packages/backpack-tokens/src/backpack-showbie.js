@@ -1,3 +1,5 @@
+import chroma from 'chroma-js';
+
 /**
  * Colours marked "blessed" are in use and confirmed accurate by the
  * design team. Other colours are found in production but unconfirmed.
@@ -24,6 +26,7 @@ export const colors = {
     // xx5: '#90a8b2',
     600: '#8aa4af', // blessed
     800: '',
+    900: '#152024', // blessed
   },
 
   blue: {
@@ -69,6 +72,15 @@ export const colors = {
     microsoft: '#07a6f0',
     showbie: '#009fe8',
     socrative: '#ff602b',
+  },
+};
+
+colors.slate = {
+  ...colors.slate,
+  ...{
+    '900-95': chroma(colors.slate['900'])
+      .alpha(0.95)
+      .css(),
   },
 };
 

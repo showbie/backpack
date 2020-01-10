@@ -65,6 +65,17 @@ this element.
 
 Sign-up TOC footer link is incorrect, should be `color-secondary-dark`.
 
+### Black feather
+
+::: warning
+Replace this with `#152024`
+:::
+
+<ColorSwatch hex="#101e24" theme="showbie" />
+
+Not really ever used fully-opaque, but semi-transparent at various levels in
+the previewer. To be standardised at a 95% opacity.
+
 ### Apricot†
 
 ::: warning

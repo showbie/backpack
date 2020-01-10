@@ -1,12 +1,22 @@
 <template>
   <div class="swatch flex mt2 mb4 br2 overflow-hidden">
-    <div class="w4 flex-shrink-0 flex items-end" :style="bgStyle" style="min-height: 8rem">
+    <div
+      class="w4 flex-shrink-0 flex items-end"
+      :style="bgStyle"
+      style="min-height: 8rem"
+    >
       <div class="w-100 flex justify-around mb3">
-        <span class="dib f6 b pa2 br1" :style="blackContrastStyle">{{ blackContrast }}</span>
-        <span class="dib f6 b pa2 br1" :style="whiteContrastStyle">{{ whiteContrast }}</span>
+        <span class="dib f6 b pa2 br1" :style="blackContrastStyle">{{
+          blackContrast
+        }}</span>
+        <span class="dib f6 b pa2 br1" :style="whiteContrastStyle">{{
+          whiteContrast
+        }}</span>
       </div>
     </div>
-    <dl class="swatch-details flex flex-wrap items-center ma0 ph4 pv3 bl b--black-025">
+    <dl
+      class="swatch-details flex flex-wrap items-center ma0 ph4 pv3 bl b--black-025"
+    >
       <div class="w-100 mv2 mh2">
         <dt class="f7 fw6 lh-copy ttu">Name</dt>
         <dd class="f5 ml0">{{ colorName }}</dd>
@@ -14,7 +24,7 @@
       <div class="mv2 mh2">
         <dt class="f7 fw6 lh-copy ttu">Value</dt>
         <dd class="f5 ml0">
-          <code>{{ colorHex }}</code>
+          <code>{{ chromaColor.hex() }}</code>
         </dd>
       </div>
       <div class="mv2 mh2">
@@ -51,13 +61,11 @@
 import chroma from 'chroma-js';
 import namedColors from 'color-name-list';
 
-import SHOWBIE from '../../../src/backpack-showbie';
-import SOCRATIVE from '../../../src/backpack-socrative';
+import SBE from '../../../src/backpack-showbie';
+import SOC from '../../../src/backpack-socrative';
 
-// const chroma = require('chroma-js');
 const nearestColor = require('nearest-color');
 
-const COLORS = require('../../../src/color');
 const { swiftVarName } = require('../../../lib/utils/string');
 
 /**
@@ -108,31 +116,29 @@ export default {
      * @todo Need to handle error here if the colour doesn't exist
      *       in the main list.
      */
-    colorHex: function() {
-      let source =
-        this.theme === 'socrative' ? SOCRATIVE.colors : SHOWBIE.colors;
+    chromaColor: function() {
+      let source = this.theme === 'socrative' ? SOC.colors : SBE.colors;
+      let color = this.hex || source[this.hue][this.scale];
 
-      return this.hex || source[this.hue][this.scale] || '#ff00ff';
+      return chroma(color);
     },
 
     colorRGB: function() {
-      return chroma(this.colorHex)
-        .rgb()
-        .join(', ');
+      return this.chromaColor.rgb().join(', ');
     },
 
     colorHSL: function() {
       let hsl = [
-        Math.round(chroma(this.colorHex).get('hsl.h')),
-        Math.round(chroma(this.colorHex).get('hsl.s') * 100),
-        Math.round(chroma(this.colorHex).get('hsl.l') * 100),
+        Math.round(this.chromaColor.get('hsl.h')),
+        Math.round(this.chromaColor.get('hsl.s') * 100),
+        Math.round(this.chromaColor.get('hsl.l') * 100),
       ];
 
       return hsl.join(', ');
     },
 
     variablePrefix: function() {
-      return this.theme === 'socrative' ? SOCRATIVE.prefix : SHOWBIE.prefix;
+      return this.theme === 'socrative' ? SOC.prefix : SBE.prefix;
     },
 
     /**
@@ -148,22 +154,26 @@ export default {
       );
       let nearest = nearestColor.from(colorNames);
 
-      return nearest(this.colorHex).name;
+      return nearest(this.chromaColor.alpha(1).hex()).name;
     },
 
     swiftVar: function() {
-      return swiftVarName(this.variablePrefix, this.hue, this.scale);
+      return swiftVarName(
+        this.variablePrefix,
+        this.hue,
+        this.scale ? this.scale.replace(/-+/g, '_') : null
+      );
     },
 
     // Determine best foreground colour to use on `color` background.
     foreground: function() {
-      let lum = chroma(this.colorHex).luminance();
+      let lum = this.chromaColor.luminance();
       return lum < 0.5 ? 'white' : 'black';
     },
 
     // Contrast score against black.
     blackContrast() {
-      let contrast = chroma.contrast(this.colorHex, '#000');
+      let contrast = chroma.contrast(this.chromaColor.hex(), '#000');
       let contrastScore = score(contrast);
 
       return contrastScore;
@@ -171,22 +181,24 @@ export default {
 
     // Contrast score against white.
     whiteContrast() {
-      let contrast = chroma.contrast(this.colorHex, '#fff');
+      let contrast = chroma.contrast(this.chromaColor.hex(), '#fff');
       let contrastScore = score(contrast);
 
       return contrastScore;
     },
 
     bgStyle: function() {
-      return `background-color:${this.colorHex}; color:${this.foreground}`;
+      return `background-color:${this.chromaColor.css()}; color:${
+        this.foreground
+      }`;
     },
 
     blackContrastStyle: function() {
-      return `color: #000; background-color: ${this.colorHex}`;
+      return `color: #000; background-color: ${this.chromaColor.css()}`;
     },
 
     whiteContrastStyle: function() {
-      return `color: #fff; background-color: ${this.colorHex}`;
+      return `color: #fff; background-color: ${this.chromaColor.css()}`;
     },
   },
 };

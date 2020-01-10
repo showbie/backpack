@@ -81,6 +81,15 @@ varying background colours.
 
 <ColorSwatch hue="slate" scale="600" />
 
+### Slate 900
+
+<ColorSwatch hue="slate" scale="900" />
+<ColorSwatch hue="slate" scale="900-95" />
+
+Used for background colours within the previewer, as well as the async
+notification UI. Also available as a 95% opaque value by using
+`slate-900-95`.
+
 ## Blue
 
 ### Blue 50
