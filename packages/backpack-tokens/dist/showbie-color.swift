@@ -1,6 +1,6 @@
 ////
 ///   BACKPACK COLOURS
-///   v1.2.0
+///   v1.3.0
 ////
 
 import UIKit
@@ -12,6 +12,8 @@ public extension UIColor {
     ///
     // #f8f8f8
     static let sbeGrey50 = UIColor(red: 0.9725490196078431, green: 0.9725490196078431, blue: 0.9725490196078431, alpha: 1)
+    // #f2f3f4
+    static let sbeGrey100 = UIColor(red: 0.9490196078431372, green: 0.9529411764705882, blue: 0.9568627450980393, alpha: 1)
     // #e6e5e7
     static let sbeGrey200 = UIColor(red: 0.9019607843137255, green: 0.8980392156862745, blue: 0.9058823529411765, alpha: 1)
     // #c4c4ca

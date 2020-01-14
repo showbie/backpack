@@ -1,11 +1,12 @@
 /**
  *    BACKPACK COLOURS
- *    v1.2.0
+ *    v1.3.0
  */
 
 var colors = {
   grey: {
     '50': '#f8f8f8',
+    '100': '#f2f3f4',
     '200': '#e6e5e7',
     '400': '#c4c4ca',
     '500': '#b9bbbd',
