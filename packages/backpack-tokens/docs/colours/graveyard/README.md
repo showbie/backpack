@@ -5,7 +5,7 @@
 ### Seashell†
 
 ::: warning
-Replace this with `#f8f8f8`
+Replace this with either `#f8f8f8` or `#f2f3f4`
 :::
 
 <ColorSwatch hex="#f0f0f0" theme="showbie" />
