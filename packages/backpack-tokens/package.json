@@ -37,7 +37,7 @@
     "vuepress": "1.2.x"
   },
   "engines": {
-    "node": "12.x"
+    "node": "10.* || >= 12.*"
   },
   "prettier": {
     "arrowParens": "always",
