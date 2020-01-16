@@ -1,6 +1,6 @@
 /**
  *    BACKPACK COLOURS
- *    v1.3.0
+ *    v1.4.0
  */
 
 var colors = {
@@ -13,6 +13,13 @@ var colors = {
     '500': '#c2cbd2',
     '600': '#abb4bd',
     '700': '#8c97a1',
+  },
+
+  red: {
+    '100': '#fce5e5',
+    '500': '#f07f7f',
+    '600': '#eb5f5f',
+    '800': '#e10000',
   },
 
   orange: {
