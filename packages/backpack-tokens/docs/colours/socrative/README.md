@@ -5,6 +5,8 @@
 
 <ColorScale theme="socrative" hue="grey" />
 
+<ColorScale theme="socrative" hue="red" />
+
 <ColorScale theme="socrative" hue="orange" />
 
 <ColorScale theme="socrative" hue="green" />
@@ -46,6 +48,29 @@
 ### Grey 700
 
 <ColorSwatch theme="socrative" hue="grey" scale="700" />
+
+## Reds
+
+::: tip NOTE
+These colours are mapped to the same reds as the
+[Showbie palette](../showbie/#red) — updating there will update these as well.
+:::
+
+### Red 100
+
+<ColorSwatch theme="socrative" hue="red" scale="100" />
+
+### Red 500
+
+<ColorSwatch theme="socrative" hue="red" scale="500" />
+
+### Red 600
+
+<ColorSwatch theme="socrative" hue="red" scale="600" />
+
+### Red 800
+
+<ColorSwatch theme="socrative" hue="red" scale="800" />
 
 ## Oranges
 

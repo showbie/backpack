@@ -1,3 +1,5 @@
+import { colors as SHOWBIE } from './backpack-showbie';
+
 export const colors = {
   grey: {
     50: '#f5f7f8',
@@ -11,6 +13,8 @@ export const colors = {
     800: '',
     900: '',
   },
+
+  red: SHOWBIE.red,
 
   orange: {
     50: '#fff7e5',
