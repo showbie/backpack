@@ -1,6 +1,6 @@
 /**
  *    BACKPACK COLOURS
- *    v1.4.0
+ *    v2.0.0
  */
 
 var colors = {
@@ -23,6 +23,12 @@ var colors = {
   },
 
   orange: {
+    '50': '#ffece6',
+    '200': '#ffcbb6',
+    '600': '#ff753f',
+  },
+
+  amber: {
     '50': '#fff7e5',
     '100': '#fff0ce',
     '200': '#ffe9b7',
@@ -48,6 +54,12 @@ var colors = {
 
   blue: {
     '900': '#273b4c',
+  },
+
+  indigo: {
+    '50': '#e9eefb',
+    '200': '#c3cee4',
+    '600': '#5971a4',
   },
 
   brand: {
