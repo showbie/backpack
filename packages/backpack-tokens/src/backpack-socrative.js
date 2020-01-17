@@ -16,7 +16,7 @@ export const colors = {
 
   red: SHOWBIE.red,
 
-  orange: {
+  amber: {
     50: '#fff7e5',
     100: '#fff0ce',
     200: '#ffe9b7',
