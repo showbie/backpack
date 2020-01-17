@@ -19,8 +19,6 @@ individual swatches for details and usage notes.
 
 <ColorScale hue="green" />
 
-<ColorScale hue="yellow" />
-
 <ColorScale hue="red" />
 
 ## Grey
