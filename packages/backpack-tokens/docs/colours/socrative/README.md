@@ -9,6 +9,8 @@
 
 <ColorScale theme="socrative" hue="orange" />
 
+<ColorScale theme="socrative" hue="amber" />
+
 <ColorScale theme="socrative" hue="green" />
 
 <ColorScale theme="socrative" hue="cyan" />
@@ -17,7 +19,7 @@
 
 <ColorScale theme="socrative" hue="indigo" />
 
-## Greys
+## Grey
 
 ### Grey 50
 
@@ -51,7 +53,7 @@
 
 <ColorSwatch theme="socrative" hue="grey" scale="700" />
 
-## Reds
+## Red
 
 ::: tip NOTE
 These colours are mapped to the same reds as the
@@ -74,29 +76,43 @@ These colours are mapped to the same reds as the
 
 <ColorSwatch theme="socrative" hue="red" scale="800" />
 
-## Oranges
+## Orange
 
 ### Orange 50
 
 <ColorSwatch theme="socrative" hue="orange" scale="50" />
 
-### Orange 100
-
-<ColorSwatch theme="socrative" hue="orange" scale="100" />
-
 ### Orange 200
 
 <ColorSwatch theme="socrative" hue="orange" scale="200" />
-
-### Orange 500
-
-<ColorSwatch theme="socrative" hue="orange" scale="500" />
 
 ### Orange 600
 
 <ColorSwatch theme="socrative" hue="orange" scale="600" />
 
-## Greens
+## Amber
+
+### Amber 50
+
+<ColorSwatch theme="socrative" hue="amber" scale="50" />
+
+### Amber 100
+
+<ColorSwatch theme="socrative" hue="amber" scale="100" />
+
+### Amber 200
+
+<ColorSwatch theme="socrative" hue="amber" scale="200" />
+
+### Amber 500
+
+<ColorSwatch theme="socrative" hue="amber" scale="500" />
+
+### Amber 600
+
+<ColorSwatch theme="socrative" hue="amber" scale="600" />
+
+## Green
 
 ### Green 50
 
@@ -118,7 +134,7 @@ These colours are mapped to the same reds as the
 
 <ColorSwatch theme="socrative" hue="green" scale="600" />
 
-## Cyans
+## Cyan
 
 ### Cyan 50
 
@@ -140,7 +156,7 @@ These colours are mapped to the same reds as the
 
 <ColorSwatch theme="socrative" hue="cyan" scale="700" />
 
-## Blues
+## Blue
 
 ### Blue 900
 
