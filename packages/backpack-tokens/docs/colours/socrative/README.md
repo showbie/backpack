@@ -15,6 +15,8 @@
 
 <ColorScale theme="socrative" hue="blue" />
 
+<ColorScale theme="socrative" hue="indigo" />
+
 ## Greys
 
 ### Grey 50
@@ -143,3 +145,17 @@ These colours are mapped to the same reds as the
 ### Blue 900
 
 <ColorSwatch theme="socrative" hue="blue" scale="900" />
+
+## Indigo
+
+### Indigo 50
+
+<ColorSwatch theme="socrative" hue="indigo" scale="50" />
+
+### Indigo 200
+
+<ColorSwatch theme="socrative" hue="indigo" scale="200" />
+
+### Indigo 600
+
+<ColorSwatch theme="socrative" hue="indigo" scale="600" />
