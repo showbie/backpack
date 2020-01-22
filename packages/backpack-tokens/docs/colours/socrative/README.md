@@ -64,6 +64,10 @@ These colours are mapped to the same reds as the
 
 <ColorSwatch theme="socrative" hue="red" scale="100" />
 
+### Red 200
+
+<ColorSwatch theme="socrative" hue="red" scale="200" />
+
 ### Red 500
 
 <ColorSwatch theme="socrative" hue="red" scale="500" />

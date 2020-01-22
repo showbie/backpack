@@ -15,11 +15,11 @@ individual swatches for details and usage notes.
 
 <ColorScale hue="slate" />
 
-<ColorScale hue="blue" />
+<ColorScale hue="red" />
 
 <ColorScale hue="green" />
 
-<ColorScale hue="red" />
+<ColorScale hue="blue" />
 
 ## Grey
 
@@ -92,6 +92,55 @@ Used for background colours within the previewer, as well as the async
 notification UI. Also available as a 95% opaque value by using
 `slate-900-95`.
 
+## Red
+
+### Red 100
+
+<ColorSwatch hue="red" scale="100" />
+
+Used in AudioNote component during recording.
+
+### Red 200
+
+<ColorSwatch hue="red" scale="200" />
+
+### Red 500
+
+<ColorSwatch hue="red" scale="500" />
+
+Used for indicating destructive action, also in AudioNote component
+during recording.
+
+### Red 600
+
+<ColorSwatch hue="red" scale="600" />
+
+Used for text or icons against a background colour of `red-100`. Added
+for async notifications.
+
+### Red 800
+
+<ColorSwatch hue="red" scale="800" />
+
+## Green
+
+### Green 100
+
+<ColorSwatch hue="green" scale="100" />
+
+Background colour for positive notification messages.
+
+### Green 500
+
+<ColorSwatch hue="green" scale="500" />
+
+### Green 600
+
+<ColorSwatch hue="green" scale="600" />
+
+Used for text or icons against a background colour of `green-100`. Added
+for async notifications.
+
 ## Blue
 
 ### Blue 50
@@ -144,48 +193,3 @@ stroke, icons). Also used in AudioNote component controls.
 ### Blue 700
 
 <ColorSwatch hue="blue" scale="700" />
-
-## Green
-
-### Green 100
-
-<ColorSwatch hue="green" scale="100" />
-
-Background colour for positive notification messages.
-
-### Green 500
-
-<ColorSwatch hue="green" scale="500" />
-
-### Green 600
-
-<ColorSwatch hue="green" scale="600" />
-
-Used for text or icons against a background colour of `green-100`. Added
-for async notifications.
-
-## Red
-
-### Red 100
-
-<ColorSwatch hue="red" scale="100" />
-
-Used in AudioNote component during recording.
-
-### Red 500
-
-<ColorSwatch hue="red" scale="500" />
-
-Used for indicating destructive action, also in AudioNote component
-during recording.
-
-### Red 600
-
-<ColorSwatch hue="red" scale="600" />
-
-Used for text or icons against a background colour of `red-100`. Added
-for async notifications.
-
-### Red 800
-
-<ColorSwatch hue="red" scale="800" />

@@ -7,10 +7,10 @@
       v-for="(color, label) in colors"
       v-if="color && !label.includes('-')"
     >
-      <div class="h3 br2" :style="{ backgroundColor: color }"></div>
+      <div class="h2 br2" :style="{ backgroundColor: color }"></div>
     </a>
     <div class="scale-blank w-10 mr2" v-else-if="!label.includes('-')">
-      <div class="h3 br2"></div>
+      <div class="h2 br2"></div>
     </div>
   </div>
 </template>
