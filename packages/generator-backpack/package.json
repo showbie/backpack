@@ -7,39 +7,28 @@
     "showbie",
     "backpack"
   ],
-  "author": "Jeff <rustyangel@gmail.com>",
   "homepage": "https://github.com/showbie/backpack#readme",
+  "repository": "showbie/backpack",
   "license": "ISC",
-  "main": "lib/generator-backpack.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/showbie/backpack.git"
-  },
+  "author": "Jeff <jeff@showbie.com>",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
+    "prepublish": "yarn build",
     "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/showbie/backpack/issues"
   },
   "dependencies": {
     "yeoman-generator": "4.5.0"
-  },
-  "peerDependencies": {
-    "yo": ">3.x"
   },
   "devDependencies": {
     "@types/node": "13.5.1",
     "@types/yeoman-generator": "3.1.4",
     "typescript": "3.7.5"
+  },
+  "peerDependencies": {
+    "yo": ">3.x"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
