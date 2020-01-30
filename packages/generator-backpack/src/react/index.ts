@@ -4,7 +4,7 @@ import * as path from 'path';
 import Generator = require('yeoman-generator');
 
 export default class ReactComponentGenerator extends Generator {
-  constructor(args, opts) {
+  constructor(args: any, opts: any) {
     super(args, opts);
 
     this.argument('componentName', { type: String, required: true });
