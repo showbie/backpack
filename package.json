@@ -5,11 +5,12 @@
     "./packages/*"
   ],
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "format": "prettier"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn bootstrap && lint-staged"
     }
   },
   "lint-staged": {
