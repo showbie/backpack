@@ -11,9 +11,12 @@
   "repository": "showbie/backpack",
   "license": "ISC",
   "author": "Jeff <jeff@showbie.com>",
-  "main": "dist/index.js",
+  "files": [
+    "generators"
+  ],
   "scripts": {
     "build": "tsc",
+    "postbuild": "cp -r ./src/react/templates ./generators/react",
     "prepublish": "yarn build",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
