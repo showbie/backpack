@@ -1,15 +1,19 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
+import { paramCase, pascalCase } from 'change-case';
+
 import Generator = require('yeoman-generator');
 
 type Fields = {
-  componentName: string;
+  pascalName: string;
+  slugName: string;
 };
 
 export default class ReactComponentGenerator extends Generator {
   public fields: Fields = {
-    componentName: '',
+    pascalName: '',
+    slugName: '',
   };
 
   constructor(args: any, opts: any) {
@@ -25,7 +29,10 @@ export default class ReactComponentGenerator extends Generator {
     let templateDir = `${__dirname}/templates`;
     let { componentName, path: destPath } = this.options;
 
-    this.fields.componentName = componentName;
+    this.fields = {
+      pascalName: pascalCase(componentName),
+      slugName: paramCase(componentName),
+    };
 
     fs.readdirSync(templateDir).forEach((file) => {
       this.fs.copyTpl(
