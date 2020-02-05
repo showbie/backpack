@@ -23,6 +23,11 @@ export default class ReactComponentGenerator extends Generator {
     this.option('path', { type: String, default: process.cwd() });
   }
 
+  /**
+   * @todo Possible options for generating components:
+   *       1. Functional or Class-based
+   *       2. Tests or no tests
+   */
   // public async prompting() {}
 
   public writing(): void {
@@ -35,10 +40,11 @@ export default class ReactComponentGenerator extends Generator {
     };
 
     fs.readdirSync(templateDir).forEach((file) => {
+      let fileName = file.replace(/component/, pascalCase(componentName));
+
       this.fs.copyTpl(
-        // util.format()
         this.templatePath(path.join(templateDir, file)),
-        this.destinationPath(path.join(destPath, componentName, file)),
+        this.destinationPath(path.join(destPath, componentName, fileName)),
         this.fields
       );
     });
