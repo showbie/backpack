@@ -1,7 +1,19 @@
 {
-  "name": "root",
   "private": true,
+  "name": "backpack-root",
+  "workspaces": [
+    "./packages/*"
+  ],
   "devDependencies": {
-    "lerna": "3.20.x"
+    "@showbie/eslint-config": "1.1.x",
+    "eslint": "6.7.x",
+    "lerna": "3.20.x",
+    "prettier": "1.19.x"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
   }
 }
