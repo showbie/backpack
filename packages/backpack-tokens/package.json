@@ -1,18 +1,15 @@
 {
   "name": "@showbie/backpack-tokens",
-  "description": "Design tokens for Showbie Backpack",
+  "version": "2.1.0",
+  "description": "Showbie Backpack design system tokens",
+  "homepage": "https://design.showbie.com",
+  "repository": "showbie/backpack",
   "license": "ISC",
   "author": "Showbie (https://www.showbie.com)",
-  "maintainers": [
-    "Jeff Nelson @stormwarning (https://www.showbie.com)"
-  ],
-  "homepage": "https://design.showbie.com",
-  "repository": "showbie/backpack-tokens",
-  "version": "2.1.0",
-  "main": "dist/index.js",
   "files": [
     "dist/"
   ],
+  "main": "dist/index.js",
   "scripts": {
     "build": "node -r esm lib/index.js",
     "deploy": "np --no-release-draft && yarn podspec:deploy && yarn docs:deploy",
@@ -26,10 +23,8 @@
     "version": "yarn build && yarn podspec:ver && git add -A dist BackpackTokens.podspec"
   },
   "devDependencies": {
-    "@showbie/eslint-config": "0.4.x",
     "chroma-js": "2.1.x",
     "color-name-list": "4.11.x",
-    "eslint": "6.8.x",
     "esm": "3.2.x",
     "handlebars": "4.7.x",
     "nearest-color": "0.4.x",
@@ -39,10 +34,7 @@
   "engines": {
     "node": "10.* || >= 12.*"
   },
-  "prettier": {
-    "arrowParens": "always",
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  }
+  "maintainers": [
+    "Jeff Nelson @stormwarning (https://www.showbie.com)"
+  ]
 }
