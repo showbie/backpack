@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "changelog": "lerna-changelog",
     "format": "prettier"
   },
   "husky": {
@@ -38,10 +39,23 @@
     "husky": "4.2.x",
     "import-sort-style-python": "1.0.x",
     "lerna": "3.20.x",
+    "lerna-changelog": "1.0.x",
     "lint-staged": "10.0.x",
     "prettier": "1.19.x",
     "prettier-plugin-import-sort": "0.0.3",
     "prettier-plugin-packagejson": "2.0.x"
+  },
+  "changelog": {
+    "repo": "showbie/backpack",
+    "labels": {
+      "added": "Added",
+      "breaking": "💣 Breaking Change",
+      "changed": "Changed",
+      "deprecated": "Deprecated",
+      "fixed": "🐛 Fixed",
+      "removed": "Removed",
+      "security": "🔒 Security"
+    }
   },
   "importSort": {
     ".js,.jsx": {
