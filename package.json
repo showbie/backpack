@@ -1,19 +1,68 @@
 {
-  "private": true,
   "name": "backpack-root",
+  "private": true,
   "workspaces": [
     "./packages/*"
   ],
-  "devDependencies": {
-    "@showbie/eslint-config": "1.1.x",
-    "eslint": "6.7.x",
-    "lerna": "3.20.x",
-    "prettier": "1.19.x"
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "format": "prettier"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn bootstrap && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "package.json": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "prettier": {
     "arrowParens": "always",
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "@showbie/eslint-config": "1.1.x",
+    "@typescript-eslint/eslint-plugin": "2.18.x",
+    "@typescript-eslint/parser": "2.18.x",
+    "eslint": "6.7.x",
+    "eslint-plugin-react": "7.18.x",
+    "husky": "4.2.x",
+    "import-sort-style-python": "1.0.x",
+    "lerna": "3.20.x",
+    "lint-staged": "10.0.x",
+    "prettier": "1.19.x",
+    "prettier-plugin-import-sort": "0.0.3",
+    "prettier-plugin-packagejson": "2.0.x"
+  },
+  "importSort": {
+    ".js,.jsx": {
+      "parser": "babylon",
+      "style": "python",
+      "options": {
+        "knownFramework": [
+          "react",
+          "react-dom"
+        ]
+      }
+    },
+    ".ts,.tsx": {
+      "parser": "typescript",
+      "style": "python",
+      "options": {
+        "knownFramework": [
+          "react",
+          "react-dom"
+        ]
+      }
+    }
   }
 }
