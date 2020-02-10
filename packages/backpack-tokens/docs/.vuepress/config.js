@@ -3,6 +3,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Colours', link: '/colours/showbie/' },
+      { text: 'Type', link: '/type/showbie/' },
       { text: 'GitHub', link: 'https://github.com/showbie/backpack-tokens' },
     ],
 
@@ -17,6 +18,13 @@ module.exports = {
           title: 'Exploration',
           collapsable: false,
           children: ['unconfirmed/', 'graveyard/', 'grid/'],
+        },
+      ],
+      '/type/': [
+        {
+          title: 'Typography',
+          collapsable: false,
+          children: ['showbie/', 'socrative/'],
         },
       ],
     },

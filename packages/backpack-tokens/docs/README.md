@@ -10,10 +10,10 @@ A design token is an abstraction of a visual property such as colour, font, widt
     <h2><Badge vertical="middle"><VIcon name="droplet"/></Badge> Colours</h2>
     <p>Showbie application UI colour palettes and usage guidelines.</p>
   </a>
-  <div class="feature ma2 o-50">
+  <a class="feature ma2" href="/type/showbie/">
     <h2><Badge vertical="middle"><VIcon name="type"/></Badge> Fonts</h2>
     <p>Coming soon.</p>
-  </div>
+  </a>
   <div class="feature ma2 o-50">
     <h2><Badge vertical="middle"><VIcon name="layout"/></Badge> Spacing</h2>
     <p>Coming soon.</p>
