@@ -6,7 +6,7 @@
         <code>{{ fontSize }}</code>
       </dd>
     </dl>
-    <div class="ml3" :style="`font-size: ${fontSize}`">
+    <div class="ml3" :style="exampleCSS">
       The quick brown fox jumps over the lazy dog.
     </div>
   </div>
@@ -23,12 +23,20 @@ export default {
     value: {
       type: String,
     },
+    family: {
+      type: String,
+      required: false,
+    },
   },
 
   computed: {
     fontSize() {
       let val = /([0-9.]+)/.exec(this.value)[1];
       return `${Math.floor(val * ROOT_SIZE)}px`;
+    },
+    exampleCSS() {
+      let family = this.family ? `font-family: ${this.family};` : '';
+      return `${family} font-size: ${this.fontSize}`;
     },
   },
 };

@@ -37,6 +37,13 @@ module.exports = {
         href: 'https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css',
       },
     ],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat:500,700,800',
+      },
+    ],
   ],
 
   plugins: [

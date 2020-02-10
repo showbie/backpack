@@ -6,7 +6,7 @@
         <code>{{ name }}</code>
       </dd>
     </dl>
-    <div class="ml3" :style="`font-size: 18px; font-weight: ${weight}`">
+    <div class="ml3" :style="exampleCSS">
       The quick brown fox jumps over the lazy dog.
     </div>
   </div>
@@ -20,6 +20,17 @@ export default {
     },
     weight: {
       type: String,
+    },
+    family: {
+      type: String,
+      required: false,
+    },
+  },
+
+  computed: {
+    exampleCSS() {
+      let family = this.family ? `font-family: ${this.family};` : '';
+      return `${family} font-size: 18px; font-weight: ${this.weight}`;
     },
   },
 };
