@@ -2,15 +2,15 @@ module.exports = {
   title: 'Showbie Backpack',
   themeConfig: {
     nav: [
-      { text: 'Colours', link: '/colours/showbie/' },
+      { text: 'Colour', link: '/colour/showbie/' },
       { text: 'Type', link: '/type/showbie/' },
       { text: 'GitHub', link: 'https://github.com/showbie/backpack-tokens' },
     ],
 
     sidebar: {
-      '/colours/': [
+      '/colour/': [
         {
-          title: 'Colours',
+          title: 'Colour',
           collapsable: false,
           children: ['showbie/', 'socrative/', 'brands/'],
         },
