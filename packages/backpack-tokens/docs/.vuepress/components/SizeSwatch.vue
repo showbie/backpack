@@ -1,5 +1,5 @@
 <template>
-  <div class="swatch mt4 mb4">
+  <div class="mt4 mb4">
     <div class="flex items-baseline justify-start">
       <span class="flex w3 f6 fw6 lh-copy ttu">{{ name }}</span>
       <span class="flex f5 ml2">
