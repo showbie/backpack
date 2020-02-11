@@ -2,7 +2,7 @@
 
 ## Family
 
-Showbie uses a single font family, Avenir.
+Showbie uses a single font family, [Avenir](https://www.fonts.com/font/linotype/avenir).
 
 ## Sizes
 

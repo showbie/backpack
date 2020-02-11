@@ -2,7 +2,7 @@
 
 ## Family
 
-Socrative uses two different fonts throughout the app: most text is set in Inter, and Montserrat is used for display text.
+Socrative uses two different fonts throughout the app: most text is set in [Inter](https://rsms.me/inter/), and [Montserrat](https://fonts.google.com/specimen/Montserrat) is used for display text.
 
 ## Sizes
 
