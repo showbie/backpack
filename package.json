@@ -48,12 +48,12 @@
   "changelog": {
     "repo": "showbie/backpack",
     "labels": {
-      "added": "Added",
       "breaking": "💣 Breaking Change",
-      "changed": "Changed",
-      "deprecated": "Deprecated",
+      "removed": "🗑️ Removed",
+      "deprecated": "🚚 Deprecated",
+      "changed": "♻️ Changed",
+      "added": "🎁 Added",
       "fixed": "🐛 Fixed",
-      "removed": "Removed",
       "security": "🔒 Security"
     }
   },
