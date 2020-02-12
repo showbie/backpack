@@ -60,6 +60,10 @@ These colours are mapped to the same reds as the
 [Showbie palette](../showbie/#red) — updating there will update these as well.
 :::
 
+### Red 50
+
+<ColorSwatch theme="socrative" hue="red" scale="50" />
+
 ### Red 100
 
 <ColorSwatch theme="socrative" hue="red" scale="100" />
@@ -75,6 +79,10 @@ These colours are mapped to the same reds as the
 ### Red 600
 
 <ColorSwatch theme="socrative" hue="red" scale="600" />
+
+### Red 700
+
+<ColorSwatch theme="socrative" hue="red" scale="700" />
 
 ### Red 800
 

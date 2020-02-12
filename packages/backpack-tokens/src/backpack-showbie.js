@@ -35,14 +35,14 @@ export const colors = {
   },
 
   red: {
-    50: '',
+    50: '#ffeeee', // blessed
     100: '#fce5e5', // blessed
     200: '#f9cccc', // blessed
     300: '',
     400: '',
     500: '#f07f7f', // blessed
     600: '#eb5f5f', // blessed
-    700: '',
+    700: '#e13c3c', // blessed
     800: '#e10000', // blessed
     900: '',
   },

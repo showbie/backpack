@@ -94,6 +94,10 @@ notification UI. Also available as a 95% opaque value by using
 
 ## Red
 
+### Red 50
+
+<ColorSwatch hue="red" scale="50" />
+
 ### Red 100
 
 <ColorSwatch hue="red" scale="100" />
@@ -117,6 +121,10 @@ during recording.
 
 Used for text or icons against a background colour of `red-100`. Added
 for async notifications.
+
+### Red 700
+
+<ColorSwatch hue="red" scale="700" />
 
 ### Red 800
 
