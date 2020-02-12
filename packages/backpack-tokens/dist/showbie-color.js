@@ -1,6 +1,6 @@
 /**
  *    BACKPACK COLOURS
- *    v2.1.1
+ *    v2.2.0
  */
 
 var colors = {
@@ -19,10 +19,12 @@ var colors = {
   },
 
   red: {
+    '50': '#ffeeee',
     '100': '#fce5e5',
     '200': '#f9cccc',
     '500': '#f07f7f',
     '600': '#eb5f5f',
+    '700': '#e13c3c',
     '800': '#e10000',
   },
 
