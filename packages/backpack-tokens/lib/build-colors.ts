@@ -1,19 +1,16 @@
-const fs = require('fs');
-const path = require('path');
+import * as fs from 'fs';
+import * as path from 'path';
 
-const chroma = require('chroma-js');
-const Handlebars = require('handlebars');
+import chroma from 'chroma-js';
+import Handlebars from 'handlebars';
 
-const { capitalize, swiftVarName } = require('./utils/string');
+import { capitalize, swiftVarName } from './utils/string';
 
 /**
  * Get floating-point values for each colour channel and return a
  * string for `UIColor()` in Swift.
- *
- * @param {String} hex
- * @returns {String}
  */
-function rgbFloat(hex) {
+function rgbFloat(hex: string): string {
   let vals = chroma(hex).gl();
   return `red: ${vals[0]}, green: ${vals[1]}, blue: ${vals[2]}, alpha: ${vals[3]}`;
 }
@@ -25,23 +22,28 @@ Handlebars.registerHelper('swiftvar', (a, b, c) =>
 );
 
 class BaseBuilder {
-  constructor(colors, prefix = '', version) {
+  colors: Record<string, any>;
+  prefix: string;
+  version: string;
+
+  constructor(colors, prefix = '', version: string) {
     this.colors = colors;
     this.prefix = prefix;
     this.version = version;
   }
-
-  // build(file, outputPaths, extraData = {}) {}
 }
 
-class ColorBuilder extends BaseBuilder {
+export default class ColorBuilder extends BaseBuilder {
+  templatesDir: string;
+  colorsArray;
+
   constructor(
     colors,
-    prefix,
-    version,
+    prefix: string,
+    version: string,
     templatesDir = path.join(__dirname, '..', 'src', 'templates')
   ) {
-    super(...arguments);
+    super(colors, prefix, version);
 
     this.templatesDir = templatesDir;
     this.colorsArray = Object.keys(colors)
@@ -59,7 +61,7 @@ class ColorBuilder extends BaseBuilder {
       });
   }
 
-  build(file, outputPaths, extraData = {}) {
+  build(file: string, outputPaths: string[]): void {
     let template = fs.readFileSync(
       path.join(this.templatesDir, `${file}.hbs`),
       { encoding: 'utf8' }
@@ -70,7 +72,7 @@ class ColorBuilder extends BaseBuilder {
       prefix: this.prefix,
       version: this.version,
       colors: this.colorsArray,
-      filter: extraData.filter ? extraData.filter : (color) => color,
+      // filter: extraData.filter ? extraData.filter : (color) => color,
     });
 
     outputPaths.forEach((outputPath) => {
@@ -82,5 +84,3 @@ class ColorBuilder extends BaseBuilder {
     });
   }
 }
-
-module.exports = ColorBuilder;

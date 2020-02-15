@@ -1,10 +1,10 @@
+import * as path from 'path';
+
 import SHOWBIE from '../src/backpack-showbie';
 import SOCRATIVE from '../src/backpack-socrative';
+import ColorBuilder from './build-colors';
 
-const path = require('path');
-
-const pkg = require('../package.json');
-const ColorBuilder = require('./build-colors');
+import pkg = require('../package.json');
 
 const ShowbieColors = new ColorBuilder(
   SHOWBIE.colors,
