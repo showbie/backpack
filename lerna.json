@@ -1,4 +1,9 @@
 {
+  "command": {
+    "publish": {
+      "message": "Release %v"
+    }
+  },
   "npmClient": "yarn",
   "packages": [
     "packages/*"
