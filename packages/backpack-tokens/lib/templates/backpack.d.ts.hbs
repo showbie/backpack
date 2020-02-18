@@ -1,0 +1,17 @@
+/**
+ *    BACKPACK COLOURS
+ *    v{{version}}
+ */
+
+declare module 'backpack-tokens' {
+  type Color = string;
+
+  interface ColorTokens {
+{{~#each colors as |hue|}}
+    {{hue.name}}: Color[];
+{{/each}}
+  }
+
+  const ColorTokens: ColorTokens;
+  export = ColorTokens;
+}
