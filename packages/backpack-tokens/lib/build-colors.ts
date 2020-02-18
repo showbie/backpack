@@ -41,7 +41,7 @@ export default class ColorBuilder extends BaseBuilder {
     colors,
     prefix: string,
     version: string,
-    templatesDir = path.join(__dirname, '..', 'src', 'templates')
+    templatesDir = path.join(__dirname, 'templates')
   ) {
     super(colors, prefix, version);
 
