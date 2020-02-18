@@ -10,6 +10,7 @@
     "dist/"
   ],
   "main": "dist/index.js",
+  "types": "dist/backpack.d.ts",
   "scripts": {
     "build": "ts-node lib",
     "deploy": "np --no-release-draft && yarn podspec:deploy",
@@ -21,6 +22,7 @@
     "version": "yarn build && yarn podspec:ver && git add -A dist BackpackTokens.podspec"
   },
   "devDependencies": {
+    "@types/chroma-js": "2.0.0",
     "@types/node": "13.7.1",
     "chroma-js": "2.1.x",
     "color-name-list": "4.11.x",
