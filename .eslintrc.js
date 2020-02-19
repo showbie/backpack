@@ -3,7 +3,7 @@ module.exports = {
   rules: {},
   overrides: [
     {
-      files: ['packages/generator-backpack/**/*.ts'],
+      files: ['packages/**/*.ts'],
       extends: ['@showbie/eslint-config/react'],
       env: {
         node: true,

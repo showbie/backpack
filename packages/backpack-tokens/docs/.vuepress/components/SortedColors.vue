@@ -12,7 +12,7 @@
           :style="{ backgroundColor: color.hex }"
         >
           <code>{{ color.hex }}</code>
-          <br>
+          <br />
           <code>{{ color.lum }}</code>
         </div>
       </div>
@@ -21,13 +21,13 @@
 </template>
 
 <script>
-const chroma = require('chroma-js');
+import chroma from 'chroma-js';
 
 export default {
   data() {
     return {
       luminanceGroups: [1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1],
-
+      
       colors: {
         grey: [
           '#f8f8f8', // 50
