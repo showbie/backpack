@@ -1,3 +1,3 @@
 node_modules
-docs/.vuepress/dist
+packages/backpack-tokens/docs/.vuepress/dist
 packages/generator-backpack/generators
