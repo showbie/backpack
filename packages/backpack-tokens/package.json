@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/chroma-js": "2.0.0",
-    "@types/node": "13.7.1",
+    "@types/node": "13.7.4",
     "chroma-js": "2.1.x",
     "color-name-list": "4.11.x",
     "handlebars": "4.7.x",
