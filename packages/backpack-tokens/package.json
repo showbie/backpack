@@ -10,14 +10,13 @@
     "dist/"
   ],
   "main": "dist/index.js",
-  "types": "dist/backpack.d.ts",
   "scripts": {
     "build": "ts-node lib",
     "deploy": "np --no-release-draft && yarn podspec:deploy",
     "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs",
     "podspec:deploy": "pod repo push showbie --allow-warnings",
-    "podspec:ver": "replace \"s\\.version = '\\d+\\.\\d+\\.\\d+'\" \"s.version = '$npm_package_version'\" ./BackpackTokens.podspec",
+    "podspec:ver": "replace \"s\\.version = '\\d+\\.\\d+\\.\\d+'\" \"s.version = '$npm_package_version'\" ../../BackpackTokens.podspec",
     "test": "eslint '**/*.js' --ignore 'dist/*.js'",
     "version": "yarn build && yarn podspec:ver && git add -A dist BackpackTokens.podspec"
   },
