@@ -170,6 +170,14 @@ These colours are mapped to the same reds as the
 
 ## Blue
 
+### Blue 600
+
+<ColorSwatch theme="socrative" hue="blue" scale="600" />
+
+### Blue 800
+
+<ColorSwatch theme="socrative" hue="blue" scale="800" />
+
 ### Blue 900
 
 <ColorSwatch theme="socrative" hue="blue" scale="900" />
