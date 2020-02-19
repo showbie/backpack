@@ -1,4 +1,15 @@
-## 2.2.0 — 2020-02-12
+### 2.3.0 — 2020-02-19
+
+#### ♻️ Changed
+* [#10](https://github.com/showbie/backpack/pull/10) Rewrite tokens builder in TypeScript ([@stormwarning](https://github.com/stormwarning))
+
+#### 🎁 Added
+* [#12](https://github.com/showbie/backpack/pull/12) Add new blues to Socrative palette ([@stormwarning](https://github.com/stormwarning))
+
+#### 🔒 Security
+* [#4](https://github.com/showbie/backpack/pull/4) Bump serialize-javascript from 1.9.1 to 2.1.2 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+
+### 2.2.0 — 2020-02-12
 
 #### 🎁 Added
 * [#3](https://github.com/showbie/backpack/pull/3) Add `50`- and `700`-level red values ([@stormwarning](https://github.com/stormwarning))
