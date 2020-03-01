@@ -27,7 +27,7 @@
   "devDependencies": {
     "@types/node": "13.7.4",
     "@types/yeoman-generator": "3.1.4",
-    "typescript": "3.7.5"
+    "typescript": "3.8.3"
   },
   "peerDependencies": {
     "yo": ">3.x"
