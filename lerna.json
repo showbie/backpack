@@ -1,7 +1,7 @@
 {
   "command": {
     "version": {
-      "message": "Release %v"
+      "message": "Release new version"
     }
   },
   "npmClient": "yarn",
