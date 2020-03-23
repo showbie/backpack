@@ -10,7 +10,7 @@ export const colors = {
     500: '#c2cbd2',
     600: '#abb4bd',
     700: '#8c97a1',
-    800: '',
+    800: '#788490',
     900: '',
   },
 
@@ -18,7 +18,7 @@ export const colors = {
 
   orange: {
     50: '#ffece6',
-    100: '',
+    100: '#ffdfd5',
     200: '#ffcbb6',
     300: '',
     400: '',
@@ -83,7 +83,7 @@ export const colors = {
 
   indigo: {
     50: '#e9eefb',
-    100: '',
+    100: '#e1e7f7',
     200: '#c3cee4',
     300: '',
     400: '',
