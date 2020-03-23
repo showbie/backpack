@@ -1,3 +1,9 @@
+### 2.4.0 — 2020-03-23
+
+#### 🎁 Added
+* [#19](https://github.com/showbie/backpack/pull/19) Add `100`-level colours & `grey-800` to Socrative ([@stormwarning](https://github.com/stormwarning)) \
+  New light shades of orange and indigo for background hovers.
+
 ### 2.3.0 — 2020-02-19
 
 #### ♻️ Changed
