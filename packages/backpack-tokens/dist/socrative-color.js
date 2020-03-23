@@ -1,6 +1,6 @@
 /**
  *    BACKPACK COLOURS
- *    v2.3.0
+ *    v2.4.0
  */
 
 var colors = {
@@ -13,6 +13,7 @@ var colors = {
     '500': '#c2cbd2',
     '600': '#abb4bd',
     '700': '#8c97a1',
+    '800': '#788490',
   },
 
   red: {
@@ -27,6 +28,7 @@ var colors = {
 
   orange: {
     '50': '#ffece6',
+    '100': '#ffdfd5',
     '200': '#ffcbb6',
     '600': '#ff753f',
   },
@@ -63,6 +65,7 @@ var colors = {
 
   indigo: {
     '50': '#e9eefb',
+    '100': '#e1e7f7',
     '200': '#c3cee4',
     '600': '#5971a4',
   },
