@@ -53,6 +53,10 @@
 
 <ColorSwatch theme="socrative" hue="grey" scale="700" />
 
+### Grey 800
+
+<ColorSwatch theme="socrative" hue="grey" scale="800" />
+
 ## Red
 
 ::: tip NOTE
@@ -93,6 +97,10 @@ These colours are mapped to the same reds as the
 ### Orange 50
 
 <ColorSwatch theme="socrative" hue="orange" scale="50" />
+
+### Orange 100
+
+<ColorSwatch theme="socrative" hue="orange" scale="100" />
 
 ### Orange 200
 
@@ -187,6 +195,10 @@ These colours are mapped to the same reds as the
 ### Indigo 50
 
 <ColorSwatch theme="socrative" hue="indigo" scale="50" />
+
+### Indigo 100
+
+<ColorSwatch theme="socrative" hue="indigo" scale="100" />
 
 ### Indigo 200
 
