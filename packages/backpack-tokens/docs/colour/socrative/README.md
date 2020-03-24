@@ -110,6 +110,10 @@ These colours are mapped to the same reds as the
 
 <ColorSwatch theme="socrative" hue="orange" scale="600" />
 
+### Orange 700
+
+<ColorSwatch theme="socrative" hue="orange" scale="700" />
+
 ## Amber
 
 ### Amber 50
@@ -131,6 +135,10 @@ These colours are mapped to the same reds as the
 ### Amber 600
 
 <ColorSwatch theme="socrative" hue="amber" scale="600" />
+
+### Amber 700
+
+<ColorSwatch theme="socrative" hue="amber" scale="700" />
 
 ## Green
 
@@ -207,3 +215,7 @@ These colours are mapped to the same reds as the
 ### Indigo 600
 
 <ColorSwatch theme="socrative" hue="indigo" scale="600" />
+
+### Indigo 700
+
+<ColorSwatch theme="socrative" hue="indigo" scale="700" />
