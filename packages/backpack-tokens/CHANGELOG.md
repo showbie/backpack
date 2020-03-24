@@ -1,3 +1,8 @@
+### 2.5.0 — 2020-03-24
+
+#### 🎁 Added
+* [#21](https://github.com/showbie/backpack/pull/21) Add `700`-level colours to Socrative palette ([@stormwarning](https://github.com/stormwarning))
+
 ### 2.4.0 — 2020-03-23
 
 #### 🎁 Added
