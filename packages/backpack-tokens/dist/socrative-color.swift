@@ -1,6 +1,6 @@
 ////
 ///   BACKPACK COLOURS
-///   v2.4.0
+///   v2.5.0
 ////
 
 import UIKit
@@ -58,6 +58,8 @@ public extension UIColor {
     static let socOrange200 = UIColor(red: 1, green: 0.796078431372549, blue: 0.7137254901960784, alpha: 1)
     // #ff753f
     static let socOrange600 = UIColor(red: 1, green: 0.4588235294117647, blue: 0.24705882352941178, alpha: 1)
+    // #ed580f
+    static let socOrange700 = UIColor(red: 0.9294117647058824, green: 0.34509803921568627, blue: 0.058823529411764705, alpha: 1)
 
     ///
     /// Amber
@@ -72,6 +74,8 @@ public extension UIColor {
     static let socAmber500 = UIColor(red: 1, green: 0.7843137254901961, blue: 0.3411764705882353, alpha: 1)
     // #efa946
     static let socAmber600 = UIColor(red: 0.9372549019607843, green: 0.6627450980392157, blue: 0.27450980392156865, alpha: 1)
+    // #e39100
+    static let socAmber700 = UIColor(red: 0.8901960784313725, green: 0.5686274509803921, blue: 0, alpha: 1)
 
     ///
     /// Green
@@ -122,6 +126,8 @@ public extension UIColor {
     static let socIndigo200 = UIColor(red: 0.7647058823529411, green: 0.807843137254902, blue: 0.8941176470588236, alpha: 1)
     // #5971a4
     static let socIndigo600 = UIColor(red: 0.34901960784313724, green: 0.44313725490196076, blue: 0.6431372549019608, alpha: 1)
+    // #335498
+    static let socIndigo700 = UIColor(red: 0.2, green: 0.32941176470588235, blue: 0.596078431372549, alpha: 1)
 
     ///
     /// Brand
