@@ -4,7 +4,10 @@ module.exports = {
   overrides: [
     {
       files: ['packages/**/*.ts'],
-      extends: ['@showbie/eslint-config/react'],
+      extends: [
+        '@showbie/eslint-config/react',
+        'plugin:react-hooks/recommended',
+      ],
       env: {
         node: true,
       },
