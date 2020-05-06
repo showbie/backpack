@@ -1,17 +1,24 @@
-const path = require('path')
-module.exports = ({ config }) => {
+// const path = require('path');
+
+// Export a function. Accept the base config as the only param.
+module.exports = async ({ config, mode }) => {
+  // `mode` has a value of 'DEVELOPMENT' or 'PRODUCTION'
+  // You can change the configuration based on that.
+  // 'PRODUCTION' is used when building the static version of storybook.
+
+  // Make whatever fine-grained changes you need
   config.module.rules.push({
-    test: /\.tsx?$/,
+    test: /\.(tsx?)$/,
     use: [
       {
-        loader: require.resolve('ts-loader'),
-        options: {
-          reportFiles: ['stories/**/*.{ts|tsx}']
-        }
-      }
-    ]
-  })
-  config.resolve.extensions.push('.ts', '.tsx')
-  config.resolve.alias = Object.assign(config.resolve.alias, { '@': path.resolve(__dirname, '..') })
-  return config
-}
+        loader: require.resolve('awesome-typescript-loader'),
+        // options: { configFileName: './.storybook/tsconfig.json' },
+      },
+      { loader: require.resolve('react-docgen-typescript-loader') },
+    ],
+  });
+  config.resolve.extensions.push('.ts', '.tsx', 'js');
+
+  // Return the altered config
+  return config;
+};
