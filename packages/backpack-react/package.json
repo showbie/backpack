@@ -1,31 +1,28 @@
 {
+  "name": "@showbie/backpack-react",
   "version": "0.1.0",
   "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "author": "Jeff",
   "files": [
     "dist"
   ],
+  "main": "dist/index.js",
+  "module": "dist/backpack-react.esm.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
+    "build-storybook": "build-storybook",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
+    "start": "tsdx watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "peerDependencies": {
-    "react": ">=16"
+    "test": "tsdx test --passWithNoTests"
   },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
     }
   },
-  "name": "backpack-react",
-  "author": "Jeff",
-  "module": "dist/backpack-react.esm.js",
   "dependencies": {
     "@types/warning": "3.0.0",
     "warning": "4.0.3"
@@ -49,5 +46,8 @@
     "tsdx": "0.13.2",
     "tslib": "1.11.x",
     "typescript": "3.8.x"
+  },
+  "peerDependencies": {
+    "react": ">=16"
   }
 }
