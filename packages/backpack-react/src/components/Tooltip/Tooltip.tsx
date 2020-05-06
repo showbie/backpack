@@ -410,9 +410,10 @@ export const Tooltip = forwardRefWithAs<TooltipProps, 'div'>(function(
           <div
             style={{
               position: 'absolute',
-              left:
-                triggerRect && triggerRect.left - 10 + triggerRect.width / 2,
-              top: triggerRect && triggerRect.bottom + window.scrollY,
+              left: triggerRect
+                ? triggerRect.left - 10 + triggerRect.width / 2
+                : 0,
+              top: triggerRect ? triggerRect.bottom + window.scrollY : 0,
               width: 0,
               height: 0,
               borderLeft: '10px solid transparent',
