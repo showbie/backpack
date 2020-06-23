@@ -4,7 +4,7 @@ module.exports = {
     nav: [
       { text: 'Colour', link: '/colour/showbie/' },
       { text: 'Type', link: '/type/showbie/' },
-      { text: 'GitHub', link: 'https://github.com/showbie/backpack-tokens' },
+      { text: 'GitHub', link: 'https://github.com/showbie/backpack' },
     ],
 
     sidebar: {
