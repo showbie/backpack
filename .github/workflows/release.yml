@@ -22,7 +22,7 @@ jobs:
         uses: stormwarning/action-release-notification@v3.1.1
         if: startsWith(github.ref, 'refs/tags/@showbie/generator-backpack')
         with:
-          channel: frontend
+          channel: socrative-dev
           message: A new version of *@showbie/generator-backpack* was just released!
           actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/master/packages/generator-backpack/CHANGELOG.md"}]'
         env:
