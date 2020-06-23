@@ -1,3 +1,9 @@
+### 2.5.1 — 2020-06-23
+
+#### 🔒 Security
+* [#18](https://github.com/showbie/backpack/pull/18) Bump acorn from 6.3.0 to 6.4.1 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+* [#28](https://github.com/showbie/backpack/pull/28) Bump websocket-extensions from 0.1.3 to 0.1.4 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+
 ### 2.5.0 — 2020-03-24
 
 #### 🎁 Added
