@@ -62,6 +62,10 @@ two approaches.
 
 <ColorSwatch hue="grey" scale="200" />
 
+### Grey 400
+
+<ColorSwatch hue="grey" scale="400" />
+
 ### Grey 500
 
 <ColorSwatch hue="grey" scale="500" />
