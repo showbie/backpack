@@ -6,7 +6,7 @@ import cx from 'classnames';
 
 interface Props {}
 
-export default class <%= pascalName %> extends Component<Props> {
+export class <%= pascalName %> extends Component<Props> {
   static defaultProps = {};
 
   render() {
