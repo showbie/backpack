@@ -10,6 +10,8 @@ type Fields = {
   slugName: string;
 };
 
+type ComponentFormat = 'function' | 'class';
+
 export default class ReactComponentGenerator extends Generator {
   public fields: Fields = {
     pascalName: '',
@@ -21,6 +23,7 @@ export default class ReactComponentGenerator extends Generator {
 
     this.argument('componentName', { type: String, required: true });
     this.option('path', { type: String, default: process.cwd() });
+    this.option('format', { type: String, default: 'function' });
   }
 
   /**
@@ -32,21 +35,34 @@ export default class ReactComponentGenerator extends Generator {
 
   public writing(): void {
     let templateDir = `${__dirname}/templates`;
-    let { componentName, path: destPath } = this.options;
+    let { componentName, path: destPath, format } = this.options;
+    let componentDir = `${templateDir}/${format}`;
 
     this.fields = {
       pascalName: pascalCase(componentName),
       slugName: paramCase(componentName),
     };
 
-    fs.readdirSync(templateDir).forEach((file) => {
+    fs.readdirSync(componentDir).forEach((file) => {
       let fileName = file.replace(/component/, pascalCase(componentName));
 
       this.fs.copyTpl(
-        this.templatePath(path.join(templateDir, file)),
+        this.templatePath(path.join(componentDir, file)),
         this.destinationPath(path.join(destPath, componentName, fileName)),
         this.fields
       );
+    });
+
+    fs.readdirSync(templateDir).forEach((file) => {
+      if (!file.match(/(class|function)/g)) {
+        let fileName = file.replace(/component/, pascalCase(componentName));
+
+        this.fs.copyTpl(
+          this.templatePath(path.join(templateDir, file)),
+          this.destinationPath(path.join(destPath, componentName, fileName)),
+          this.fields
+        );
+      }
     });
   }
 }
