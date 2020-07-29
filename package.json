@@ -31,7 +31,8 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@changesets/cli": "2.9.2",
     "@showbie/eslint-config": "1.1.x",
     "@typescript-eslint/eslint-plugin": "2.18.x",
     "@typescript-eslint/parser": "2.20.x",
@@ -79,8 +80,5 @@
         ]
       }
     }
-  },
-  "dependencies": {
-    "@changesets/cli": "2.9.2"
   }
 }
