@@ -7,7 +7,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "changelog": "lerna-changelog",
-    "format": "prettier"
+    "format": "prettier",
+    "release": "changeset release"
   },
   "husky": {
     "hooks": {
@@ -78,5 +79,8 @@
         ]
       }
     }
+  },
+  "dependencies": {
+    "@changesets/cli": "2.9.2"
   }
 }
