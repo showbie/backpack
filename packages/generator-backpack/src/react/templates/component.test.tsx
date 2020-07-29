@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { render } from '@testing-library/react';
 
-import <%= pascalName %>, { Props } from './<%= pascalName %>';
+import { <%= pascalName %>, Props } from './<%= pascalName %>';
 
 describe('<<%= pascalName %> />', () => {
   function setup(override = {}) {

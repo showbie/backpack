@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import <%= pascalName %> from './<%= pascalName %>';
+import { <%= pascalName %> } from './<%= pascalName %>';
 
 export default {
-  title: 'BaseComponents|<%= pascalName %>',
+  title: 'Teacher/<%= pascalName %>',
   component: <%= pascalName %>,
 };
 
