@@ -8,7 +8,7 @@
     "bootstrap": "lerna bootstrap",
     "changelog": "lerna-changelog",
     "format": "prettier",
-    "release": "changeset release"
+    "release": "changeset publish"
   },
   "husky": {
     "hooks": {
