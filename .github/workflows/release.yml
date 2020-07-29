@@ -1,29 +1,31 @@
-on:
-  release:
-    types: [published]
-
 name: Release
 
+on:
+  push:
+    branches:
+      - trunk
+
 jobs:
-  notification:
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Send Tokens package notification
-        uses: stormwarning/action-release-notification@v3.1.1
-        if: startsWith(github.ref, 'refs/tags/@showbie/backpack-tokens')
+      - name: Checkout Repo
+        uses: actions/checkout@main
         with:
-          channel: design
-          message: A new version of *@showbie/backpack-tokens* was just released!
-          actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/master/packages/backpack-tokens/CHANGELOG.md"},{"text": "View docs 📚", "url": "https://design.showbie.com/"}]'
-        env:
-          SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
+          # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
+          fetch-depth: 0
 
-      - name: Send Generator package notification
-        uses: stormwarning/action-release-notification@v3.1.1
-        if: startsWith(github.ref, 'refs/tags/@showbie/generator-backpack')
+      - name: Setup Node.js 12.x
+        uses: actions/setup-node@main
         with:
-          channel: socrative-dev
-          message: A new version of *@showbie/generator-backpack* was just released!
-          actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/master/packages/generator-backpack/CHANGELOG.md"}]'
+          node-version: 12.x
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Create Release Pull Request
+        uses: changesets/action@master
         env:
-          SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
