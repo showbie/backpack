@@ -14,7 +14,7 @@ jobs:
         with:
           channel: design
           message: A new version of *@showbie/backpack-tokens* was just released!
-          actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/master/packages/backpack-tokens/CHANGELOG.md"},{"text": "View docs 📚", "url": "https://design.showbie.com/"}]'
+          actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/trunk/packages/backpack-tokens/CHANGELOG.md"},{"text": "View docs 📚", "url": "https://design.showbie.com/"}]'
         env:
           SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
 
@@ -24,6 +24,6 @@ jobs:
         with:
           channel: socrative-dev
           message: A new version of *@showbie/generator-backpack* was just released!
-          actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/master/packages/generator-backpack/CHANGELOG.md"}]'
+          actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/trunk/packages/generator-backpack/CHANGELOG.md"}]'
         env:
           SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
