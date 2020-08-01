@@ -42,7 +42,7 @@
     "import-sort-style-python": "1.0.x",
     "lerna": "3.20.x",
     "lerna-changelog": "1.0.x",
-    "lint-staged": "10.0.x",
+    "lint-staged": "10.2.x",
     "prettier": "1.19.x",
     "prettier-plugin-packagejson": "2.1.x"
   },
