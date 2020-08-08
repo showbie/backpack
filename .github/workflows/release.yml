@@ -36,12 +36,12 @@ jobs:
   notify:
     name: Notify
     needs: release
-    if: jobs.release.steps.changesets.outputs.published == 'true'
+    if: needs.release.steps.changesets.outputs.published == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Send Tokens package notification
         uses: stormwarning/action-release-notification@v3.1.1
-        if: contains(jobs.release.steps.changesets.outputs.publishedPackages.*.name, '@showbie/backpack-tokens')
+        if: contains(needs.release.steps.changesets.outputs.publishedPackages.*.name, '@showbie/backpack-tokens')
         with:
           channel: design
           message: A new version of *@showbie/backpack-tokens* was just released!
@@ -51,7 +51,7 @@ jobs:
 
       - name: Send Generator package notification
         uses: stormwarning/action-release-notification@v3.1.1
-        if: contains(jobs.release.steps.changesets.outputs.publishedPackages.*.name, '@showbie/generator-backpack')
+        if: contains(needs.release.steps.changesets.outputs.publishedPackages.*.name, '@showbie/generator-backpack')
         with:
           channel: socrative-dev
           message: A new version of *@showbie/generator-backpack* was just released!
