@@ -25,9 +25,36 @@ jobs:
         run: yarn
 
       - name: Create Release PR or Publish
+        id: changesets
         uses: changesets/action@master
         with:
           publish: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  notify:
+    name: Notify
+    needs: release
+    if: release.steps.changesets.outputs.published == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Tokens package notification
+        uses: stormwarning/action-release-notification@v3.1.1
+        if: contains(release.steps.changesets.outputs.publishedPackages.*.name, '@showbie/backpack-tokens')
+        with:
+          channel: design
+          message: A new version of *@showbie/backpack-tokens* was just released!
+          actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/trunk/packages/backpack-tokens/CHANGELOG.md"},{"text": "View docs 📚", "url": "https://design.showbie.com/"}]'
+        env:
+          SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
+
+      - name: Send Generator package notification
+        uses: stormwarning/action-release-notification@v3.1.1
+        if: contains(release.steps.changesets.outputs.publishedPackages.*.name, '@showbie/generator-backpack')
+        with:
+          channel: socrative-dev
+          message: A new version of *@showbie/generator-backpack* was just released!
+          actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/trunk/packages/generator-backpack/CHANGELOG.md"}]'
+        env:
+          SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
