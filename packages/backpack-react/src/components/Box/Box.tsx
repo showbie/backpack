@@ -10,12 +10,12 @@ export interface BoxProps
     AllHTMLAttributes<HTMLElement>,
     'width' | 'height' | 'className'
   > {
-  component?: ElementType;
+  tagName?: ElementType;
 }
 
 export const Box = forwardRef<HTMLElement, BoxProps>(
-  ({ component = 'div', ...restProps }, ref) => {
-    return createElement(component, {
+  ({ tagName = 'div', ...restProps }, ref) => {
+    return createElement(tagName, {
       ...restProps,
       ref,
     });
