@@ -1,31 +1,27 @@
-// import {
-//   AllHTMLAttributes,
-//   ElementType,
-//   createElement,
-//   forwardRef,
-// } from 'react';
+import {
+  createElement,
+  forwardRef,
+  AllHTMLAttributes,
+  ElementType,
+} from 'react';
 
-// import { renderBackgroundProvider } from './BackgroundContext';
+export interface BoxProps
+  extends Omit<
+    AllHTMLAttributes<HTMLElement>,
+    'width' | 'height' | 'className'
+  > {
+  component?: ElementType;
+}
 
-// // import { UseBoxStylesProps, useBoxStyles } from './useBoxStyles';
+export const Box = forwardRef<HTMLElement, BoxProps>(
+  ({ component = 'div', ...restProps }, ref) => {
+    return createElement(component, {
+      ...restProps,
+      ref,
+    });
+  }
+);
 
-// export interface BoxProps
-//   extends Omit<AllHTMLAttributes<HTMLElement>, 'width' | 'height'> {
-//   tagName?: ElementType;
-// }
-
-// const NamedBox = forwardRef<HTMLElement, BoxProps>(
-//   ({ tagName = 'div', className, ...restProps }, ref) => {
-//     let element = createElement(tagName, {
-//       className,
-//       ...restProps,
-//       ref,
-//     });
-
-//     return renderBackgroundProvider(background, element);
-//   }
-// );
-
-// NamedBox.displayName = 'Box';
-
-// export const Box = NamedBox;
+if (__DEV__) {
+  Box.displayName = 'Box';
+}
