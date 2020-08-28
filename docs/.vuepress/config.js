@@ -1,6 +1,9 @@
+const path = require('path');
+
 module.exports = {
   title: 'Showbie Backpack',
   themeConfig: {
+    repo: 'showbie/backpack',
     nav: [
       { text: 'Colour', link: '/colour/showbie/' },
       { text: 'Type', link: '/type/showbie/' },
@@ -34,13 +37,6 @@ module.exports = {
       'link',
       {
         rel: 'stylesheet',
-        href: 'https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css',
-      },
-    ],
-    [
-      'link',
-      {
-        rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Montserrat:500,700,800',
       },
     ],
@@ -53,8 +49,14 @@ module.exports = {
         componentsDir: 'components',
       },
     ],
-    ['typescript'],
   ],
+
+  postcss: {
+    plugins: [
+      require('tailwindcss')('./docs/.vuepress/tailwind.config.js'),
+      require('autoprefixer'),
+    ],
+  },
 
   /**
    * Required for custom components that use both `import`s and
@@ -62,5 +64,9 @@ module.exports = {
    */
   chainWebpack: (config, isServer) => {
     config.resolve.symlinks(false);
+  },
+
+  alias: {
+    styles: path.resolve(__dirname, './styles'),
   },
 };

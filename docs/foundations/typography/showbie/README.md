@@ -27,4 +27,3 @@ Font sizes within the app are confined to a fairly narrow range.
   <WeightSwatch weight="800" name="heavy" family="Avenir W04" />
   <WeightSwatch weight="900" name="black" family="Avenir W04" />
 </figure>
-

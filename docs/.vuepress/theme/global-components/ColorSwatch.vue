@@ -1,54 +1,58 @@
 <template>
-  <div class="swatch flex mt2 mb4 br2 overflow-hidden">
+  <div class="swatch flex mt2 mb4 rounded-2 overflow-hidden">
     <div
-      class="w4 flex-shrink-0 flex items-end"
+      class="flex flex-shrink-0 items-end w-32"
       :style="bgStyle"
       style="min-height: 8rem"
     >
-      <div class="w-100 flex justify-around mb3">
-        <span class="dib f6 b pa2 br1" :style="blackContrastStyle">{{
-          blackContrast
-        }}</span>
-        <span class="dib f6 b pa2 br1" :style="whiteContrastStyle">{{
-          whiteContrast
-        }}</span>
+      <div class="w-full flex justify-around mb3">
+        <span
+          class="inline-block f6 font-700 p-2 rounded-1"
+          :style="blackContrastStyle"
+          >{{ blackContrast }}</span
+        >
+        <span
+          class="inline-block f6 font-700 p-2 rounded-1"
+          :style="whiteContrastStyle"
+          >{{ whiteContrast }}</span
+        >
       </div>
     </div>
     <dl
-      class="swatch-details flex flex-wrap items-center ma0 ph4 pv3 bl b--black-025"
+      class="swatch-details flex flex-wrap items-center m-0 px-4 py-3 bl b--black-025"
     >
-      <div class="w-100 mv2 mh2">
-        <dt class="f7 fw6 lh-copy ttu">Name</dt>
-        <dd class="f5 ml0">{{ colorName }}</dd>
+      <div class="w-full my-2 mx-2">
+        <dt class="text-xs text-600 lh-copy uppercase">Name</dt>
+        <dd class="f5 ml-0">{{ colorName }}</dd>
       </div>
-      <div class="mv2 mh2">
-        <dt class="f7 fw6 lh-copy ttu">Value</dt>
-        <dd class="f5 ml0">
+      <div class="my-2 mx-2">
+        <dt class="text-xs text-600 lh-copy uppercase">Value</dt>
+        <dd class="f5 ml-0">
           <code>{{ chromaColor.hex() }}</code>
         </dd>
       </div>
-      <div class="mv2 mh2">
-        <dt class="f7 fw6 lh-copy ttu">SCSS</dt>
-        <dd class="f5 ml0">
+      <div class="my-2 mx-2">
+        <dt class="text-xs text-600 lh-copy uppercase">SCSS</dt>
+        <dd class="f5 ml-0">
           <code>${{ variablePrefix }}-{{ hue }}-{{ scale }}</code>
         </dd>
       </div>
-      <div class="mv2 mh2">
-        <dt class="f7 fw6 lh-copy ttu">Swift</dt>
-        <dd class="f5 ml0">
+      <div class="my-2 mx-2">
+        <dt class="text-xs text-600 lh-copy uppercase">Swift</dt>
+        <dd class="f5 ml-0">
           <code>{{ swiftVar }}</code>
         </dd>
       </div>
       <div class="flex">
-        <div class="mv2 mh2">
-          <dt class="f7 fw6 lh-copy ttu">RGB</dt>
-          <dd class="f5 ml0">
+        <div class="my-2 mx-2">
+          <dt class="text-xs text-600 lh-copy uppercase">RGB</dt>
+          <dd class="f5 ml-0">
             <code>{{ colorRGB }}</code>
           </dd>
         </div>
-        <div class="mv2 mh2">
-          <dt class="f7 fw6 lh-copy ttu">HSL</dt>
-          <dd class="f5 ml0">
+        <div class="my-2 mx-2">
+          <dt class="text-xs text-600 lh-copy uppercase">HSL</dt>
+          <dd class="f5 ml-0">
             <code>{{ colorHSL }}</code>
           </dd>
         </div>
@@ -61,12 +65,14 @@
 import chroma from 'chroma-js';
 import namedColors from 'color-name-list';
 
-import SBE from '../../../src/backpack-showbie';
-import SOC from '../../../src/backpack-socrative';
+import SBE from '../../../packages/backpack-tokens/src/backpack-showbie';
+import SOC from '../../../packages/backpack-tokens/src/backpack-socrative';
 
 const nearestColor = require('nearest-color');
 
-const { swiftVarName } = require('../../../lib/utils/string');
+const {
+  swiftVarName,
+} = require('../../../packages/backpack-tokens/lib/utils/string');
 
 /**
  * Get an a11y rating score based on a contrast value.
@@ -206,6 +212,6 @@ export default {
 
 <style>
 .swatch {
-  background-color: #f8f8f8;
+  background-color: #f5f7f8;
 }
 </style>
