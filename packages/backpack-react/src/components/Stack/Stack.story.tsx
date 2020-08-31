@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import { Box } from 'components';
+import { Box } from '../';
 
 import { Stack } from './Stack';
 
