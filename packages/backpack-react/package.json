@@ -4,7 +4,8 @@
   "license": "ISC",
   "author": "Jeff",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "main": "dist/index.js",
   "module": "dist/backpack-react.esm.js",
@@ -41,7 +42,6 @@
     "react-docgen-typescript-loader": "3.7.x",
     "react-dom": "16.13.x",
     "rollup-plugin-postcss": "3.1.x",
-    "rollup-plugin-static-files": "0.1.0",
     "tailwind-capsize": "1.0.x",
     "tailwindcss": "1.7.x",
     "ts-loader": "7.0.x",
