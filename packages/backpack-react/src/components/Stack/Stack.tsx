@@ -2,7 +2,8 @@ import React, { ReactElement } from 'react';
 
 import warning from 'warning';
 
-import { Box, Divider } from '..';
+import { Box } from '../Box/Box';
+import { Divider } from '../Divider/Divider';
 
 export type ReactNodeNoStrings =
   | React.ReactElement
