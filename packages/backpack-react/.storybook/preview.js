@@ -1,4 +1,4 @@
-import '../src/styles.css';
+import '../dist/styles.css';
 
 import React from 'react';
 

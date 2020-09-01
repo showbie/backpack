@@ -6,6 +6,8 @@ module.exports = {
       postcss({
         modules: true,
         plugins: [require('tailwindcss'), require('autoprefixer')],
+        inject: false,
+        extract: 'styles.css',
       })
     );
     return config;
