@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "alwaysStrict": true,
-    "baseUrl": "./",
     "declaration": true,
     "esModuleInterop": true,
     "importHelpers": true,
@@ -10,22 +8,12 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "paths": {
-      "@": ["./"],
-      "*": ["src/*", "node_modules/*"]
-    },
-    "rootDir": "./",
+    "rootDir": "./src",
     "sourceMap": true,
-    "strict": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-    "target": "es5"
+    "strict": true
   },
-  "include": ["src", "types", "test"]
+  "include": ["src", "types"]
 }
