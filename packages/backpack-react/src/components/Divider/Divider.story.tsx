@@ -8,3 +8,5 @@ export default {
 };
 
 export const base = (): ReactElement => <Divider />;
+
+export const light = (): ReactElement => <Divider weight="light" />;

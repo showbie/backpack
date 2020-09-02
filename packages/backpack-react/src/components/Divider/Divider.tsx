@@ -1,9 +1,20 @@
 import React, { ReactElement } from 'react';
 
-export function Divider(): ReactElement {
+import cx from 'classnames';
+
+interface DividerProps {
+  weight?: 'normal' | 'light';
+}
+
+export function Divider({ weight = 'normal' }: DividerProps): ReactElement {
+  const dividerClass = cx('absolute w-full h-px', {
+    'bg-divider': weight === 'normal',
+    'bg-grey-200': weight === 'light',
+  });
+
   return (
     <div className="relative">
-      <div className="absolute w-full h-px bg-divider" />
+      <div className={dividerClass} />
     </div>
   );
 }
