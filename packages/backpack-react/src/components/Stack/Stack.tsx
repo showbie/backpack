@@ -2,15 +2,9 @@ import React, { ReactElement } from 'react';
 
 import warning from 'warning';
 
+import { ReactNodeNoStrings } from '../../types/ReactNodeNoStrings';
 import { Box } from '../Box/Box';
 import { Divider } from '../Divider/Divider';
-
-export type ReactNodeNoStrings =
-  | React.ReactElement
-  | Array<ReactNodeNoStrings>
-  | boolean
-  | null
-  | undefined;
 
 const validStackElements = ['div', 'ol', 'ul'] as const;
 
@@ -32,17 +26,20 @@ export function Stack({
       .join(', ')}]`
   );
 
+  const isList = tagName === 'ol' || tagName === 'ul';
+  const stackItemElement = isList ? 'li' : 'div';
+
   return (
     <Box tagName={tagName}>
       {React.Children.map(children, (child, index) => (
-        <div>
+        <Box tagName={stackItemElement}>
           {dividers && index > 0 ? (
             <div>
               <Divider />
             </div>
           ) : null}
           {child}
-        </div>
+        </Box>
       ))}
     </Box>
   );
