@@ -1,8 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import { Box } from '../Box/Box';
-
-import { Stack } from './Stack';
+import { Box, Stack } from '../../../dist';
 
 export default {
   title: 'Layout/Stack',
