@@ -4,12 +4,15 @@ module.exports = {
   rollup(config, options) {
     config.plugins.push(
       postcss({
-        modules: true,
+        modules: {
+          // https://github.com/webpack/loader-utils#interpolatename
+          generateScopedName: '[folder]__[local]__[hash:base64:5]',
+        },
         plugins: [require('tailwindcss'), require('autoprefixer')],
-        inject: false,
         extract: 'styles.css',
       })
     );
+
     return config;
   },
 };
