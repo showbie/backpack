@@ -118,6 +118,16 @@ module.exports = {
       display: ['Montserrat', 'sans-serif'],
     },
 
+    fontMetrics: {
+      sans: {
+        capHeight: 2048,
+        ascent: 2728,
+        descent: -680,
+        lineGap: 0,
+        unitsPerEm: 2816,
+      },
+    },
+
     fontSize: {
       inherit: 'inherit',
       xs: '1.08334rem', //      13px
@@ -279,6 +289,6 @@ module.exports = {
 
       addUtilities(blendModes);
     }),
-    require('tailwind-capsize'),
+    require('tailwind-capsize').default({ rootSize: 12 }),
   ],
 };

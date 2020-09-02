@@ -8,7 +8,7 @@ module.exports = {
           // https://github.com/webpack/loader-utils#interpolatename
           generateScopedName: '[folder]__[local]__[hash:base64:5]',
         },
-        plugins: [require('tailwindcss'), require('autoprefixer')],
+        plugins: [require('autoprefixer')],
         extract: 'styles.css',
       })
     );

@@ -12,11 +12,12 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "tsdx build",
-    "build-storybook": "build-storybook",
+    "build:storybook": "yarn build:tailwind && build-storybook",
+    "build:tailwind": "postcss ./src/tailwind.css --dir ./.storybook --use {tailwindcss,autoprefixer} --no-map",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "start": "tsdx watch",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "yarn build:tailwind && start-storybook -p 6006",
     "test": "tsdx test --passWithNoTests"
   },
   "dependencies": {
@@ -42,6 +43,7 @@
     "babel-jest": "26.3.0",
     "babel-loader": "8.1.x",
     "husky": "4.2.x",
+    "postcss-cli": "7.1.x",
     "react": "16.13.x",
     "react-docgen-typescript-loader": "3.7.x",
     "react-dom": "16.13.x",
