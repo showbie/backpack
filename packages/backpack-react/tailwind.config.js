@@ -27,6 +27,9 @@ const BLEND_MODES = [
 ];
 
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   purge: ['./src/**/*.@(js|ts)x'],
   prefix: '',
   separator: ':',
