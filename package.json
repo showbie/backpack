@@ -7,6 +7,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "changelog": "lerna-changelog",
+    "changeset": "changeset add",
     "format": "prettier",
     "release": "changeset publish"
   },
