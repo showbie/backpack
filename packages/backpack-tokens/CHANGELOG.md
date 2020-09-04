@@ -1,52 +1,54 @@
-### 2.5.1 — 2020-06-23
+# Change Log
 
-## 2.6.0
+## 2.6.0 — 2020-09-04
 
-### Minor Changes
+#### 🎁 Added
 
-- 27c7244: Add new `color-docs` token export \
+- [`27c7244`](https://github.com/showbie/backpack/commit/27c7244772d8d5e6c9ff7bbdf39ca2298292d805) Add new `color-docs` token export \
   Exports an object with all app palettes and pre-generated values for
-  use the docs site.
+  use on the docs site.
+
+### 2.5.1 — 2020-06-23
 
 #### 🔒 Security
 
-- [#18](https://github.com/showbie/backpack/pull/18) Bump acorn from 6.3.0 to 6.4.1 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
-- [#28](https://github.com/showbie/backpack/pull/28) Bump websocket-extensions from 0.1.3 to 0.1.4 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- [#18](https://github.com/showbie/backpack/pull/18) Bump acorn from 6.3.0 to 6.4.1
+- [#28](https://github.com/showbie/backpack/pull/28) Bump websocket-extensions from 0.1.3 to 0.1.4
 
-### 2.5.0 — 2020-03-24
-
-#### 🎁 Added
-
-- [#21](https://github.com/showbie/backpack/pull/21) Add `700`-level colours to Socrative palette ([@stormwarning](https://github.com/stormwarning))
-
-### 2.4.0 — 2020-03-23
+## 2.5.0 — 2020-03-24
 
 #### 🎁 Added
 
-- [#19](https://github.com/showbie/backpack/pull/19) Add `100`-level colours & `grey-800` to Socrative ([@stormwarning](https://github.com/stormwarning)) \
+- [#21](https://github.com/showbie/backpack/pull/21) Add `700`-level colours to Socrative palette
+
+## 2.4.0 — 2020-03-23
+
+#### 🎁 Added
+
+- [#19](https://github.com/showbie/backpack/pull/19) Add `100`-level colours & `grey-800` to Socrative \
   New light shades of orange and indigo for background hovers.
 
-### 2.3.0 — 2020-02-19
+## 2.3.0 — 2020-02-19
 
 #### ♻️ Changed
 
-- [#10](https://github.com/showbie/backpack/pull/10) Rewrite tokens builder in TypeScript ([@stormwarning](https://github.com/stormwarning))
+- [#10](https://github.com/showbie/backpack/pull/10) Rewrite tokens builder in TypeScript
 
 #### 🎁 Added
 
-- [#12](https://github.com/showbie/backpack/pull/12) Add new blues to Socrative palette ([@stormwarning](https://github.com/stormwarning))
+- [#12](https://github.com/showbie/backpack/pull/12) Add new blues to Socrative palette
 
 #### 🔒 Security
 
-- [#4](https://github.com/showbie/backpack/pull/4) Bump serialize-javascript from 1.9.1 to 2.1.2 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- [#4](https://github.com/showbie/backpack/pull/4) Bump serialize-javascript from 1.9.1 to 2.1.2
 
-### 2.2.0 — 2020-02-12
+## 2.2.0 — 2020-02-12
 
 #### 🎁 Added
 
-- [#3](https://github.com/showbie/backpack/pull/3) Add `50`- and `700`-level red values ([@stormwarning](https://github.com/stormwarning))
+- [#3](https://github.com/showbie/backpack/pull/3) Add `50`- and `700`-level red values
 
-### 2.1.0 — 2020-01-22
+## 2.1.0 — 2020-01-22
 
 #### 🎁 Added
 
@@ -64,27 +66,27 @@
 - Add indigo colours to Socrative palette
 - Add orange colours to Socrative palette
 
-### 1.4.0 — 2020-01-16
+## 1.4.0 — 2020-01-16
 
 #### 🎁 Added
 
 - Add all Showbie reds to Socrative palette \
   Red palette is imported directly; any change to Showbie reds will update the Socrative palette.
 
-### 1.3.0 — 2020-01-14
+## 1.3.0 — 2020-01-14
 
 #### 🎁 Added
 
 - Add `100`-level grey to Showbie palette
 
-### 1.2.0 — 2020-01-10
+## 1.2.0 — 2020-01-10
 
 #### 🎁 Added
 
 - Add `900`-level slate colour to Showbie palette \
   Includes changes to templates & docs to allow for colours with alpha values.
 
-### 1.1.0 — 2020-01-09
+## 1.1.0 — 2020-01-09
 
 #### 🎁 Added
 
@@ -105,20 +107,20 @@
 
 - Unify green values across Showbie & Socrative palettes
 
-### 0.6.0 — 2019-12-02
+## 0.6.0 — 2019-12-02
 
 #### 🎁 Added
 
 - Add new red & green colours to Showbie palette \
   As per: [sketch.cloud/s/15bvw/a/a1xL85](https://sketch.cloud/s/15bvw/a/a1xL85) Also adds docs for retired red values.
 
-### 0.5.0 — 2019-11-19
+## 0.5.0 — 2019-11-19
 
 #### 🎁 Added
 
 - Add blessed `50`-level grey to Showbie palette
 
-### 0.4.0 — 2019-09-23
+## 0.4.0 — 2019-09-23
 
 #### 🎁 Added
 
@@ -159,6 +161,6 @@
 
 - Modified Swift output files to include hex values in comments
 
-### 0.1.0 — 2019-05-29
+## 0.1.0 — 2019-05-29
 
-🎉 Initial release!
+### 🎉 Initial release!
