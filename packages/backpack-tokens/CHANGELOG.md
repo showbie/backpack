@@ -1,35 +1,50 @@
 ### 2.5.1 — 2020-06-23
 
+## 2.6.0
+
+### Minor Changes
+
+- 27c7244: Add new `color-docs` token export \
+  Exports an object with all app palettes and pre-generated values for
+  use the docs site.
+
 #### 🔒 Security
-* [#18](https://github.com/showbie/backpack/pull/18) Bump acorn from 6.3.0 to 6.4.1 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
-* [#28](https://github.com/showbie/backpack/pull/28) Bump websocket-extensions from 0.1.3 to 0.1.4 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+
+- [#18](https://github.com/showbie/backpack/pull/18) Bump acorn from 6.3.0 to 6.4.1 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- [#28](https://github.com/showbie/backpack/pull/28) Bump websocket-extensions from 0.1.3 to 0.1.4 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 ### 2.5.0 — 2020-03-24
 
 #### 🎁 Added
-* [#21](https://github.com/showbie/backpack/pull/21) Add `700`-level colours to Socrative palette ([@stormwarning](https://github.com/stormwarning))
+
+- [#21](https://github.com/showbie/backpack/pull/21) Add `700`-level colours to Socrative palette ([@stormwarning](https://github.com/stormwarning))
 
 ### 2.4.0 — 2020-03-23
 
 #### 🎁 Added
-* [#19](https://github.com/showbie/backpack/pull/19) Add `100`-level colours & `grey-800` to Socrative ([@stormwarning](https://github.com/stormwarning)) \
+
+- [#19](https://github.com/showbie/backpack/pull/19) Add `100`-level colours & `grey-800` to Socrative ([@stormwarning](https://github.com/stormwarning)) \
   New light shades of orange and indigo for background hovers.
 
 ### 2.3.0 — 2020-02-19
 
 #### ♻️ Changed
-* [#10](https://github.com/showbie/backpack/pull/10) Rewrite tokens builder in TypeScript ([@stormwarning](https://github.com/stormwarning))
+
+- [#10](https://github.com/showbie/backpack/pull/10) Rewrite tokens builder in TypeScript ([@stormwarning](https://github.com/stormwarning))
 
 #### 🎁 Added
-* [#12](https://github.com/showbie/backpack/pull/12) Add new blues to Socrative palette ([@stormwarning](https://github.com/stormwarning))
+
+- [#12](https://github.com/showbie/backpack/pull/12) Add new blues to Socrative palette ([@stormwarning](https://github.com/stormwarning))
 
 #### 🔒 Security
-* [#4](https://github.com/showbie/backpack/pull/4) Bump serialize-javascript from 1.9.1 to 2.1.2 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+
+- [#4](https://github.com/showbie/backpack/pull/4) Bump serialize-javascript from 1.9.1 to 2.1.2 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 ### 2.2.0 — 2020-02-12
 
 #### 🎁 Added
-* [#3](https://github.com/showbie/backpack/pull/3) Add `50`- and `700`-level red values ([@stormwarning](https://github.com/stormwarning))
+
+- [#3](https://github.com/showbie/backpack/pull/3) Add `50`- and `700`-level red values ([@stormwarning](https://github.com/stormwarning))
 
 ### 2.1.0 — 2020-01-22
 
@@ -81,8 +96,8 @@
 #### 💣 Breaking Change
 
 - Update all grey colours in Socrative palette \
-  Usage of `grey-300` and `grey-400` should be changed to `grey-500`
-and `grey-600`, respectively.
+   Usage of `grey-300` and `grey-400` should be changed to `grey-500`
+  and `grey-600`, respectively.
 
 ### 0.6.1 — 2019-12-04
 
