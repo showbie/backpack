@@ -1,0 +1,21 @@
+module.exports = {
+{{#each themes as |t|}}
+  {{t.theme}}: {
+{{~#each t.palette as |h|}}
+
+    {{h.hue}}: {
+{{#each h.scale as |shade|}}
+      '{{shade.shade}}': {
+        hex: '{{shade.hex}}',
+        rgb: '{{shade.rgb}}',
+        hsl: '{{shade.hsl}}',
+        name: '{{shade.name}}',
+        scss: '{{shade.scss}}',
+        swift: '{{shade.swift}}',
+      },
+{{/each}}
+    },
+{{/each}}
+  },
+{{/each}}
+}

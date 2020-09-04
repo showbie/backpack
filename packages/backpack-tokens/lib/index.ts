@@ -3,6 +3,7 @@ import * as path from 'path';
 import SHOWBIE from '../src/backpack-showbie';
 import SOCRATIVE from '../src/backpack-socrative';
 import ColorBuilder from './build-colors';
+import ColorDocsBuilder from './build-docs';
 
 import pkg = require('../package.json');
 
@@ -16,6 +17,10 @@ const SocrativeColors = new ColorBuilder(
   SOCRATIVE.prefix,
   pkg.version
 );
+const DocsColors = new ColorDocsBuilder({
+  showbie: SHOWBIE,
+  socrative: SOCRATIVE,
+});
 
 ShowbieColors.build('showbie-color.scss', [
   path.join(__dirname, '..', 'dist', 'showbie-color.scss'),
@@ -38,4 +43,8 @@ SocrativeColors.build('showbie-color.swift', [
 ]);
 SocrativeColors.build('showbie-color.js', [
   path.join(__dirname, '..', 'dist', 'socrative-color.js'),
+]);
+
+DocsColors.build('color-docs.js', [
+  path.join(__dirname, '..', 'dist', 'color-docs.js'),
 ]);
