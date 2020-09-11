@@ -1,6 +1,10 @@
 const extensions = '@(js|md|vue|html)';
 
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
+
   purge: [
     `../../**/*.${extensions}`,
     `../../../node_modules/**/*vuepress*/!(node_modules)/**/*.${extensions}`,
@@ -134,6 +138,12 @@ module.exports = {
         },
       },
     }),
+
+    extend: {
+      colors: {
+        divider: 'rgba(7, 2, 20, 0.1)',
+      },
+    },
   },
 
   plugins: [require('@tailwindcss/typography'), require('tailwind-capsize')],

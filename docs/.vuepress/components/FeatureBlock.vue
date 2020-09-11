@@ -16,11 +16,11 @@
 </template>
 
 <script>
-import IconFeather from './icons/IconFeather.vue';
-import IconSwatch from './icons/IconSwatch.vue';
-import IconLayout from './icons/IconLayout.vue';
-import IconText from './icons/IconText.vue';
-import IconWind from './icons/IconWind.vue';
+import IconFeather from './IconFeather.vue';
+import IconSwatch from './IconSwatch.vue';
+import IconLayout from './IconLayout.vue';
+import IconText from './IconText.vue';
+import IconWind from './IconWind.vue';
 
 export default {
   components: {

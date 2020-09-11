@@ -2,16 +2,16 @@ const path = require('path');
 
 module.exports = {
   title: 'Showbie Backpack',
+  extend: '@vuepress/theme-default',
   themeConfig: {
     repo: 'showbie/backpack',
     nav: [
-      { text: 'Colour', link: '/colour/showbie/' },
-      { text: 'Type', link: '/type/showbie/' },
-      { text: 'GitHub', link: 'https://github.com/showbie/backpack' },
+      { text: 'Colour', link: '/foundations/colour/showbie/' },
+      { text: 'Typography', link: '/foundations/typography/showbie/' },
     ],
 
     sidebar: {
-      '/colour/': [
+      '/foundations/colour/': [
         {
           title: 'Colour',
           collapsable: false,
@@ -20,10 +20,10 @@ module.exports = {
         {
           title: 'Exploration',
           collapsable: false,
-          children: ['unconfirmed/', 'graveyard/', 'grid/'],
+          children: ['unconfirmed/', 'graveyard/'],
         },
       ],
-      '/type/': [
+      '/foundations/typography/': [
         {
           title: 'Typography',
           collapsable: false,

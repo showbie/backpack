@@ -8,7 +8,7 @@ Socrative uses two different fonts throughout the app: most text is set in [Inte
 
 Font sizes within the app are confined to a fairly narrow range.
 
-<figure class="mh0 mv5">
+<figure class="mx-0 my-16">
   <SizeSwatch name="xs" value="1.08334rem" family="Inter" />
   <SizeSwatch name="sm" value="1.25rem" family="Inter" />
   <SizeSwatch name="base" value="1.33334rem" family="Inter" />
@@ -16,7 +16,7 @@ Font sizes within the app are confined to a fairly narrow range.
 
 These three smaller sizes should only be used with Inter. Montserrat does not render well this small.
 
-<figure class="mh0 mv5">
+<figure class="mx-0 my-16">
   <SizeSwatch name="display" value="1.41667rem" family="Montserrat" />
   <SizeSwatch name="md" value="1.66667rem" family="Montserrat" />
   <SizeSwatch name="lg" value="2.5rem" family="Montserrat" />
@@ -27,7 +27,7 @@ Larger font sizes should be used for Montserrat, rarely for Inter.
 
 ## Weights
 
-<figure class="mh0 mv5">
+<figure class="mx-0 my-16">
   <WeightSwatch weight="400" name="regular" family="Inter" />
   <WeightSwatch weight="500" name="medium" family="Inter" />
   <WeightSwatch weight="600" name="semibold" family="Inter" />
@@ -37,7 +37,7 @@ Larger font sizes should be used for Montserrat, rarely for Inter.
 Inter is available in these four weights. Italics are available at each of these
 weights as well.
 
-<figure class="mh0 mv5">
+<figure class="mx-0 my-16">
   <WeightSwatch weight="500" name="medium" family="Montserrat" />
   <WeightSwatch weight="700" name="bold" family="Montserrat" />
   <WeightSwatch weight="800" name="extra-bold" family="Montserrat" />

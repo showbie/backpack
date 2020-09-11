@@ -1,14 +1,14 @@
 <template>
-  <div class="mt4 mb4">
+  <div class="my-8">
     <div class="flex items-baseline justify-start">
-      <span class="flex w-16 text-sm text-600 uppercase">{{ weight }}</span>
-      <span class="flex ml2 text-base">
+      <span class="flex w-16 text-sm font-600 uppercase">{{ weight }}</span>
+      <span class="flex ml-2 text-base">
         <code>{{ name }}</code>
       </span>
     </div>
-    <div class="flex items-baseline justify-start mt3">
+    <div class="flex items-baseline justify-start mt-4">
       <span class="flex w-16 flex-shrink-0"></span>
-      <span class="flex ml2" :style="exampleCSS"
+      <span class="flex ml-2" :style="exampleCSS"
         >The quick brown fox jumps over the lazy dog.</span
       >
     </div>

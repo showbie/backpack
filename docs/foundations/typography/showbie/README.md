@@ -8,7 +8,7 @@ Showbie uses a single font family, [Avenir](https://www.fonts.com/font/linotype/
 
 Font sizes within the app are confined to a fairly narrow range.
 
-<figure class="mh0 mv5">
+<figure class="mx-0 my-16">
   <SizeSwatch name="xs" value="1rem" family="Avenir W04" />
   <SizeSwatch name="sm" value="1.08334rem" family="Avenir W04" />
   <SizeSwatch name="base" value="1.25rem" family="Avenir W04" />
@@ -19,7 +19,7 @@ Font sizes within the app are confined to a fairly narrow range.
 
 ## Weights
 
-<figure class="mh0 mv5">
+<figure class="mx-0 my-16">
   <WeightSwatch weight="300" name="light" family="Avenir W04" />
   <WeightSwatch weight="400" name="book" family="Avenir W04" />
   <WeightSwatch weight="500" name="roman" family="Avenir W04" />

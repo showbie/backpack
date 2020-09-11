@@ -1,29 +1,27 @@
 <template>
-  <div class="scale flex gap-2 mt-4">
-    <template v-for="(color, label, index) in colors">
+  <div class="scale flex gap-2 mt-2">
+    <template v-for="(label, index) in labels">
       <a
-        v-if="color && !label.includes('-')"
+        v-if="colors[label]"
         :key="index"
-        class="scale-chip w-12"
+        class="scale-chip flex-1"
         :href="anchor + label"
         :title="hue + ' ' + label"
       >
-        <div class="h-8 rounded-1" :style="{ backgroundColor: color }"></div>
+        <div
+          class="w-full h-8 rounded-1"
+          :style="{ backgroundColor: colors[label].hex }"
+        ></div>
       </a>
-      <div
-        v-else-if="!label.includes('-')"
-        :key="index"
-        class="scale-blank w-12"
-      >
-        <div class="h-8 rounded-1"></div>
+      <div v-else :key="index" class="scale-blank flex-1">
+        <div class="w-full h-8 rounded-1"></div>
       </div>
     </template>
   </div>
 </template>
 
 <script>
-import { colors as SBE_COLORS } from '../../../packages/backpack-tokens/src/backpack-showbie';
-import { colors as SOC_COLORS } from '../../../packages/backpack-tokens/src/backpack-socrative';
+import colors from '@showbie/backpack-tokens/dist/color-docs';
 
 export default {
   props: {
@@ -37,13 +35,25 @@ export default {
     },
   },
 
+  data() {
+    return {
+      /**
+       * Tokens export only includes defined shades, but we need to
+       * loop through the whole scale.
+       */
+      labels: [50, 100, 200, 300, 400, 500, 600, 700, 800, 900],
+    };
+  },
+
   computed: {
     /**
      * @todo Need to handle error here if the colour doesn't exist
      *       in the main list.
      */
     colors: function() {
-      let source = this.theme === 'socrative' ? SOC_COLORS : SBE_COLORS;
+      let { showbie, socrative } = colors;
+      let source = this.theme === 'socrative' ? socrative : showbie;
+
       return source[this.hue];
     },
 
@@ -55,10 +65,6 @@ export default {
 </script>
 
 <style>
-.scale {
-  /* margin-right: -0.5rem; */
-}
-
 .scale-blank > div {
   box-shadow: inset 0 0 0 1px hsla(257, 82%, 4%, 0.1);
 }
