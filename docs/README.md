@@ -13,7 +13,7 @@ A design token is an abstraction of a visual property such as colour, font, widt
     href="/foundations/colour/showbie/"
   >
     <div class="flex items-center">
-      <div class="p-2 rounded-1 text-white bg-gray-600">
+      <div class="flex p-2 rounded-1 text-white bg-gray-600">
         <IconSwatch class="w-6 h-6" />
       </div>
       <h2 class="m-0 pb-0 pl-2 border-b-0 text-xl font-500 leading-8">Colour</h2>
@@ -25,7 +25,7 @@ A design token is an abstraction of a visual property such as colour, font, widt
     href="/foundations/typography/showbie/"
   >
     <div class="flex items-center">
-      <div class="p-2 rounded-1 text-white bg-gray-600">
+      <div class="flex p-2 rounded-1 text-white bg-gray-600">
         <IconText class="w-6 h-6" />
       </div>
       <h2 class="m-0 pb-0 pl-2 border-b-0 text-xl font-500 leading-8">Typography</h2>
@@ -34,7 +34,7 @@ A design token is an abstraction of a visual property such as colour, font, widt
   </a>
   <div class="p-4 rounded-2 opacity-50">
     <div class="flex items-center">
-      <div class="p-2 rounded-1 text-white bg-gray-600">
+      <div class="flex p-2 rounded-1 text-white bg-gray-600">
         <IconLayout class="w-6 h-6" />
       </div>
       <h2 class="m-0 pb-0 pl-2 border-b-0 text-xl font-500 leading-8">Space</h2>
@@ -43,7 +43,7 @@ A design token is an abstraction of a visual property such as colour, font, widt
   </div>
   <div class="p-4 rounded-2 opacity-50">
     <div class="flex items-center">
-      <div class="p-2 rounded-1 text-white bg-gray-600">
+      <div class="flex p-2 rounded-1 text-white bg-gray-600">
         <IconFeather class="w-6 h-6" />
       </div>
       <h2 class="m-0 pb-0 pl-2 border-b-0 text-xl font-500 leading-8">Icons</h2>
@@ -52,7 +52,7 @@ A design token is an abstraction of a visual property such as colour, font, widt
   </div>
   <div class="p-4 rounded-2 opacity-50">
     <div class="flex items-center">
-      <div class="p-2 rounded-1 text-white bg-gray-600">
+      <div class="flex p-2 rounded-1 text-white bg-gray-600">
         <IconWind class="w-6 h-6" />
       </div>
       <h2 class="m-0 pb-0 pl-2 border-b-0 text-xl font-500 leading-8">Motion</h2>
