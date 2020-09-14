@@ -7,7 +7,7 @@ tagline: 'A design system for Showbie applications'
 A design token is an abstraction of a visual property such as colour, font, width, animation, etc. These raw values are language-agnostic and once transformed and formatted can be used on any platform.
 </div>
 
-<div class="grid md:grid-cols-3 md:gap-4 py-12 -mx-4">
+<div class="grid md:grid-cols-3 md:gap-4 py-12 -mx-4 feature-blocks">
   <a
     class="p-4 rounded-2 hover:bg-gray-100"
     href="/foundations/colour/showbie/"
