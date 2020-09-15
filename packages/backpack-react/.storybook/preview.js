@@ -3,11 +3,16 @@ import '../dist/styles.css';
 
 import React from 'react';
 
-import { withA11y } from '@storybook/addon-a11y';
 import { addDecorator, addParameters } from '@storybook/react';
 
-addDecorator(withA11y);
 addDecorator((story) => <div className="story-container">{story()}</div>);
+
+export const parameters = {
+  // This won't do anything until 6.1.x probably.
+  backgrounds: {
+    grid: { cellSize: 12 },
+  },
+};
 
 addParameters({
   options: {
