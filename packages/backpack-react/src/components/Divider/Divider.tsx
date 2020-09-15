@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import cx from 'classnames';
+import cx from 'clsx';
 
 interface DividerProps {
   weight?: 'normal' | 'light';

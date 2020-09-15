@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@types/warning": "3.0.0",
-    "classnames": "2.2.6",
+    "clsx": "1.1.1",
     "warning": "4.0.3"
   },
   "devDependencies": {
@@ -36,7 +36,6 @@
     "@storybook/theming": "6.0.21",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/react": "10.4.9",
-    "@types/classnames": "2.2.x",
     "@types/jest": "26.0.x",
     "@types/react": "16.9.x",
     "@types/react-dom": "16.9.x",
