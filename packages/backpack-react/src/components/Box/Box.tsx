@@ -6,10 +6,7 @@ import {
 } from 'react';
 
 export interface BoxProps
-  extends Omit<
-    AllHTMLAttributes<HTMLElement>,
-    'width' | 'height' | 'className'
-  > {
+  extends Omit<AllHTMLAttributes<HTMLElement>, 'width' | 'height'> {
   tagName?: ElementType;
 }
 
