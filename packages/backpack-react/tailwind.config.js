@@ -25,6 +25,7 @@ const BLEND_MODES = [
   'color',
   'luminosity',
 ];
+const PSEUDO_ELEMENTS = ['before', 'after'];
 
 module.exports = {
   future: {
@@ -279,7 +280,7 @@ module.exports = {
 
   plugins: [
     plugin(function({ addUtilities }) {
-      let blendModes = BLEND_MODES.map((value) => {
+      const blendModes = BLEND_MODES.map((value) => {
         return {
           [`.mix-${value}`]: {
             mixBlendMode: value,
@@ -288,6 +289,23 @@ module.exports = {
       });
 
       addUtilities(blendModes);
+    }),
+    plugin(function({ addUtilities, addVariant, e }) {
+      addUtilities(
+        {
+          '.empty-content': {
+            content: "''",
+          },
+        },
+        PSEUDO_ELEMENTS
+      );
+      PSEUDO_ELEMENTS.forEach((pseudo) => {
+        addVariant(pseudo, ({ modifySelectors, separator }) => {
+          modifySelectors(({ className }) => {
+            return `.${e(`${pseudo}${separator}${className}`)}::${pseudo}`;
+          });
+        });
+      });
     }),
     require('tailwind-capsize').default({ rootSize: 12 }),
   ],
