@@ -25,7 +25,7 @@ export function Inline({
 }: InlineProps): ReactElement {
   warning(
     validInlineElements.includes(tagName),
-    `Invalid Inline element: '${tagName}'. Should be one of [${validInlineElements
+    `Invalid Inline tagName: '${tagName}'. Should be one of [${validInlineElements
       .map((c) => `'${c}'`)
       .join(', ')}]`
   );
