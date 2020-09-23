@@ -6,6 +6,11 @@ interface DividerProps {
   weight?: 'normal' | 'light';
 }
 
+/**
+ * A hairline divider to visually break up content. Mainly used in
+ * conjunction with the `Stack` component, it can also be used
+ * directly when needed.
+ */
 export function Divider({ weight = 'normal' }: DividerProps): ReactElement {
   const dividerClass = cx('absolute w-full h-px', {
     'bg-divider': weight === 'normal',

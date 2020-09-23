@@ -9,14 +9,21 @@ import { Divider } from '../Divider/Divider';
 const validStackElements = ['div', 'ol', 'ul'] as const;
 
 export interface StackProps {
-  tagName?: typeof validStackElements[number];
   children: ReactNodeNoStrings;
+  /** The parent element to render. Children will also be wrapped appropriately. */
+  tagName?: typeof validStackElements[number];
+  /** Render `Divider` components between children. */
   dividers?: boolean;
 }
 
+/**
+ * The most common white space on screen is between elements stacked
+ * vertically. Can also be used to automatically insert dividing lines
+ * between children.
+ */
 export function Stack({
-  tagName = 'div',
   children,
+  tagName = 'div',
   dividers = false,
 }: StackProps): ReactElement {
   warning(

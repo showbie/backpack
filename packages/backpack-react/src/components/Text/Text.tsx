@@ -20,12 +20,19 @@ export interface TextProps extends Pick<BoxProps, 'tagName'> {
   leading?: UseTextProps['leading'];
   color?: UseTextProps['color'];
   align?: UseTextProps['align'];
+  /** Truncates the content with an ellipsis when overflowing a parent. */
   truncate?: boolean;
 }
 
 export const TextContext = createContext<UseTextProps | false>(false);
 
+/**
+ * Provides a limited subset of typography-related properties. Also
+ * handles other text utilities; like trimming leading whitespace,
+ * truncating, and text selection.
+ */
 export function Text({
+  children,
   id,
   tagName = 'span',
   family,
@@ -35,7 +42,6 @@ export function Text({
   color,
   align,
   truncate = false,
-  children,
 }: TextProps): ReactElement {
   warning(
     !useContext(TextContext),

@@ -9,8 +9,8 @@ import { Box } from '../Box/Box';
 const validInlineElements = ['div', 'ol', 'ul'] as const;
 
 export interface InlineProps {
-  tagName?: typeof validInlineElements[number];
   children: ReactNodeNoStrings;
+  tagName?: typeof validInlineElements[number];
   space?: 'default' | 'none';
 }
 
@@ -19,8 +19,8 @@ export interface InlineProps {
  * them, wrapping onto multiple lines when necessary.
  */
 export function Inline({
-  tagName = 'div',
   children,
+  tagName = 'div',
   space = 'default',
 }: InlineProps): ReactElement {
   warning(
