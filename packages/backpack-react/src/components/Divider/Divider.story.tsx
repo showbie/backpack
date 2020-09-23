@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import { Divider } from '../../../dist';
+import { Divider } from './Divider';
 
 export default {
   title: 'Layout/Divider',

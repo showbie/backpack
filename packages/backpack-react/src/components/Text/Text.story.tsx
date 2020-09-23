@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
 
-import { Text } from '../../../dist';
+import { Text } from './Text';
 
 export default {
-  title: 'Layout/Text',
+  title: 'Content/Text',
   component: Text,
 };
 
