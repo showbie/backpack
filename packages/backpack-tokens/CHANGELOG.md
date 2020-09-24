@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.7.0
+
+### Minor Changes
+
+- [`053a51b`](https://github.com/showbie/backpack/commit/053a51baea25b43b50e65ca5b577ec27394a51d6) [#64](https://github.com/showbie/backpack/pull/64) Thanks [@stormwarning](https://github.com/stormwarning)! - Add new colours to Socrative palette
+  Adds `300` and `900`-level shades of red, `800`-level orange, and
+  `700`, `800`, and `900`-level shades of green. This also decouples
+  the red values from the Showbie palette, making it standalone.
+
 ## 2.6.0 — 2020-09-04
 
 #### 🎁 Added
