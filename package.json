@@ -9,7 +9,7 @@
     "changelog": "lerna-changelog",
     "changeset": "changeset add",
     "format": "prettier",
-    "release": "changeset publish"
+    "release": "lerna run build && changeset publish"
   },
   "husky": {
     "hooks": {
@@ -33,6 +33,7 @@
     "trailingComma": "es5"
   },
   "dependencies": {
+    "@changesets/changelog-github": "0.2.7",
     "@changesets/cli": "2.9.2",
     "@showbie/eslint-config": "1.1.x",
     "@typescript-eslint/eslint-plugin": "2.18.x",
