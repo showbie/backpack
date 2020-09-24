@@ -60,8 +60,9 @@
 ## Red
 
 ::: tip NOTE
-These colours are mapped to the same reds as the
-[Showbie palette](../showbie/#red) — updating there will update these as well.
+These colours were initially based on the reds from the 
+[Showbie palette](../showbie/#red). The hue has been decoupled from that palette
+in order to include new shades.
 :::
 
 ### Red 50
@@ -75,6 +76,10 @@ These colours are mapped to the same reds as the
 ### Red 200
 
 <ColorSwatch theme="socrative" hue="red" scale="200" />
+
+### Red 300
+
+<ColorSwatch theme="socrative" hue="red" scale="300" />
 
 ### Red 500
 
@@ -91,6 +96,11 @@ These colours are mapped to the same reds as the
 ### Red 800
 
 <ColorSwatch theme="socrative" hue="red" scale="800" />
+
+### Red 900
+
+<ColorSwatch theme="socrative" hue="red" scale="900" />
+
 
 ## Orange
 
@@ -113,6 +123,10 @@ These colours are mapped to the same reds as the
 ### Orange 700
 
 <ColorSwatch theme="socrative" hue="orange" scale="700" />
+
+### Orange 800
+
+<ColorSwatch theme="socrative" hue="orange" scale="800" />
 
 ## Amber
 
@@ -161,6 +175,18 @@ These colours are mapped to the same reds as the
 ### Green 600
 
 <ColorSwatch theme="socrative" hue="green" scale="600" />
+
+### Green 700
+
+<ColorSwatch theme="socrative" hue="green" scale="700" />
+
+### Green 800
+
+<ColorSwatch theme="socrative" hue="green" scale="800" />
+
+### Green 900
+
+<ColorSwatch theme="socrative" hue="green" scale="900" />
 
 ## Cyan
 
