@@ -1,6 +1,6 @@
 # Change Log
 
-## 2.7.0
+## 2.7.0 — 2020-09-24
 
 ### Minor Changes
 
