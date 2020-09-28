@@ -36,9 +36,13 @@ jobs:
   notify:
     name: Notify
     needs: release
-    if: needs.release.outputs.published == 'true'
     runs-on: ubuntu-latest
     steps:
+      - name: Dump needs context
+        env:
+          NEEDS_CONTEXT: ${{ toJson(needs) }}
+        run: echo "$NEEDS_CONTEXT"
+
       - name: Send Tokens package notification
         uses: stormwarning/action-release-notification@v3.1.1
         if: contains(needs.release.outputs.publishedPackages.*.name, '@showbie/backpack-tokens')
