@@ -7,11 +7,19 @@ import { Box } from '../Box/Box';
 import { Divider } from '../Divider/Divider';
 
 const validStackElements = ['div', 'ol', 'ul'] as const;
+const spaceClassesMap = {
+  '2': {
+    space: 'pt-2',
+    offset: 'before:-mt-2',
+  },
+};
 
 export interface StackProps {
   children: ReactNodeNoStrings;
   /** The parent element to render. Children will also be wrapped appropriately. */
   tagName?: typeof validStackElements[number];
+  /** The space between each item. Maps to a value on the Tailwind space scale. */
+  space?: 'none' | '2';
   /** Render `Divider` components between children. */
   dividers?: boolean;
 }
@@ -24,6 +32,7 @@ export interface StackProps {
 export function Stack({
   children,
   tagName = 'div',
+  space = 'none',
   dividers = false,
 }: StackProps): ReactElement {
   warning(
@@ -36,16 +45,26 @@ export function Stack({
   const isList = tagName === 'ol' || tagName === 'ul';
   const stackItemElement = isList ? 'li' : 'div';
 
+  let spaceClass = '';
+  let offsetClass = '';
+
+  if (space !== 'none') {
+    spaceClass = spaceClassesMap[space].space;
+    offsetClass = `before:block before:empty-content ${spaceClassesMap[space].offset}`;
+  }
+
   return (
-    <Box tagName={tagName}>
+    <Box tagName={tagName} className={offsetClass}>
       {React.Children.map(children, (child, index) => (
-        <Box tagName={stackItemElement}>
+        <Box tagName={stackItemElement} className={spaceClass}>
           {dividers && index > 0 ? (
-            <div>
+            <>
               <Divider />
-            </div>
-          ) : null}
-          {child}
+              <Box className={spaceClass}>{child}</Box>
+            </>
+          ) : (
+            child
+          )}
         </Box>
       ))}
     </Box>
