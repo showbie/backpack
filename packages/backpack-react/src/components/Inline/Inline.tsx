@@ -1,17 +1,23 @@
 import React, { ReactElement } from 'react';
 
-import cx from 'clsx';
 import warning from 'warning';
 
 import { ReactNodeNoStrings } from '../../types/ReactNodeNoStrings';
 import { Box } from '../Box/Box';
 
 const validInlineElements = ['div', 'ol', 'ul'] as const;
+const spaceClassesMap = {
+  '4': {
+    item: 'mt-4 ml-4',
+    row: '-ml-4',
+    container: 'before:-mt-4',
+  },
+};
 
 export interface InlineProps {
   children: ReactNodeNoStrings;
   tagName?: typeof validInlineElements[number];
-  space?: 'default' | 'none';
+  space?: 'none' | '4';
 }
 
 /**
@@ -21,7 +27,7 @@ export interface InlineProps {
 export function Inline({
   children,
   tagName = 'div',
-  space = 'default',
+  space = '4',
 }: InlineProps): ReactElement {
   warning(
     validInlineElements.includes(tagName),
@@ -33,16 +39,15 @@ export function Inline({
   const isList = tagName === 'ol' || tagName === 'ul';
   const inlineItemElement = isList ? 'li' : 'div';
 
-  const containerClass = cx({
-    'before:block before:empty-content': space !== 'none',
-    'before:-mt-4': space === 'default',
-  });
-  const rowClass = cx('flex flex-wrap', {
-    '-ml-4': space === 'default',
-  });
-  const itemClass = cx('min-w-none', {
-    'mt-4 ml-4': space === 'default',
-  });
+  let itemClass = '';
+  let rowClass = '';
+  let containerClass = '';
+
+  if (space !== 'none') {
+    itemClass = spaceClassesMap[space].item;
+    rowClass = spaceClassesMap[space].row;
+    containerClass = `before:block before:empty-content ${spaceClassesMap[space].container}`;
+  }
 
   return (
     <Box className={containerClass}>
