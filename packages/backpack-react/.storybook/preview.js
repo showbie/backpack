@@ -8,6 +8,7 @@ import { addDecorator, addParameters } from '@storybook/react';
 addDecorator((story) => <div className="story-container">{story()}</div>);
 
 export const parameters = {
+  grid: { cellSize: 12 },
   // This won't do anything until 6.1.x probably.
   backgrounds: {
     grid: { cellSize: 12 },
