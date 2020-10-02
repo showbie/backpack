@@ -127,6 +127,13 @@ module.exports = {
         lineGap: 0,
         unitsPerEm: 2816,
       },
+      display: {
+        capHeight: 700,
+        ascent: 968,
+        descent: -251,
+        lineGap: 0,
+        unitsPerEm: 1000,
+      },
     },
 
     fontSize: {

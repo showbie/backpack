@@ -18,5 +18,11 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'off',
       },
     },
+    {
+      files: ['.eslintrc.js', '*.config.js'],
+      env: {
+        node: true,
+      },
+    },
   ],
 };
