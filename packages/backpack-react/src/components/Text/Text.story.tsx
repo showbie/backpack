@@ -1,4 +1,6 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+
+import { Story } from '@storybook/react/types-6-0';
 
 import { Text } from './Text';
 
@@ -7,4 +9,4 @@ export default {
   component: Text,
 };
 
-export const Base = (): ReactElement => <Text>Default text</Text>;
+export const Base: Story = () => <Text>Default text</Text>;

@@ -1,5 +1,8 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 
+import { Args, Story } from '@storybook/react/types-6-0';
+
+import { Box } from '../Box/Box';
 import { Inline } from './Inline';
 
 export default {
@@ -7,20 +10,20 @@ export default {
   component: Inline,
 };
 
-export const base = (): ReactElement => (
-  <Inline>
-    <div className="w-8 h-8 bg-grey-50"></div>
-    <div className="w-8 h-8 bg-grey-50"></div>
-    <div className="w-8 h-8 bg-grey-50"></div>
-    <div className="w-8 h-8 bg-grey-50"></div>
+export const Default: Story = (args: Args) => (
+  <Inline {...args}>
+    <Box className="w-8 h-8 bg-grey-50"></Box>
+    <Box className="w-8 h-8 bg-grey-50"></Box>
+    <Box className="w-8 h-8 bg-grey-50"></Box>
+    <Box className="w-8 h-8 bg-grey-50"></Box>
   </Inline>
 );
 
-export const noSpace = (): ReactElement => (
+export const NoSpace: Story = () => (
   <Inline space="none">
-    <div className="w-8 h-8 bg-grey-50"></div>
-    <div className="w-8 h-8 bg-grey-50"></div>
-    <div className="w-8 h-8 bg-grey-50"></div>
-    <div className="w-8 h-8 bg-grey-50"></div>
+    <Box className="w-8 h-8 bg-grey-50"></Box>
+    <Box className="w-8 h-8 bg-grey-50"></Box>
+    <Box className="w-8 h-8 bg-grey-50"></Box>
+    <Box className="w-8 h-8 bg-grey-50"></Box>
   </Inline>
 );

@@ -1,4 +1,6 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+
+import { Args, Story } from '@storybook/react/types-6-0';
 
 import { Divider } from './Divider';
 
@@ -7,6 +9,6 @@ export default {
   component: Divider,
 };
 
-export const base = (): ReactElement => <Divider />;
+export const Default: Story = (args: Args) => <Divider {...args} />;
 
-export const light = (): ReactElement => <Divider weight="light" />;
+export const Light: Story = () => <Divider weight="light" />;

@@ -10,7 +10,7 @@ export default {
   component: Stack,
 };
 
-export const Base: Story = (args: Args) => (
+export const Default: Story = (args: Args) => (
   <Stack {...args}>
     <Box className="h-8 bg-grey-50"></Box>
     <Box className="h-8 bg-grey-50"></Box>
@@ -18,11 +18,6 @@ export const Base: Story = (args: Args) => (
     <Box className="h-8 bg-grey-50"></Box>
   </Stack>
 );
-
-Base.args = {
-  space: 'none',
-  dividers: false,
-};
 
 export const Spaced: Story = () => (
   <Stack space="2">
