@@ -16,7 +16,9 @@ const spaceClassesMap = {
 
 export interface InlineProps {
   children: ReactNodeNoStrings;
+  /** The parent element to render. Children will also be wrapped appropriately. */
   tagName?: typeof validInlineElements[number];
+  /** The space between each item. Maps to a value on the Tailwind space scale. */
   space?: 'none' | '4';
 }
 
@@ -51,7 +53,7 @@ export function Inline({
 
   return (
     <Box className={containerClass}>
-      <Box tagName={tagName} className={rowClass}>
+      <Box tagName={tagName} className={`flex flex-wrap ${rowClass}`}>
         {React.Children.map(children, (child) =>
           child !== null && child !== undefined ? (
             <Box tagName={inlineItemElement} className={itemClass}>
