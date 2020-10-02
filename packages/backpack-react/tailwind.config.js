@@ -268,7 +268,9 @@ module.exports = {
   variants: {
     backgroundColor: ['responsive', 'group-hover', 'hover', 'focus'],
     borderColor: ['responsive', 'group-hover', 'hover', 'focus'],
+    display: ['responsive', 'before', 'after'],
     fill: ['responsive', 'group-hover'],
+    margin: ['responsive', 'before', 'after'],
     opacity: ['responsive', 'hover', 'focus', 'group-hover', 'focus-within'],
     stroke: ['responsive', 'group-hover'],
     zIndex: ['responsive', 'focus', 'focus-within'],
