@@ -18,11 +18,20 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'off',
       },
     },
+
     {
       files: ['.eslintrc.js', '*.config.js'],
       env: {
         node: true,
       },
+    },
+
+    {
+      files: ['*.test.tsx'],
+      env: {
+        'jest/globals': true,
+      },
+      extends: ['plugin:jest/recommended', 'plugin:jest-dom/recommended'],
     },
   ],
 };

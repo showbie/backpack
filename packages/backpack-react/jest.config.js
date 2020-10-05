@@ -3,4 +3,5 @@
  */
 module.exports = {
   globals: { __DEV__: 'boolean' },
+  setupFilesAfterEnv: ['./jest.setup.ts'],
 };
