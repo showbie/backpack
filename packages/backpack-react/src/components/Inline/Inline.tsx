@@ -14,6 +14,8 @@ const spaceClassesMap = {
   },
 };
 
+type InlineChild = 'div' | 'li';
+
 export interface InlineProps {
   children: ReactNodeNoStrings;
   /** The parent element to render. Children will also be wrapped appropriately. */
@@ -38,8 +40,8 @@ export function Inline({
       .join(', ')}]`
   );
 
-  const isList = tagName === 'ol' || tagName === 'ul';
-  const inlineItemElement = isList ? 'li' : 'div';
+  let isList = tagName === 'ol' || tagName === 'ul';
+  let inlineItemElement: InlineChild = isList ? 'li' : 'div';
 
   let itemClass = '';
   let rowClass = '';

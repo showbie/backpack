@@ -6,6 +6,5 @@ addons.setConfig({
   theme: create({
     base: 'light',
     brandTitle: '🎒 Backpack',
-    gridCellSize: 12,
   }),
 });

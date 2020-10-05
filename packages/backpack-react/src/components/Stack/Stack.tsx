@@ -14,6 +14,8 @@ const spaceClassesMap = {
   },
 };
 
+type StackChild = 'div' | 'li';
+
 export interface StackProps {
   children: ReactNodeNoStrings;
   /** The parent element to render. Children will also be wrapped appropriately. */
@@ -42,8 +44,8 @@ export function Stack({
       .join(', ')}]`
   );
 
-  const isList = tagName === 'ol' || tagName === 'ul';
-  const stackItemElement = isList ? 'li' : 'div';
+  let isList = tagName === 'ol' || tagName === 'ul';
+  let stackItemElement: StackChild = isList ? 'li' : 'div';
 
   let spaceClass = '';
   let offsetClass = '';

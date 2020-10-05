@@ -289,7 +289,7 @@ module.exports = {
 
   plugins: [
     plugin(function({ addUtilities }) {
-      const blendModes = BLEND_MODES.map((value) => {
+      let blendModes = BLEND_MODES.map((value) => {
         return {
           [`.mix-${value}`]: {
             mixBlendMode: value,

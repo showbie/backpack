@@ -12,7 +12,7 @@ interface DividerProps {
  * directly when needed.
  */
 export function Divider({ weight = 'normal' }: DividerProps): ReactElement {
-  const dividerClass = cx('absolute w-full h-px', {
+  let dividerClass = cx('absolute w-full h-px', {
     'bg-divider': weight === 'normal',
     'bg-grey-200': weight === 'light',
   });
