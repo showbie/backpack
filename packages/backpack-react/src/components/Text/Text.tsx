@@ -33,7 +33,7 @@ export function Text({
 
   let textClass = useMemo(
     () =>
-      cx('block', {
+      cx('block capsize', {
         'select-none': preventSelection,
         [className as string]: !!className,
       }),
