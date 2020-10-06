@@ -42,7 +42,7 @@
     "eslint-plugin-react": "7.20.x",
     "husky": "4.2.x",
     "import-sort-style-python": "1.0.x",
-    "lerna": "3.20.x",
+    "lerna": "3.22.x",
     "lerna-changelog": "1.0.x",
     "lint-staged": "10.4.x",
     "prettier": "1.19.x",
