@@ -6,10 +6,13 @@
   "repository": "showbie/backpack",
   "license": "ISC",
   "author": "Showbie (https://www.showbie.com)",
+  "maintainers": [
+    "Jeff Nelson @stormwarning (https://www.showbie.com)"
+  ],
+  "main": "dist/index.js",
   "files": [
     "dist/"
   ],
-  "main": "dist/index.js",
   "scripts": {
     "build": "ts-node lib",
     "deploy": "np --no-release-draft && yarn podspec:deploy",
@@ -32,8 +35,5 @@
     "typescript": "3.9.5",
     "vuepress": "1.3.x",
     "vuepress-plugin-typescript": "0.1.2"
-  },
-  "maintainers": [
-    "Jeff Nelson @stormwarning (https://www.showbie.com)"
-  ]
+  }
 }
