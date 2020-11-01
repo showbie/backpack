@@ -27,7 +27,7 @@
     "@types/chroma-js": "2.0.0",
     "@types/node": "13.7.7",
     "chroma-js": "2.1.x",
-    "color-name-list": "5.30.x",
+    "color-name-list": "7.14.x",
     "handlebars": "4.7.x",
     "nearest-color": "0.4.x",
     "replace": "1.1.x",
