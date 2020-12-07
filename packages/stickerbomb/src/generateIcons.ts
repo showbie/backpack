@@ -29,6 +29,7 @@ const componentTemplate = ({ template }, opts, { componentName, jsx }) => {
 };
 
 const svgo = new SVGO({
+  // @ts-expect-error -- This property is missing from SVGO types.
   multipass: true,
   plugins: [
     { removeViewBox: false },
@@ -54,8 +55,8 @@ const svgrConfig = {
   titleProp: true,
 };
 
-const baseDir = path.join(__dirname, '..');
-const iconComponentsDir = path.join(baseDir, 'lib/components/icons');
+// const baseDir = path.join(__dirname, '..');
+// const iconComponentsDir = path.join(baseDir, 'lib/components/icons');
 
 export async function generateIcons(
   iconsDir: string,
@@ -100,10 +101,11 @@ export async function generateIcons(
       }Svg`;
       let svgComponent = await svgr(optimisedSvg, svgrConfig, {
         componentName: svgComponentName,
+        jsx: null,
       });
 
       // Create icon directory if it's missing
-      let iconDir = path.join(iconComponentsDir, iconName);
+      let iconDir = path.join(componentsDir, iconName);
       await fs.mkdirp(iconDir);
 
       // Write SVG React component
