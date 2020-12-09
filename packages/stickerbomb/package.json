@@ -1,6 +1,11 @@
 {
+  "name": "stickerbomb",
   "version": "0.1.0",
   "license": "ISC",
+  "author": "Showbie (https://www.showbie.com)",
+  "maintainers": [
+    "Jeff Nelson <jeff@showbie.com>"
+  ],
   "main": "dist/index.js",
   "bin": {
     "stickerbomb": "bin/index.js"
@@ -9,18 +14,13 @@
     "bin",
     "dist"
   ],
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
-    "start": "tsdx watch",
     "build": "tsdx build --entry src/cli.ts --target node --format cjs",
-    "test": "tsdx test",
     "lint": "tsdx lint",
-    "prepare": "tsdx build"
+    "prepare": "tsdx build",
+    "start": "tsdx watch",
+    "test": "tsdx test"
   },
-  "name": "stickerbomb",
-  "author": "Jeff",
   "dependencies": {
     "@svgr/core": "5.5.0",
     "@svgr/plugin-jsx": "5.5.0",
@@ -43,5 +43,8 @@
     "tsdx": "0.14.1",
     "tslib": "2.0.x",
     "typescript": "4.1.x"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }

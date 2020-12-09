@@ -20,7 +20,7 @@ module.exports = {
     },
 
     {
-      files: ['.eslintrc.js', '*.config.js'],
+      files: ['.eslintrc.js', '*.config.js', '**/bin/*.js'],
       env: {
         node: true,
       },
