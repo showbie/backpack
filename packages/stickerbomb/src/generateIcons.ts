@@ -9,15 +9,15 @@ import globby from 'globby';
 import SVGO from 'svgo';
 
 const componentTemplate = ({ template }, opts, { componentName, jsx }) => {
-  const code = `
-    import React from 'react';
+  let code = `
+    import * as React from 'react';
     NEWLINE
-    import { SVGProps } from '../SVGTypes';
+    import { SVGProps } from '../types';
     NEWLINE
     export const COMPONENT_NAME = ({ title, titleId, ...props }: SVGProps) => COMPONENT_JSX;
   `;
 
-  const reactTemplate = template.smart(code, {
+  let reactTemplate = template.smart(code, {
     plugins: ['react', 'typescript'],
   });
 
@@ -28,17 +28,20 @@ const componentTemplate = ({ template }, opts, { componentName, jsx }) => {
   });
 };
 
+/** @see https://github.com/svg/svgo#what-it-can-do */
 const svgo = new SVGO({
   // @ts-expect-error -- This property is missing from SVGO types.
   multipass: true,
   plugins: [
-    { removeViewBox: false },
     {
       inlineStyles: {
         onlyMatchedOnce: false,
       },
     },
+    { removeXMLNS: true },
+    { removeViewBox: false },
     { convertStyleToAttrs: true },
+    { sortAttrs: true },
   ],
 });
 
@@ -46,17 +49,12 @@ const svgrConfig = {
   svgProps: {
     focusable: 'false',
     fill: 'currentColor',
-    width: 16,
-    height: 16,
   },
   replaceAttrValues: { '#000': 'currentColor' },
   template: componentTemplate,
   plugins: ['@svgr/plugin-jsx', '@svgr/plugin-prettier'],
   titleProp: true,
 };
-
-// const baseDir = path.join(__dirname, '..');
-// const iconComponentsDir = path.join(baseDir, 'lib/components/icons');
 
 export async function generateIcons(
   iconsDir: string,
@@ -68,7 +66,7 @@ export async function generateIcons(
 
   await Promise.all(
     svgFilePaths.map(async (svgFilePath) => {
-      // Split out the icon variants (e.g. bookmark-active.svg)
+      // Split out the icon variants (e.g. star-active.svg)
       let [svgName, variantName] = path
         .basename(svgFilePath, '.svg')
         .split('-');
@@ -115,8 +113,11 @@ export async function generateIcons(
         { encoding: 'utf-8' }
       );
 
-      // Bail out early if we're processing an icon variant (e.g. bookmark-active.svg)
-      // All subsequent steps should only happen once per icon component.
+      /**
+       * Bail out early if we're processing a variant
+       * (e.g. star-active.svg) All subsequent steps should only
+       * happen once per icon component.
+       */
       if (variantName) return;
 
       let templateFileIfMissing = async (
@@ -134,17 +135,19 @@ export async function generateIcons(
       await templateFileIfMissing(
         `${iconName}.tsx`,
         dedent`
-          import React from 'react';
-          import { Box } from '../../Box/Box';
-          import useIcon, { UseIconProps } from '../../../hooks/useIcon';
+          import * as React from 'react';
+
+          import { Box } from '~shared/components/Box';
+
+          import useIcon, { UseIconProps } from '../useIcon';
           import { ${svgComponentName} } from './${svgComponentName}';
 
           export type ${iconName}Props = UseIconProps;
 
-          export const ${iconName} = (props: ${iconName}Props) => {
-            const iconProps = useIcon(props);
+          export function ${iconName}(props: ${iconName}Props) {
+            let iconProps = useIcon(props);
 
-            return <Box component={${svgComponentName}} {...iconProps} />;
+            return <Box tagName={${svgComponentName}} {...iconProps} />;
           };
         `
       );
