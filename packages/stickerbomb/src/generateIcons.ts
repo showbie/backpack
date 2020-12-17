@@ -1,32 +1,14 @@
 import * as path from 'path';
 
-import svgr from '@svgr/core';
-import { pascalCase } from 'change-case';
 import cheerio from 'cheerio';
-import dedent from 'dedent';
 import fs from 'fs-extra';
 import globby from 'globby';
 import SVGO from 'svgo';
 
-const componentTemplate = ({ template }, opts, { componentName, jsx }) => {
-  let code = `
-    import * as React from 'react';
-    NEWLINE
-    import { SVGProps } from '../types';
-    NEWLINE
-    export const COMPONENT_NAME = ({ title, titleId, ...props }: SVGProps) => COMPONENT_JSX;
-  `;
-
-  let reactTemplate = template.smart(code, {
-    plugins: ['react', 'typescript'],
-  });
-
-  return reactTemplate({
-    COMPONENT_NAME: componentName,
-    COMPONENT_JSX: jsx,
-    NEWLINE: '\n',
-  });
-};
+import { generateComponent } from './generateComponent';
+import { getNames } from './getNames';
+import { FormatOption } from './types';
+import { writeSVG, writeWrapper } from './writeComponent';
 
 /** @see https://github.com/svg/svgo#what-it-can-do */
 const svgo = new SVGO({
@@ -45,20 +27,10 @@ const svgo = new SVGO({
   ],
 });
 
-const svgrConfig = {
-  svgProps: {
-    focusable: 'false',
-    fill: 'currentColor',
-  },
-  replaceAttrValues: { '#000': 'currentColor' },
-  template: componentTemplate,
-  plugins: ['@svgr/plugin-jsx', '@svgr/plugin-prettier'],
-  titleProp: true,
-};
-
 export async function generateIcons(
   iconsDir: string,
-  componentsDir: string
+  componentsDir: string,
+  format: FormatOption
 ): Promise<void> {
   let svgFilePaths = await globby(iconsDir, {
     absolute: true,
@@ -93,25 +65,24 @@ export async function generateIcons(
         });
       });
 
-      let iconName = `Icon${pascalCase(svgName)}`;
-      let svgComponentName = `${iconName}${
-        variantName ? pascalCase(variantName) : ''
-      }Svg`;
-      let svgComponent = await svgr(optimisedSvg, svgrConfig, {
-        componentName: svgComponentName,
-        jsx: null,
-      });
+      let { iconName, svgComponentName } = getNames(
+        svgName,
+        variantName,
+        format
+      );
+
+      let svgComponent = await generateComponent(
+        optimisedSvg,
+        svgComponentName,
+        format
+      );
 
       // Create icon directory if it's missing
       let iconDir = path.join(componentsDir, iconName);
       await fs.mkdirp(iconDir);
 
-      // Write SVG React component
-      await fs.writeFile(
-        path.join(iconDir, `${svgComponentName}.tsx`),
-        svgComponent,
-        { encoding: 'utf-8' }
-      );
+      // Write SVG component
+      await writeSVG(iconDir, svgComponentName, svgComponent, format);
 
       /**
        * Bail out early if we're processing a variant
@@ -120,37 +91,8 @@ export async function generateIcons(
        */
       if (variantName) return;
 
-      let templateFileIfMissing = async (
-        relativePath: string,
-        contents: string
-      ) => {
-        let filePath = path.join(iconDir, relativePath);
-
-        if (!(await fs.pathExists(filePath))) {
-          await fs.writeFile(filePath, `${contents}\n`, 'utf-8');
-        }
-      };
-
       // Create icon wrapper component, if it doesn't already exist
-      await templateFileIfMissing(
-        `${iconName}.tsx`,
-        dedent`
-          import * as React from 'react';
-
-          import { Box } from '~shared/components/Box';
-
-          import useIcon, { UseIconProps } from '../useIcon';
-          import { ${svgComponentName} } from './${svgComponentName}';
-
-          export type ${iconName}Props = UseIconProps;
-
-          export function ${iconName}(props: ${iconName}Props) {
-            let iconProps = useIcon(props);
-
-            return <Box tagName={${svgComponentName}} {...iconProps} />;
-          };
-        `
-      );
+      await writeWrapper(iconDir, iconName, svgComponentName, format);
     })
   );
 }

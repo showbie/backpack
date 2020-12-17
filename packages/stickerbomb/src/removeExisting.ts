@@ -3,9 +3,19 @@ import * as path from 'path';
 import fs from 'fs-extra';
 import globby from 'globby';
 
-export async function removeExisting(componentsDir: string): Promise<void> {
+import { FormatOption } from './types';
+
+const GENERATED_FILES = {
+  ember: '*/*-svg.hbs',
+  react: '*/*Svg.tsx',
+};
+
+export async function removeExisting(
+  componentsDir: string,
+  format: FormatOption
+): Promise<void> {
   let existingComponentPaths = await globby(
-    path.join(componentsDir, '*/*Svg.tsx'),
+    path.join(componentsDir, GENERATED_FILES[format]),
     { absolute: true }
   );
 
