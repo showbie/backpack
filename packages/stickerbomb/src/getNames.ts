@@ -18,8 +18,8 @@ export function getNames(
   switch (format) {
     case 'ember':
       iconName = `icon-${paramCase(svgName)}`;
-      svgComponentName = `${paramCase(svgName)}-${
-        variantName ? paramCase(variantName) : ''
+      svgComponentName = `${paramCase(svgName)}${
+        variantName ? `-${paramCase(variantName)}` : ''
       }-svg`;
 
       return { iconName, svgComponentName };
