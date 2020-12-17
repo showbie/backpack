@@ -1,8 +1,8 @@
 import * as path from 'path';
 
-import dedent from 'dedent';
 import fs from 'fs-extra';
 
+import { emberWrapper, reactWrapper } from './templates';
 import { FormatOption } from './types';
 
 const EXTENSIONS = {
@@ -31,7 +31,15 @@ export async function writeWrapper(
   svgComponentName: string,
   format: FormatOption
 ): Promise<void> {
-  let wrapperFilename = format === 'ember' ? 'component.js' : `${iconName}.tsx`;
+  let filename = {
+    ember: 'component.js',
+    react: `${iconName}.tsx`,
+  };
+  let template = {
+    ember: emberWrapper(svgComponentName, iconName),
+    react: reactWrapper(svgComponentName, iconName),
+  };
+
   let templateFileIfMissing = async (
     relativePath: string,
     contents: string
@@ -43,23 +51,5 @@ export async function writeWrapper(
     }
   };
 
-  await templateFileIfMissing(
-    wrapperFilename,
-    dedent`
-      import * as React from 'react';
-
-      import { Box } from '~shared/components/Box';
-
-      import useIcon, { UseIconProps } from '../useIcon';
-      import { ${svgComponentName} } from './${svgComponentName}';
-
-      export type ${iconName}Props = UseIconProps;
-
-      export function ${iconName}(props: ${iconName}Props) {
-        let iconProps = useIcon(props);
-
-        return <Box tagName={${svgComponentName}} {...iconProps} />;
-      };
-    `
-  );
+  await templateFileIfMissing(filename[format], template[format]);
 }
