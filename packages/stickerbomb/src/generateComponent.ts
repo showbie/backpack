@@ -1,5 +1,6 @@
 import svgr from '@svgr/core';
 
+import { svge } from './svgToHtmlbars';
 import { FormatOption } from './types';
 
 const componentTemplate = ({ template }, opts, { componentName, jsx }) => {
@@ -40,7 +41,7 @@ export async function generateComponent(
 ): Promise<string> {
   switch (format) {
     case 'ember':
-      return '';
+      return await svge(svg);
 
     case 'react':
     default:
