@@ -34,6 +34,7 @@ sade('stickerbomb [src] [dest]', true)
       spinner.succeed('Reticulating splines... DONE');
     } catch (error) {
       spinner.fail('Reticulating splines... FAILED');
+      throw new Error(error);
     }
 
     if (format === 'react') {

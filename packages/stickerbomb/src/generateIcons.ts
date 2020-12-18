@@ -24,6 +24,7 @@ const svgo = new SVGO({
     { removeViewBox: false },
     { convertStyleToAttrs: true },
     { sortAttrs: true },
+    { removeAttrs: { attrs: 'fill' } },
   ],
 });
 
