@@ -1,0 +1,5 @@
+---
+'stickerbomb': patch
+---
+
+Initial release!
