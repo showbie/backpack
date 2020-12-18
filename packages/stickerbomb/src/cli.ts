@@ -5,10 +5,18 @@ import { generateIcons } from './generateIcons';
 import { removeExisting } from './removeExisting';
 import { writeIndex } from './writeIndex';
 
+const { version } = require('../package.json');
+
+/**
+ * Basic CLI setup.
+ *
+ * @see https://github.com/lukeed/sade
+ * @see https://github.com/sindresorhus/ora
+ */
 sade('stickerbomb [src] [dest]', true)
-  .version('1.0.0')
+  .version(version)
   .describe('Generate icon components from SVG artwork')
-  .option('-f, --format', 'Choose a component framework to target', 'react')
+  .option('-f, --format', 'Sets the component framework (ember|react)', 'react')
   .action(async (src, dest, opts) => {
     let filesIn = src || 'icons/*.svg';
     let filesOut = dest || 'components/icons';
