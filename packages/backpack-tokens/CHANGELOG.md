@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.8.0 — 2021-01-05
+
+#### 🎁 Added
+
+- [#93](https://github.com/showbie/backpack/pull/93) Add new colours to Socrative palette \
+  Adds `300`-level green, `300`, `400`  and `900`-level amber shades, and
+  `400`-level red.
+
 ## 2.7.0 — 2020-09-24
 
 #### 🎁 Added
