@@ -1,10 +1,12 @@
 # Change Log
 
-## 2.8.0
+## 2.8.0 — 2021-01-05
 
-### Minor Changes
+#### 🎁 Added
 
-- [`36fecf0`](https://github.com/showbie/backpack/commit/36fecf0aaee54b1c64e84a5b12318cc9e40fe900) [#93](https://github.com/showbie/backpack/pull/93) Thanks [@stormwarning](https://github.com/stormwarning)! - Add new colours to Socrative palette
+- [#93](https://github.com/showbie/backpack/pull/93) Add new colours to Socrative palette \
+  Adds `300`-level green, `300`, `400`  and `900`-level amber shades, and
+  `400`-level red.
 
 ## 2.7.0 — 2020-09-24
 
