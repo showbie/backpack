@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.8.0
+
+### Minor Changes
+
+- [`36fecf0`](https://github.com/showbie/backpack/commit/36fecf0aaee54b1c64e84a5b12318cc9e40fe900) [#93](https://github.com/showbie/backpack/pull/93) Thanks [@stormwarning](https://github.com/stormwarning)! - Add new colours to Socrative palette
+
 ## 2.7.0 — 2020-09-24
 
 #### 🎁 Added
