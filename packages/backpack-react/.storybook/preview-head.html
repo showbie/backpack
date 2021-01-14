@@ -1,0 +1,48 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Montserrat:500,700,800"
+/>
+<style>
+  :root {
+    font-size: 12px;
+  }
+
+  html {
+    display: flex;
+    box-sizing: border-box;
+    min-height: 100%;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    display: flex;
+    flex: 1 1 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    display: flex;
+    flex: 1 1 100%;
+  }
+
+  [hidden] + #docs-root {
+    width: 100%;
+  }
+
+  .story-container {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .story-container > * + * {
+    margin-top: 1rem;
+  }
+</style>

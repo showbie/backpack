@@ -81,6 +81,12 @@ in order to include new shades.
 
 <ColorSwatch theme="socrative" hue="red" scale="300" />
 
+### Red 400
+
+<ColorSwatch theme="socrative" hue="red" scale="400" />
+
+Used for hover/focus state on Red-300.
+
 ### Red 500
 
 <ColorSwatch theme="socrative" hue="red" scale="500" />
@@ -142,6 +148,19 @@ in order to include new shades.
 
 <ColorSwatch theme="socrative" hue="amber" scale="200" />
 
+### Amber 300
+
+<ColorSwatch theme="socrative" hue="amber" scale="300" />
+
+Hover/focus state on Amber-200. Also used as "progress" fill colour for partial
+mark cells.
+
+### Amber 400
+
+<ColorSwatch theme="socrative" hue="amber" scale="400" />
+
+"Progress" hover/focus colour for partial mark cells.
+
 ### Amber 500
 
 <ColorSwatch theme="socrative" hue="amber" scale="500" />
@@ -153,6 +172,12 @@ in order to include new shades.
 ### Amber 700
 
 <ColorSwatch theme="socrative" hue="amber" scale="700" />
+
+### Amber 900
+
+<ColorSwatch theme="socrative" hue="amber" scale="900" />
+
+Text colour in partial mark cells.
 
 ## Green
 
@@ -167,6 +192,12 @@ in order to include new shades.
 ### Green 200
 
 <ColorSwatch theme="socrative" hue="green" scale="200" />
+
+### Green 300
+
+<ColorSwatch theme="socrative" hue="green" scale="300" />
+
+Hover/focus state for Green-200.
 
 ### Green 500
 
