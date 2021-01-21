@@ -1,28 +1,31 @@
 {
-  "name": "stencil-starter-project-name",
+  "name": "@showbie/backpack-components",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
-  "main": "dist/index.cjs.js",
-  "module": "dist/custom-elements/index.js",
-  "es2015": "dist/esm/index.mjs",
-  "es2017": "dist/esm/index.mjs",
-  "types": "dist/custom-elements/index.d.ts",
-  "collection": "dist/collection/collection-manifest.json",
-  "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/stencil-starter-project-name/stencil-starter-project-name.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "files": [
-    "dist/",
-    "loader/"
+    "dist/"
   ],
   "scripts": {
     "build": "stencil build --docs",
+    "generate": "stencil generate",
     "start": "stencil build --dev --watch --serve",
+    "storybook": "yarn start && build-storybook --static-dir ./__elements",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "test:watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "2.0.3"
+    "@stencil/core": "2.3.0"
+  },
+  "devDependencies": {
+    "@stencil/postcss": "2.0.x",
+    "@storybook/addon-a11y": "6.1.x",
+    "@storybook/addon-essentials": "6.1.x",
+    "@storybook/cli": "6.1.x",
+    "@storybook/html": "6.1.x",
+    "@storybook/theming": "6.1.x",
+    "concurrently": "5.3.x"
   },
   "license": "ISC"
 }
