@@ -1,8 +1,11 @@
+import * as path from 'path';
+
 import ora from 'ora';
 import sade from 'sade';
 
 import { generateIcons } from './generateIcons';
 import { removeExisting } from './removeExisting';
+import { sortFilePaths } from './sortFilePaths';
 import { writeIndex } from './writeIndex';
 
 const { version } = require('../package.json');
@@ -18,10 +21,11 @@ sade('stickerbomb [src] [dest]', true)
   .describe('Generate icon components from SVG artwork')
   .option('-f, --format', 'Sets the component framework (ember|react)', 'react')
   .action(async (src, dest, opts) => {
-    let filesIn = src || 'icons/*.svg';
+    let filesIn = src || 'icons/**/*.svg';
     let filesOut = dest || 'components/icons';
     let { format } = opts;
 
+    let filesSet = filesIn;
     let spinner = ora().start();
 
     try {
@@ -37,7 +41,8 @@ sade('stickerbomb [src] [dest]', true)
     try {
       spinner.start('Reticulating splines...');
 
-      await generateIcons(filesIn, filesOut, format);
+      filesSet = await sortFilePaths(filesIn);
+      await generateIcons(filesSet, filesOut, format);
 
       spinner.succeed('Reticulating splines... DONE');
     } catch (error) {
@@ -49,7 +54,9 @@ sade('stickerbomb [src] [dest]', true)
       try {
         spinner.start('Writing component index...');
 
-        await writeIndex(filesOut);
+        Object.keys(filesSet).forEach(async (set) => {
+          await writeIndex(path.join(filesOut, set));
+        });
 
         spinner.succeed('Writing component index... DONE');
       } catch (error) {
