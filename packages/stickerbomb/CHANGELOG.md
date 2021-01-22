@@ -1,10 +1,10 @@
 # stickerbomb
 
-## 0.2.0
+## 0.2.0 — 2021-01-22
 
-### Minor Changes
+### 🎁 Added
 
-- [`1b68efa`](https://github.com/showbie/backpack/commit/1b68efaf80a0b135e054045f6cc7878d502aaa27) [#95](https://github.com/showbie/backpack/pull/95) Thanks [@stormwarning](https://github.com/stormwarning)! - Allow subdirs in icon source directory
+- [#95](https://github.com/showbie/backpack/pull/95) Allow subdirs in icon source directory
 
   Components are now generated into the same directory structure as
   the original source SVGs. An export index will be added for each
