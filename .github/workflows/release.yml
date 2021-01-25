@@ -9,8 +9,11 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    outputs:
+      published: ${{ steps.changesets.outputs.published }}
+      publishedPackages: ${{ steps.changesets.outputs.publishedPackages }}
     steps:
-      - name: Checkout Repo
+      - name: Checkout repo
         uses: actions/checkout@main
         with:
           # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
@@ -21,10 +24,10 @@ jobs:
         with:
           node-version: 12.x
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: yarn
 
-      - name: Create Release PR or Publish
+      - name: Create release PR or publish
         id: changesets
         uses: changesets/action@master
         with:
@@ -60,5 +63,15 @@ jobs:
           channel: socrative-dev
           message: A new version of *@showbie/generator-backpack* was just released!
           actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/trunk/packages/generator-backpack/CHANGELOG.md"}]'
+        env:
+          SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
+
+      - name: Send Stickerbomb package notification
+        uses: stormwarning/action-release-notification@v3.1.1
+        if: contains(needs.release.outputs.publishedPackages.*.name, 'stickerbomb')
+        with:
+          channel: socrative-dev
+          message: A new version of *stickerbomb* was just released!
+          actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/trunk/packages/stickerbomb/CHANGELOG.md"}]'
         env:
           SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
