@@ -6,7 +6,6 @@
   "maintainers": [
     "Jeff Nelson <jeff@showbie.com>"
   ],
-  "main": "dist/index.js",
   "bin": {
     "stickerbomb": "bin/index.js"
   },
