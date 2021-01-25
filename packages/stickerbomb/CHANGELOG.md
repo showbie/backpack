@@ -1,5 +1,11 @@
 # stickerbomb
 
+## 0.2.1
+
+### Patch Changes
+
+- [`666655d`](https://github.com/showbie/backpack/commit/666655d0a2a5597faba3b6b35be82a2533345b08) Thanks [@stormwarning](https://github.com/stormwarning)! - Ensure all files in `dist` dir are distributed
+
 ## 0.2.0 — 2021-01-22
 
 ### 🎁 Added
