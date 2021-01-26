@@ -1,5 +1,11 @@
 # stickerbomb
 
+## 0.2.2
+
+### Patch Changes
+
+- [`ba23521`](https://github.com/showbie/backpack/commit/ba23521ea9501281c6487b4fa1e985cc26b94e32) Thanks [@stormwarning](https://github.com/stormwarning)! - Fix build output when publishing
+
 ## 0.2.1 — 2021-01-25
 
 ### 🐛 Fixed
