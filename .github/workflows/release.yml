@@ -41,14 +41,14 @@ jobs:
     needs: release
     runs-on: ubuntu-latest
     env:
-      PUBLISHED_PACKAGES: ${{ needs.release.outputs.publishedPackages }}
+      PUBLISHED_PACKAGES: ${{ needs.release.outputs.publishedPackages.*.name }}
     steps:
       - name: Echo outputs
-        run: echo ${{ env.PUBLISHED_PACKAGES.*.name }}
+        run: echo ${{ env.PUBLISHED_PACKAGES }}
 
       - name: Send Tokens package notification
         uses: stormwarning/action-release-notification@v3.1.1
-        if: contains(env.PUBLISHED_PACKAGES.*.name, '@showbie/backpack-tokens')
+        if: contains(env.PUBLISHED_PACKAGES, '@showbie/backpack-tokens')
         with:
           channel: design
           message: A new version of *@showbie/backpack-tokens* was just released!
@@ -58,7 +58,7 @@ jobs:
 
       - name: Send Generator package notification
         uses: stormwarning/action-release-notification@v3.1.1
-        if: contains(env.PUBLISHED_PACKAGES.*.name, '@showbie/generator-backpack')
+        if: contains(env.PUBLISHED_PACKAGES, '@showbie/generator-backpack')
         with:
           channel: socrative-dev
           message: A new version of *@showbie/generator-backpack* was just released!
@@ -68,7 +68,7 @@ jobs:
 
       - name: Send Stickerbomb package notification
         uses: stormwarning/action-release-notification@v3.1.1
-        if: contains(env.PUBLISHED_PACKAGES.*.name, 'stickerbomb')
+        if: contains(env.PUBLISHED_PACKAGES, 'stickerbomb')
         with:
           channel: socrative-dev
           message: A new version of *stickerbomb* was just released!
