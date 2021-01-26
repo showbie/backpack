@@ -40,11 +40,15 @@ jobs:
     name: Notify
     needs: release
     runs-on: ubuntu-latest
-    env:
-      PUBLISHED_PACKAGES: ${{ needs.release.outputs.publishedPackages.*.name }}
     steps:
       - name: Echo outputs
-        run: echo ${{ env.PUBLISHED_PACKAGES }}
+        env:
+          PUBLISHED_PACKAGES: ${{ needs.release.outputs.publishedPackages }}
+        run: |
+          echo "$PUBLISHED_PACKAGES"
+          echo ${{ needs.release.outputs.publishedPackages }}
+          echo ${{ toJson(needs.release.outputs.publishedPackages) }}
+          echo ${{ fromJson(needs.release.outputs.publishedPackages) }}
 
       - name: Send Tokens package notification
         uses: stormwarning/action-release-notification@v3.1.1
