@@ -16,7 +16,7 @@
   "scripts": {
     "build": "tsdx build --entry src/cli.ts --target node --format cjs",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "tsdx build --entry src/cli.ts --target node --format cjs",
     "start": "tsdx watch",
     "test": "tsdx test"
   },
