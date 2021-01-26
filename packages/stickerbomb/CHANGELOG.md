@@ -1,20 +1,20 @@
 # stickerbomb
 
-## 0.2.2
+### 0.2.2
 
-### Patch Changes
+#### 🐛 Fixed — 2021-01-25
 
-- [`ba23521`](https://github.com/showbie/backpack/commit/ba23521ea9501281c6487b4fa1e985cc26b94e32) Thanks [@stormwarning](https://github.com/stormwarning)! - Fix build output when publishing
+- [`ba23521`](https://github.com/showbie/backpack/commit/ba23521ea9501281c6487b4fa1e985cc26b94e32) Fix build output when publishing
 
-## 0.2.1 — 2021-01-25
+### 0.2.1 — 2021-01-25
 
-### 🐛 Fixed
+#### 🐛 Fixed
 
 - [`666655d`](https://github.com/showbie/backpack/commit/666655d0a2a5597faba3b6b35be82a2533345b08) Ensure all files in `dist` dir are distributed
 
 ## 0.2.0 — 2021-01-22
 
-### 🎁 Added
+#### 🎁 Added
 
 - [#95](https://github.com/showbie/backpack/pull/95) Allow subdirs in icon source directory
 
@@ -24,4 +24,4 @@
 
 ## 0.1.1 — 2020-12-18
 
-### 🎉 Initial release!
+#### 🎉 Initial release!
