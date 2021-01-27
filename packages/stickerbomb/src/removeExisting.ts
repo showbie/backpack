@@ -3,7 +3,7 @@ import * as path from 'path';
 import fs from 'fs-extra';
 import globby from 'globby';
 
-import { FormatOption } from './types';
+import { FormatOption, IconSets } from './types';
 
 const GENERATED_FILES = {
   ember: '*/*-svg.hbs',
@@ -11,16 +11,28 @@ const GENERATED_FILES = {
 };
 
 export async function removeExisting(
+  iconSets: IconSets,
   componentsDir: string,
   format: FormatOption
 ): Promise<void> {
-  let existingComponentPaths = await globby(
-    path.join(componentsDir, GENERATED_FILES[format]),
-    { absolute: true }
-  );
+  let existingComponentPaths = [];
+
+  Object.values(iconSets).forEach(async (setPaths) => {
+    setPaths.map(async (filePath) => {
+      existingComponentPaths.push(
+        await globby(
+          path.join(componentsDir, filePath, GENERATED_FILES[format]),
+          {
+            absolute: true,
+          }
+        )
+      );
+    });
+  });
 
   await Promise.all(
     existingComponentPaths.map(async (existingComponentPath) => {
+      console.log('[remove] path:', existingComponentPath);
       await fs.remove(existingComponentPath);
     })
   );

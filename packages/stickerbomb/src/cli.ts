@@ -1,5 +1,3 @@
-import * as path from 'path';
-
 import ora from 'ora';
 import sade from 'sade';
 
@@ -8,6 +6,7 @@ import { removeExisting } from './removeExisting';
 import { sortFilePaths } from './sortFilePaths';
 import { writeIndex } from './writeIndex';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { version } = require('../package.json');
 
 /**
@@ -25,43 +24,56 @@ sade('stickerbomb [src] [dest]', true)
     let filesOut = dest || 'components/icons';
     let { format } = opts;
 
-    let filesSet = filesIn;
+    let filesSet = await sortFilePaths(filesIn);
     let spinner = ora().start();
+    let spinnerMsg = '';
 
     try {
-      spinner.start('Removing existing components...');
+      spinnerMsg = 'Removing existing components...';
+      spinner.start(spinnerMsg);
+      await removeExisting(filesSet, filesOut, format);
+      spinner.succeed(`${spinnerMsg} DONE`);
 
-      await removeExisting(filesOut, format);
-
-      spinner.succeed('Removing existing components... DONE');
-    } catch (error) {
-      spinner.fail('Removing existing components... FAILED');
-    }
-
-    try {
-      spinner.start('Reticulating splines...');
-
-      filesSet = await sortFilePaths(filesIn);
+      spinnerMsg = 'Reticulating splines...';
+      spinner.start(spinnerMsg);
       await generateIcons(filesSet, filesOut, format);
+      spinner.succeed(`${spinnerMsg} DONE`);
 
-      spinner.succeed('Reticulating splines... DONE');
+      spinnerMsg = 'Writing component index...';
+      spinner.start(spinnerMsg);
+      if (format === 'react') {
+        await writeIndex(filesSet, filesOut);
+        spinner.succeed(`${spinnerMsg} DONE`);
+      } else {
+        spinner.info(`${spinnerMsg} SKIPPED`);
+      }
     } catch (error) {
-      spinner.fail('Reticulating splines... FAILED');
+      spinner.fail(`${spinnerMsg} FAILED`);
       throw new Error(error);
     }
 
-    if (format === 'react') {
-      try {
-        spinner.start('Writing component index...');
+    // try {
+    //   spinner.start(spinnerMessage);
 
-        Object.keys(filesSet).forEach(async (set) => {
-          await writeIndex(path.join(filesOut, set));
-        });
+    //   await generateIcons(filesSet, filesOut, format)
+    //     .then(() => spinner.succeed(`${spinnerMessage} DONE`))
+    //     .then(() => {
+    //       spinnerMessage = 'Writing component index...';
 
-        spinner.succeed('Writing component index... DONE');
-      } catch (error) {
-        spinner.fail('Writing component index... FAILED');
-      }
-    }
+    //       if (format === 'react') {
+    //         Object.keys(filesSet).forEach(async (set) => {
+    //           await writeIndex(path.join(filesOut, set)).catch((err) =>
+    //             console.log('[index] promise caught')
+    //           );
+    //         });
+    //         spinner.succeed(`${spinnerMessage} DONE`);
+    //       } else {
+    //         spinner.info(`${spinnerMessage} SKIPPED`);
+    //       }
+    //     });
+    // } catch (error) {
+    //   spinner.fail(`${spinnerMessage} FAILED`);
+    //   throw new Error(error);
+    // }
   })
   .parse(process.argv);
