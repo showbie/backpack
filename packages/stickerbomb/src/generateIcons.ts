@@ -32,9 +32,9 @@ export async function generateIcons(
   componentsDir: string,
   format: FormatOption
 ): Promise<void> {
-  Object.entries(iconSets).forEach(async ([subpath, setPaths]) => {
-    await Promise.all(
-      setPaths.map(async (svgFilePath) => {
+  try {
+    for await (const [subpath, setPaths] of Object.entries(iconSets)) {
+      for await (const svgFilePath of setPaths) {
         // Split out the icon variants (e.g. star-active.svg)
         let [svgName, variantName] = path
           .basename(svgFilePath, '.svg')
@@ -88,11 +88,15 @@ export async function generateIcons(
          * (e.g. star-active.svg) All subsequent steps should only
          * happen once per icon component.
          */
-        if (variantName) return;
+        if (!variantName) {
+          // Create icon wrapper component, if it doesn't already exist
+          await writeWrapper(iconDir, iconName, svgComponentName, format);
+        }
+      }
+    }
 
-        // Create icon wrapper component, if it doesn't already exist
-        await writeWrapper(iconDir, iconName, svgComponentName, format);
-      })
-    );
-  });
+    return Promise.resolve();
+  } catch (error) {
+    throw new Error(error);
+  }
 }
