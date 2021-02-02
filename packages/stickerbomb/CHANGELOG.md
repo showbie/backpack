@@ -1,5 +1,13 @@
 # stickerbomb
 
+## 0.2.3
+
+### Patch Changes
+
+- [`0b3938f`](https://github.com/showbie/backpack/commit/0b3938fad342a07efc67941df6bf8ff09472535c) [#102](https://github.com/showbie/backpack/pull/102) Thanks [@stormwarning](https://github.com/stormwarning)! - Fixes issues with export index not being written properly
+  Now writes correctly on first run of a new project, and updates when
+  icons are added or removed from source directory.
+
 ### 0.2.2
 
 #### 🐛 Fixed — 2021-01-25
