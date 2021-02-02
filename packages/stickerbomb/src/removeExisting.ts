@@ -15,25 +15,25 @@ export async function removeExisting(
   componentsDir: string,
   format: FormatOption
 ): Promise<void> {
-  let existingComponentPaths = [];
+  try {
+    let existingComponentPaths = [];
 
-  Object.values(iconSets).forEach(async (setPaths) => {
-    setPaths.map(async (filePath) => {
-      existingComponentPaths.push(
-        await globby(
-          path.join(componentsDir, filePath, GENERATED_FILES[format]),
-          {
-            absolute: true,
-          }
-        )
-      );
-    });
-  });
+    for await (const setPath of Object.keys(iconSets)) {
+      existingComponentPaths = [
+        ...existingComponentPaths,
+        ...(await globby(
+          path.join(componentsDir, setPath, GENERATED_FILES[format]),
+          { absolute: true }
+        )),
+      ];
+    }
 
-  await Promise.all(
-    existingComponentPaths.map(async (existingComponentPath) => {
-      console.log('[remove] path:', existingComponentPath);
-      await fs.remove(existingComponentPath);
-    })
-  );
+    for await (const path of existingComponentPaths) {
+      await fs.remove(path);
+    }
+
+    return Promise.resolve();
+  } catch (error) {
+    throw new Error(error);
+  }
 }

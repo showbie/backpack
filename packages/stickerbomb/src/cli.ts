@@ -41,6 +41,7 @@ sade('stickerbomb [src] [dest]', true)
 
       spinnerMsg = 'Writing component index...';
       spinner.start(spinnerMsg);
+
       if (format === 'react') {
         await writeIndex(filesSet, filesOut);
         spinner.succeed(`${spinnerMsg} DONE`);
@@ -51,29 +52,5 @@ sade('stickerbomb [src] [dest]', true)
       spinner.fail(`${spinnerMsg} FAILED`);
       throw new Error(error);
     }
-
-    // try {
-    //   spinner.start(spinnerMessage);
-
-    //   await generateIcons(filesSet, filesOut, format)
-    //     .then(() => spinner.succeed(`${spinnerMessage} DONE`))
-    //     .then(() => {
-    //       spinnerMessage = 'Writing component index...';
-
-    //       if (format === 'react') {
-    //         Object.keys(filesSet).forEach(async (set) => {
-    //           await writeIndex(path.join(filesOut, set)).catch((err) =>
-    //             console.log('[index] promise caught')
-    //           );
-    //         });
-    //         spinner.succeed(`${spinnerMessage} DONE`);
-    //       } else {
-    //         spinner.info(`${spinnerMessage} SKIPPED`);
-    //       }
-    //     });
-    // } catch (error) {
-    //   spinner.fail(`${spinnerMessage} FAILED`);
-    //   throw new Error(error);
-    // }
   })
   .parse(process.argv);
