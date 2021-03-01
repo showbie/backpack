@@ -1,15 +1,15 @@
 # stickerbomb
 
-## 0.3.0
+## 0.3.0 — 2021-03-01
 
-### Minor Changes
+#### 🎁 Added
 
-- [`c3cee8e`](https://github.com/showbie/backpack/commit/c3cee8ebda21e14a65b95dbdae26071c5ca84090) [#106](https://github.com/showbie/backpack/pull/106) Thanks [@stormwarning](https://github.com/stormwarning)! - Allow config from external file
+- [#106](https://github.com/showbie/backpack/pull/106) Allow config from external file
   Uses `cosmiconfig` to search for common config filenames. Only used
   for providing a custom SVG template for React icons at the moment, but
   more configuration will be possible in future.
 
-## 0.2.3 — 2021-02-02
+### 0.2.3 — 2021-02-02
 
 #### 🐛 Fixed
 
