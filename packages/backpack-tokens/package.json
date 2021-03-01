@@ -32,7 +32,7 @@
     "nearest-color": "0.4.4",
     "replace": "1.2.x",
     "ts-node": "9.1.x",
-    "typescript": "4.1.x",
+    "typescript": "4.2.x",
     "vuepress": "1.8.x",
     "vuepress-plugin-typescript": "0.3.1"
   }
