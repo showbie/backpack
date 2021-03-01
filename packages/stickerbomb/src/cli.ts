@@ -1,3 +1,4 @@
+import { cosmiconfigSync } from 'cosmiconfig';
 import ora from 'ora';
 import sade from 'sade';
 
@@ -23,6 +24,7 @@ sade('stickerbomb [src] [dest]', true)
     let filesIn = src || 'icons/**/*.svg';
     let filesOut = dest || 'components/icons';
     let { format } = opts;
+    let { config } = cosmiconfigSync('stickerbomb').search();
 
     let filesSet = await sortFilePaths(filesIn);
     let spinner = ora().start();
@@ -36,7 +38,7 @@ sade('stickerbomb [src] [dest]', true)
 
       spinnerMsg = 'Reticulating splines...';
       spinner.start(spinnerMsg);
-      await generateIcons(filesSet, filesOut, format);
+      await generateIcons(filesSet, filesOut, format, config);
       spinner.succeed(`${spinnerMsg} DONE`);
 
       spinnerMsg = 'Writing component index...';
