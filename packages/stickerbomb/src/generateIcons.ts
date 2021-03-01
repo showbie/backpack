@@ -30,7 +30,8 @@ const svgo = new SVGO({
 export async function generateIcons(
   iconSets: IconSets,
   componentsDir: string,
-  format: FormatOption
+  format: FormatOption,
+  config: any
 ): Promise<void> {
   try {
     for await (const [subpath, setPaths] of Object.entries(iconSets)) {
@@ -73,7 +74,8 @@ export async function generateIcons(
         let svgComponent = await generateComponent(
           optimisedSvg,
           svgComponentName,
-          format
+          format,
+          config
         );
 
         // Create icon directory if it's missing
