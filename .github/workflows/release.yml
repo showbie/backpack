@@ -27,11 +27,13 @@ jobs:
       - name: Install dependencies
         run: yarn
 
+      # https://github.com/changesets/action
       - name: Create release PR or publish
         id: changesets
         uses: changesets/action@master
         with:
           publish: yarn release
+          title: 'Chore: Publish release'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
