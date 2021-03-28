@@ -10,8 +10,8 @@ module.exports = {
       },
     },
     {
-      files: ['docs/**/*.vue'],
-      extends: ['plugin:vue/vue3-recommended', 'prettier/vue'],
+      files: ['docs/**/*.{ts,tsx}'],
+      extends: ['@showbie/eslint-config/react'],
     },
     {
       files: ['docs/**/*.js'],

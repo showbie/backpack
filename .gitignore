@@ -1,3 +1,5 @@
 node_modules
 docs/.vuepress/dist
+docs/.next
+docs/out
 packages/generator-backpack/generators
