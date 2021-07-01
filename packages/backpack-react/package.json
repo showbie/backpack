@@ -29,7 +29,7 @@
     "@babel/core": "7.11.x",
     "@showbie/backpack-tokens": "2.5.x",
     "@storybook/addon-a11y": "6.0.21",
-    "@storybook/addon-essentials": "6.0.21",
+    "@storybook/addon-essentials": "6.3.2",
     "@storybook/react": "6.0.21",
     "@storybook/theming": "6.0.21",
     "@testing-library/jest-dom": "5.11.4",
