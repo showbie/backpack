@@ -1,10 +1,16 @@
 {
   "name": "stickerbomb",
   "version": "0.3.0",
+  "description": "Generate a pack of icon components from SVG artwork.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/showbie/backpack.git",
+    "directory": "packages/stickerbomb"
+  },
   "license": "ISC",
   "author": "Showbie (https://www.showbie.com)",
   "maintainers": [
-    "Jeff Nelson <jeff@showbie.com>"
+    "Jeff Nelson (https://www.showbie.com)"
   ],
   "bin": {
     "stickerbomb": "bin/index.js"

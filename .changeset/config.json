@@ -1,13 +1,13 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@1.3.0/schema.json",
+  "$schema": "https://unpkg.com/@changesets/config@1.6.0/schema.json",
+  "access": "public",
+  "baseBranch": "trunk",
   "changelog": [
     "@changesets/changelog-github",
     { "repo": "showbie/backpack" }
   ],
   "commit": false,
+  "ignore": [],
   "linked": [],
-  "access": "public",
-  "baseBranch": "trunk",
-  "updateInternalDependencies": "patch",
-  "ignore": []
+  "updateInternalDependencies": "patch"
 }
