@@ -2,10 +2,10 @@ on:
   release:
     types: [published]
 
-name: Release
+name: Notify
 
 jobs:
-  notification:
+  notify:
     runs-on: ubuntu-latest
     steps:
       - name: Send Tokens package notification
