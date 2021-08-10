@@ -1,15 +1,23 @@
 {
   "name": "@showbie/backpack-react",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/showbie/backpack.git",
+    "directory": "packages/backpack-react"
+  },
   "license": "ISC",
-  "author": "Jeff",
-  "files": [
-    "dist",
-    "src"
+  "author": "Showbie (https://www.showbie.com)",
+  "maintainers": [
+    "Jeff Nelson (https://www.showbie.com)"
   ],
   "main": "dist/index.js",
   "module": "dist/backpack-react.esm.js",
   "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "tsdx build",
     "build:storybook": "yarn build:tailwind && build-storybook",
