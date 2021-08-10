@@ -1,12 +1,10 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "declaration": true,
-    "importHelpers": true,
     "module": "commonjs",
     "outDir": "generators",
     "rootDir": "src",
-    "strict": true,
     "target": "es6"
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "types", "../../types"]
 }

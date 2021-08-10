@@ -1,13 +1,17 @@
 {
-  "name": "backpack-root",
+  "name": "@showbie/backpack",
   "private": true,
   "workspaces": [
     "./packages/*"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
     "changelog": "lerna-changelog",
-    "format": "prettier"
+    "changeset": "changeset",
+    "format": "prettier",
+    "lerna": "lerna",
+    "release": "changeset publish"
   },
   "husky": {
     "hooks": {
@@ -15,35 +19,28 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "package.json": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,jsx,ts,tsx}": "eslint --fix",
+    "package.json": "prettier --write"
   },
   "prettier": {
-    "arrowParens": "always",
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
+    "singleQuote": true
   },
   "devDependencies": {
+    "@changesets/changelog-github": "0.4.0",
+    "@changesets/cli": "2.16.0",
     "@showbie/eslint-config": "1.1.x",
     "@typescript-eslint/eslint-plugin": "2.18.x",
     "@typescript-eslint/parser": "2.20.x",
     "eslint": "6.8.x",
     "eslint-plugin-react": "7.20.x",
     "husky": "4.2.x",
-    "import-sort-style-python": "1.0.x",
-    "lerna": "3.20.x",
+    "import-sort-style-python": "1.0.2",
+    "lerna": "4.0.0",
     "lerna-changelog": "1.0.x",
     "lint-staged": "10.0.x",
-    "prettier": "1.19.x",
-    "prettier-plugin-import-sort": "0.0.4",
-    "prettier-plugin-packagejson": "2.1.x"
+    "prettier": "2.3.2",
+    "prettier-plugin-import-sort": "0.0.7",
+    "prettier-plugin-packagejson": "2.2.11"
   },
   "changelog": {
     "repo": "showbie/backpack",
@@ -58,18 +55,8 @@
     }
   },
   "importSort": {
-    ".js,.jsx": {
+    ".js,.jsx,.ts,.tsx": {
       "parser": "babylon",
-      "style": "python",
-      "options": {
-        "knownFramework": [
-          "react",
-          "react-dom"
-        ]
-      }
-    },
-    ".ts,.tsx": {
-      "parser": "typescript",
       "style": "python",
       "options": {
         "knownFramework": [
