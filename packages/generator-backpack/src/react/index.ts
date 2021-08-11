@@ -10,7 +10,7 @@ type Fields = {
   slugName: string;
 };
 
-type ComponentFormat = 'function' | 'class';
+// type ComponentFormat = 'function' | 'class';
 
 export default class ReactComponentGenerator extends Generator {
   public fields: Fields = {
