@@ -1,11 +1,12 @@
 {
-  "name": "backpack-root",
+  "name": "@showbie/backpack",
   "private": true,
   "workspaces": [
     "./packages/*"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
     "changelog": "lerna-changelog",
     "changeset": "changeset add",
     "format": "prettier",
@@ -17,22 +18,15 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "package.json": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,jsx,ts,tsx}": "eslint --fix",
+    "package.json": "prettier --write"
   },
   "prettier": {
-    "semi": true,
     "singleQuote": true
   },
   "dependencies": {
-    "@changesets/changelog-github": "0.2.7",
-    "@changesets/cli": "2.10.x",
+    "@changesets/changelog-github": "0.4.0",
+    "@changesets/cli": "2.16.0",
     "@showbie/eslint-config": "3.0.x",
     "@typescript-eslint/eslint-plugin": "4.14.x",
     "@typescript-eslint/parser": "4.9.x",
@@ -42,13 +36,13 @@
     "eslint-plugin-react": "7.21.x",
     "eslint-plugin-react-hooks": "4.1.x",
     "husky": "4.3.x",
-    "import-sort-style-python": "1.0.x",
+    "import-sort-style-python": "1.0.2",
     "lerna": "3.22.x",
     "lerna-changelog": "1.0.x",
     "lint-staged": "10.4.x",
-    "prettier": "2.1.x",
-    "prettier-plugin-import-sort": "0.0.6",
-    "prettier-plugin-packagejson": "2.2.x"
+    "prettier": "2.3.2",
+    "prettier-plugin-import-sort": "0.0.7",
+    "prettier-plugin-packagejson": "2.2.11"
   },
   "changelog": {
     "repo": "showbie/backpack",
@@ -63,18 +57,8 @@
     }
   },
   "importSort": {
-    ".js,.jsx": {
+    ".js,.jsx,.ts,.tsx": {
       "parser": "babylon",
-      "style": "python",
-      "options": {
-        "knownFramework": [
-          "react",
-          "react-dom"
-        ]
-      }
-    },
-    ".ts,.tsx": {
-      "parser": "typescript",
       "style": "python",
       "options": {
         "knownFramework": [

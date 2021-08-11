@@ -1,5 +1,3 @@
-**_Note:_ Further versions of this package will be published to the GitHub Package registry.**
-
 # 🎒 React
 
 > React components for Showbie’s Backpack design system.
