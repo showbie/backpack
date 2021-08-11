@@ -1,5 +1,3 @@
-**_Note:_ Further versions of this package will be published to the GitHub Package registry.**
-
 # `@showbie/generator-backpack`
 
 > [Yeoman](https://yeoman.io/) generator for Backpack components.

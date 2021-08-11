@@ -1,6 +1,4 @@
-**_Note:_ Further versions of this package will be published to the GitHub Package registry.**
-
-# Backpack Design Tokens
+# `@showbie/backpack-tokens`
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/showbie/backpack-tokens)
 
