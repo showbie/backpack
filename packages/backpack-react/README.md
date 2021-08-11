@@ -1,3 +1,5 @@
+**_Note:_ Further versions of this package will be published to the GitHub Package registry.**
+
 # 🎒 React
 
 > React components for Showbie’s Backpack design system.
@@ -35,4 +37,3 @@ TSDX uses [Rollup v1.x](https://rollupjs.org) as a bundler and generates multipl
 ## Named Exports
 
 Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
-
