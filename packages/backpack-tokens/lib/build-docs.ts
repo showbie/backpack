@@ -4,8 +4,8 @@ import * as path from 'path';
 import chroma from 'chroma-js';
 import Handlebars from 'handlebars';
 
-import { capitalize, swiftVarName } from './utils/string';
 import { getColorName, getHslString } from './utils/color';
+import { capitalize, swiftVarName } from './utils/string';
 
 Handlebars.registerHelper('capitalize', (a) => capitalize(a));
 Handlebars.registerHelper('swiftvar', (a, b, c) =>
@@ -13,9 +13,9 @@ Handlebars.registerHelper('swiftvar', (a, b, c) =>
 );
 
 export default class ColorDocsBuilder {
-  palettes: Record<string, any>;
+  palettes: Record<string, any> = {};
   templatesDir: string;
-  themes;
+  themes: any;
 
   constructor(
     palettes: Record<string, any>,

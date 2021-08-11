@@ -98,9 +98,7 @@ export const colors = {
 colors.slate = {
   ...colors.slate,
   ...{
-    '900-95': chroma(colors.slate['900'])
-      .alpha(0.95)
-      .css(),
+    '900-95': chroma(colors.slate['900']).alpha(0.95).css(),
   },
 };
 

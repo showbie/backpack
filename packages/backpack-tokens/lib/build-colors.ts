@@ -6,6 +6,14 @@ import Handlebars from 'handlebars';
 
 import { capitalize, swiftVarName } from './utils/string';
 
+type HueScale = Record<string, string>;
+type Colours = Record<string, HueScale>;
+interface ColourArray {
+  name: string;
+  scale: HueScale;
+  prefix: string;
+}
+
 /**
  * Get floating-point values for each colour channel and return a
  * string for `UIColor()` in Swift.
@@ -22,11 +30,11 @@ Handlebars.registerHelper('swiftvar', (a, b, c) =>
 );
 
 class BaseBuilder {
-  colors: Record<string, any>;
+  colors: Colours;
   prefix: string;
   version: string;
 
-  constructor(colors, prefix = '', version: string) {
+  constructor(colors: Colours, prefix = '', version: string) {
     this.colors = colors;
     this.prefix = prefix;
     this.version = version;
@@ -35,10 +43,10 @@ class BaseBuilder {
 
 export default class ColorBuilder extends BaseBuilder {
   templatesDir: string;
-  colorsArray;
+  colorsArray: ColourArray[];
 
   constructor(
-    colors,
+    colors: Colours,
     prefix: string,
     version: string,
     templatesDir = path.join(__dirname, 'templates')
@@ -51,7 +59,7 @@ export default class ColorBuilder extends BaseBuilder {
       .map((name) => {
         let scale = colors[name];
 
-        Object.keys(scale).forEach(function(key) {
+        Object.keys(scale).forEach(function (key) {
           if (scale[key] === '') {
             delete scale[key];
           }
