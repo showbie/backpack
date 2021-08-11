@@ -1,10 +1,10 @@
 # @showbie/backpack-react
 
-## 1.0.1
+## 1.0.1 — 2021-08-10
 
-### Patch Changes
+#### 🚚 Deprecated
 
-- [`516149d`](https://github.com/showbie/backpack/commit/516149daf7c8e7bda4119578548b1697fc3087a4) [#142](https://github.com/showbie/backpack/pull/142) Thanks [@stormwarning](https://github.com/stormwarning)! - Further version of this package will be published to the GitHub Package registry
+- Further versions of this package will be published to the GitHub Package registry [#142](https://github.com/showbie/backpack/pull/142)
 
 ## 1.0.0 — 2020-10-28
 
