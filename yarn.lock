@@ -4239,11 +4239,6 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@showbie/backpack-tokens@2.5.x":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@showbie/backpack-tokens/-/backpack-tokens-2.5.1.tgz#fd470fd219784fc9c942fcfe8bacf421c3c1291e"
-  integrity sha512-0p+eGxAT5uWu3ORPAOi8NBOYy4TCMeo7fx0C2X3l+jZdDqJ9dioO4EXpQWuS39zWBNZUajvC7xTmuDye+5MZCA==
-
 "@showbie/eslint-config@3.0.x":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@showbie/eslint-config/-/eslint-config-3.0.0.tgz#242b6f5a95a6322ef0b988bea4358e1c17147a7c"
