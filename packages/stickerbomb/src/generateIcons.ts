@@ -49,7 +49,7 @@ export async function generateIcons(
 
         // Validate SVG before import
         let $ = cheerio.load(optimisedSvg);
-        $('svg *').each((i, el) => {
+        $('svg *').each((_, el) => {
           let $el = $(el);
 
           // Validate color attributes

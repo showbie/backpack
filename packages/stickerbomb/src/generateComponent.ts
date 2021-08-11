@@ -3,14 +3,12 @@ import svgr from '@svgr/core';
 import { svge } from './svgToHtmlbars';
 import { FormatOption } from './types';
 
-const componentTemplate = (tmpl) => (
-  { template },
-  opts,
-  { componentName, jsx }
-) => {
-  let code = tmpl
-    ? tmpl
-    : `
+const componentTemplate =
+  (tmpl) =>
+  ({ template }, _, { componentName, jsx }) => {
+    let code = tmpl
+      ? tmpl
+      : `
     import * as React from 'react';
     NEWLINE
     import { SVGProps } from '../types';
@@ -18,16 +16,16 @@ const componentTemplate = (tmpl) => (
     export const COMPONENT_NAME = ({ title, titleId, ...props }: SVGProps) => COMPONENT_JSX;
   `;
 
-  let reactTemplate = template.smart(code, {
-    plugins: ['react', 'typescript'],
-  });
+    let reactTemplate = template.smart(code, {
+      plugins: ['react', 'typescript'],
+    });
 
-  return reactTemplate({
-    COMPONENT_NAME: componentName,
-    COMPONENT_JSX: jsx,
-    NEWLINE: '\n',
-  });
-};
+    return reactTemplate({
+      COMPONENT_NAME: componentName,
+      COMPONENT_JSX: jsx,
+      NEWLINE: '\n',
+    });
+  };
 
 const svgrConfig = (tmpl) => ({
   svgProps: {
