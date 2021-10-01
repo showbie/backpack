@@ -1,6 +1,6 @@
 {
   "name": "@showbie/generator-backpack",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Blueprints for different parts of the Backpack design system.",
   "keywords": [
     "yeoman-generator",
