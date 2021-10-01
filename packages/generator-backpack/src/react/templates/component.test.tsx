@@ -4,13 +4,13 @@ import * as React from 'react';
 
 import { render } from '@testing-library/react';
 
-import { <%= pascalName %>, Props } from './<%= pascalName %>';
+import { <%= pascalName %> } from './<%= pascalName %>';
 
 function renderComponent() {
   const mockHandler = jest.fn();
 
   const TestCase = () => {
-    return <<%= pascalName %>>Text</<%= pascalName %>>
+    return <<%= pascalName %>>Text</<%= pascalName %>>;
   };
   const { getByText } = render(<TestCase />);
 

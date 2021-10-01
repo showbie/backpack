@@ -11,5 +11,5 @@ export default {
 } as Meta;
 
 export const Default: Story<Props> = (args) => (
-    <<%= pascalName %> {...args}>Text</<%= pascalName %>>
+  <<%= pascalName %> {...args}>Text</<%= pascalName %>>
 );
