@@ -1,20 +1,19 @@
-import './<%= pascalName %>.scss';
-
 import React, { Component } from 'react';
 
-import cx from 'classnames';
-
-interface Props {}
+interface Props {
+  children: React.ReactNode;
+}
 
 export class <%= pascalName %> extends Component<Props> {
   static defaultProps = {};
 
   render() {
-    let { children, ...props } = this.props;
-    let classNames = cx('<%= slugName %>');
+    const { children, ...props } = this.props;
 
     return (
-      <div className={classNames} {...props}>{children}</div>
+      <div className="" {...props}>
+        {children}
+      </div>
     );
   }
 }
