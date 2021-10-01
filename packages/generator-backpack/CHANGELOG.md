@@ -1,10 +1,10 @@
 # @showbie/generator-backpack
 
-## 2.0.2
+### 2.0.2 — 2021-10-01
 
-### Patch Changes
+#### 🐛 Fixed
 
-- [`5c455ed`](https://github.com/showbie/backpack/commit/5c455ed9c460065356bed789c7700e16fc131eb9) Thanks [@stormwarning](https://github.com/stormwarning)! - Correct a few remaining formatting errors
+- Correct a few remaining formatting errors [`5c455ed`](https://github.com/showbie/backpack/commit/5c455ed9c460065356bed789c7700e16fc131eb9)
 
 ### 2.0.1 — 2021-10-01
 
