@@ -1,11 +1,21 @@
 # @showbie/generator-backpack
 
+### 2.0.1 — 2021-10-01
+
+#### ♻️ Changed
+
+- Fix issues with React component templates [#167](https://github.com/showbie/backpack/pull/167)
+  - Don't include Sass by default, encourage use of Tailwind classes
+  - Fix formatting of generated code
+  - Include better types and configure default story for use of actions & controls
+  - Add better `TestCase` function & remove deprecated assertion method
+
 ## 2.0.0 — 2021-08-11
 
 #### 💣 Breaking Change
 
 - New versions are now published to the GitHub Package registry [#141](https://github.com/showbie/backpack/pull/141)
-  
+
   You will need to add the following to `.npmrc` in your project root:
 
   ```
