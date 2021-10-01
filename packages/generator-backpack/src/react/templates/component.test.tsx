@@ -6,19 +6,25 @@ import { render } from '@testing-library/react';
 
 import { <%= pascalName %>, Props } from './<%= pascalName %>';
 
+function renderComponent() {
+  const mockHandler = jest.fn();
+
+  const TestCase = () => {
+    return <<%= pascalName %>>Text</<%= pascalName %>>
+  };
+  const { getByText } = render(<TestCase />);
+
+  return {
+    getByText,
+    mockHandler,
+  };
+}
+
 describe('<<%= pascalName %> />', () => {
-  function setup(override = {}) {
-    let props: Props = {
-      ...override,
-    };
-
-    return render(<<%= pascalName %> {...props}>Label</<%= pascalName %>>);
-  }
-
   it('renders', () => {
-    let { getByText } = setup();
-    let element = getByText('Label');
+    const { getByText } = renderComponent();
+    const element = getByText('Text');
 
-    expect(element).toBeInTheDOM();
+    expect(element).toBeInTheDocument();
   });
 });
