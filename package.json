@@ -33,7 +33,7 @@
     "eslint": "7.10.x",
     "eslint-plugin-jest": "24.1.x",
     "eslint-plugin-jest-dom": "3.2.x",
-    "eslint-plugin-react": "7.21.x",
+    "eslint-plugin-react": "7.27.x",
     "eslint-plugin-react-hooks": "4.2.x",
     "husky": "4.3.x",
     "import-sort-style-python": "1.0.2",
