@@ -1,10 +1,10 @@
 # Change Log
 
-## 3.1.0
+## 3.1.0 — 2022-01-12
 
-### Minor Changes
+#### 🎁 Added
 
-- [#178](https://github.com/showbie/backpack/pull/178) [`f2dd900`](https://github.com/showbie/backpack/commit/f2dd9004935a03983d8869fc0277031121101601) Thanks [@stormwarning](https://github.com/stormwarning)! - Add `grey-300` to Showbie palette
+- [#178](https://github.com/showbie/backpack/pull/178) Add `grey-300` to Showbie palette
 
 ## 3.0.0 — 2021-08-11
 
