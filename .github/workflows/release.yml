@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo outputs
-        run: echo ${{ fromJson(needs.release.outputs.publishedPackages).*.name }}
+        run: echo ${{ join(fromJson(needs.release.outputs.publishedPackages).*.name, ', ') }}
 
       - name: Send Tokens package notification
         uses: stormwarning/action-release-notification@v3.1.1
