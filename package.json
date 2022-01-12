@@ -10,7 +10,8 @@
     "changelog": "lerna-changelog",
     "changeset": "changeset add",
     "format": "prettier",
-    "release": "lerna run build && changeset publish"
+    "release": "lerna run build && changeset publish",
+    "version:changeset": "changeset version && lerna run version"
   },
   "husky": {
     "hooks": {
