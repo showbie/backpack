@@ -24,7 +24,6 @@
     "docs:dev": "vuepress dev docs",
     "podspec:deploy": "pod repo push showbie --allow-warnings",
     "podspec:ver": "replace \"s\\.version = '\\d+\\.\\d+\\.\\d+'\" \"s.version = '$npm_package_version'\" ../../BackpackTokens.podspec",
-    "postpublish": "yarn podspec:deploy",
     "test": "eslint '**/*.js' --ignore 'dist/*.js'",
     "version": "yarn build && yarn podspec:ver && git add -A ."
   },
