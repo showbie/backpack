@@ -1,6 +1,6 @@
 ////
 ///   BACKPACK COLOURS
-///   v2.5.1
+///   v3.1.0
 ////
 
 import UIKit
@@ -38,6 +38,10 @@ public extension UIColor {
     static let socRed100 = UIColor(red: 0.9882352941176471, green: 0.8980392156862745, blue: 0.8980392156862745, alpha: 1)
     // #f9cccc
     static let socRed200 = UIColor(red: 0.9764705882352941, green: 0.8, blue: 0.8, alpha: 1)
+    // #f5b2b2
+    static let socRed300 = UIColor(red: 0.9607843137254902, green: 0.6980392156862745, blue: 0.6980392156862745, alpha: 1)
+    // #f39999
+    static let socRed400 = UIColor(red: 0.9529411764705882, green: 0.6, blue: 0.6, alpha: 1)
     // #f07f7f
     static let socRed500 = UIColor(red: 0.9411764705882353, green: 0.4980392156862745, blue: 0.4980392156862745, alpha: 1)
     // #eb5f5f
@@ -46,6 +50,8 @@ public extension UIColor {
     static let socRed700 = UIColor(red: 0.8823529411764706, green: 0.23529411764705882, blue: 0.23529411764705882, alpha: 1)
     // #e10000
     static let socRed800 = UIColor(red: 0.8823529411764706, green: 0, blue: 0, alpha: 1)
+    // #4d2828
+    static let socRed900 = UIColor(red: 0.30196078431372547, green: 0.1568627450980392, blue: 0.1568627450980392, alpha: 1)
 
     ///
     /// Orange
@@ -60,6 +66,8 @@ public extension UIColor {
     static let socOrange600 = UIColor(red: 1, green: 0.4588235294117647, blue: 0.24705882352941178, alpha: 1)
     // #ed580f
     static let socOrange700 = UIColor(red: 0.9294117647058824, green: 0.34509803921568627, blue: 0.058823529411764705, alpha: 1)
+    // #d14600
+    static let socOrange800 = UIColor(red: 0.8196078431372549, green: 0.27450980392156865, blue: 0, alpha: 1)
 
     ///
     /// Amber
@@ -70,12 +78,18 @@ public extension UIColor {
     static let socAmber100 = UIColor(red: 1, green: 0.9411764705882353, blue: 0.807843137254902, alpha: 1)
     // #ffe9b7
     static let socAmber200 = UIColor(red: 1, green: 0.9137254901960784, blue: 0.7176470588235294, alpha: 1)
+    // #ffdf98
+    static let socAmber300 = UIColor(red: 1, green: 0.8745098039215686, blue: 0.596078431372549, alpha: 1)
+    // #ffd374
+    static let socAmber400 = UIColor(red: 1, green: 0.8274509803921568, blue: 0.4549019607843137, alpha: 1)
     // #ffc857
     static let socAmber500 = UIColor(red: 1, green: 0.7843137254901961, blue: 0.3411764705882353, alpha: 1)
     // #efa946
     static let socAmber600 = UIColor(red: 0.9372549019607843, green: 0.6627450980392157, blue: 0.27450980392156865, alpha: 1)
     // #e39100
     static let socAmber700 = UIColor(red: 0.8901960784313725, green: 0.5686274509803921, blue: 0, alpha: 1)
+    // #3d321f
+    static let socAmber900 = UIColor(red: 0.23921568627450981, green: 0.19607843137254902, blue: 0.12156862745098039, alpha: 1)
 
     ///
     /// Green
@@ -86,10 +100,18 @@ public extension UIColor {
     static let socGreen100 = UIColor(red: 0.8549019607843137, green: 0.9411764705882353, blue: 0.8705882352941177, alpha: 1)
     // #c9e9cf
     static let socGreen200 = UIColor(red: 0.788235294117647, green: 0.9137254901960784, blue: 0.8117647058823529, alpha: 1)
+    // #a6dcb1
+    static let socGreen300 = UIColor(red: 0.6509803921568628, green: 0.8627450980392157, blue: 0.6941176470588235, alpha: 1)
     // #5dbe6e
     static let socGreen500 = UIColor(red: 0.36470588235294116, green: 0.7450980392156863, blue: 0.43137254901960786, alpha: 1)
     // #49af5b
     static let socGreen600 = UIColor(red: 0.28627450980392155, green: 0.6862745098039216, blue: 0.3568627450980392, alpha: 1)
+    // #2d953f
+    static let socGreen700 = UIColor(red: 0.17647058823529413, green: 0.5843137254901961, blue: 0.24705882352941178, alpha: 1)
+    // #008a19
+    static let socGreen800 = UIColor(red: 0, green: 0.5411764705882353, blue: 0.09803921568627451, alpha: 1)
+    // #284d2f
+    static let socGreen900 = UIColor(red: 0.1568627450980392, green: 0.30196078431372547, blue: 0.1843137254901961, alpha: 1)
 
     ///
     /// Cyan
