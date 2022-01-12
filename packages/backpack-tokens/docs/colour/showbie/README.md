@@ -6,7 +6,7 @@
 > In visual perception a color is almost never seen as it really is —
 > as it physically is. This fact makes color the most relative medium
 > in art. \
-> — *Josef Albers*
+> — _Josef Albers_
 
 Here’s an overview of the full Showbie colour palette. View the
 individual swatches for details and usage notes.
@@ -61,6 +61,10 @@ two approaches.
 ### Grey 200
 
 <ColorSwatch hue="grey" scale="200" />
+
+### Grey 300
+
+<ColorSwatch hue="grey" scale="300" />
 
 ### Grey 400
 

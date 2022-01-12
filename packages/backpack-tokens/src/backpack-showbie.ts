@@ -11,7 +11,7 @@ export const colors = {
     // 100: '#ecedee',
     // xx1: '#e9e9eb', // replace with 100?
     200: '#e6e5e7', // blessed
-    300: '',
+    300: '#cccccf',
     400: '#c4c4ca', // blessed
     500: '#b9bbbd', // blessed
     600: '', // '#989fa6',
