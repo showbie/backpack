@@ -1,17 +1,22 @@
 # Change Log
 
+## 3.1.0 — 2022-01-12
+
+#### 🎁 Added
+
+- [#178](https://github.com/showbie/backpack/pull/178) Add `grey-300` to Showbie palette
+
 ## 3.0.0 — 2021-08-11
 
 #### 💣 Breaking Change
 
 - New versions are now published to the GitHub Package registry [#141](https://github.com/showbie/backpack/pull/141)
-  
+
   You will need to add the following to `.npmrc` in your project root:
 
   ```
   @showbie:registry=https://npm.pkg.github.com/showbie
   ```
-
 
 ## 2.8.1 — 2021-08-10
 
