@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.1 — 2022-01-20
+
+#### ♻️ Changed
+
+- [#188](https://github.com/showbie/backpack/pull/188) Update value for `blue-700` in the Showbie palette
+
 ## 3.1.0 — 2022-01-12
 
 #### 🎁 Added
