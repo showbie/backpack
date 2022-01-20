@@ -81,7 +81,7 @@ export const colors = {
     400: '', // '#8ad8ff',
     500: '#29b1f0', // blessed
     600: '#009fe8', // blessed
-    700: '#0084c2',
+    700: '#007ec2', // blessed
     800: '',
     900: '',
   },
