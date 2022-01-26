@@ -22,6 +22,9 @@ const DocsColors = new ColorDocsBuilder({
   socrative: SOCRATIVE,
 });
 
+ShowbieColors.build('showbie-color.css', [
+  path.join(__dirname, '..', 'dist', 'showbie-color.css'),
+]);
 ShowbieColors.build('showbie-color.scss', [
   path.join(__dirname, '..', 'dist', 'showbie-color.scss'),
 ]);
@@ -32,6 +35,9 @@ ShowbieColors.build('showbie-color.js', [
   path.join(__dirname, '..', 'dist', 'showbie-color.js'),
 ]);
 
+SocrativeColors.build('showbie-color.css', [
+  path.join(__dirname, '..', 'dist', 'socrative-color.css'),
+]);
 SocrativeColors.build('showbie-color.less', [
   path.join(__dirname, '..', 'dist', 'socrative-color.less'),
 ]);

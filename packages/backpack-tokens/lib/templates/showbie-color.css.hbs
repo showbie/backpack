@@ -1,0 +1,14 @@
+/**
+ * BACKPACK COLOURS
+ * v{{version}}
+ */
+
+:root {
+{{#each colors as |hue|}}
+
+  /* {{capitalize hue.name}} */
+{{#each hue.scale as |value label|}}
+  --{{hue.prefix}}-{{hue.name}}-{{label}}: {{value}};
+{{/each}}
+{{/each}}
+}
