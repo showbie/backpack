@@ -1,0 +1,86 @@
+/**
+ * BACKPACK COLOURS
+ * v3.2.0
+ */
+
+:root {
+
+  /* Grey */
+  --soc-grey-50: #f5f7f8;
+  --soc-grey-100: #eff3f5;
+  --soc-grey-200: #e7edf0;
+  --soc-grey-300: #dde5ea;
+  --soc-grey-400: #d3dce1;
+  --soc-grey-500: #c2cbd2;
+  --soc-grey-600: #abb4bd;
+  --soc-grey-700: #8c97a1;
+  --soc-grey-800: #788490;
+
+  /* Red */
+  --soc-red-50: #ffeeee;
+  --soc-red-100: #fce5e5;
+  --soc-red-200: #f9cccc;
+  --soc-red-300: #f5b2b2;
+  --soc-red-400: #f39999;
+  --soc-red-500: #f07f7f;
+  --soc-red-600: #eb5f5f;
+  --soc-red-700: #e13c3c;
+  --soc-red-800: #e10000;
+  --soc-red-900: #4d2828;
+
+  /* Orange */
+  --soc-orange-50: #ffece6;
+  --soc-orange-100: #ffdfd5;
+  --soc-orange-200: #ffcbb6;
+  --soc-orange-600: #ff753f;
+  --soc-orange-700: #ed580f;
+  --soc-orange-800: #d14600;
+
+  /* Amber */
+  --soc-amber-50: #fff7e5;
+  --soc-amber-100: #fff0ce;
+  --soc-amber-200: #ffe9b7;
+  --soc-amber-300: #ffdf98;
+  --soc-amber-400: #ffd374;
+  --soc-amber-500: #ffc857;
+  --soc-amber-600: #efa946;
+  --soc-amber-700: #e39100;
+  --soc-amber-900: #3d321f;
+
+  /* Green */
+  --soc-green-50: #e7f6ea;
+  --soc-green-100: #daf0de;
+  --soc-green-200: #c9e9cf;
+  --soc-green-300: #a6dcb1;
+  --soc-green-500: #5dbe6e;
+  --soc-green-600: #49af5b;
+  --soc-green-700: #2d953f;
+  --soc-green-800: #008a19;
+  --soc-green-900: #284d2f;
+
+  /* Cyan */
+  --soc-cyan-50: #e4fbff;
+  --soc-cyan-100: #d8f8ff;
+  --soc-cyan-500: #00b5e2;
+  --soc-cyan-600: #0099c7;
+  --soc-cyan-700: #0075a3;
+
+  /* Blue */
+  --soc-blue-600: #446178;
+  --soc-blue-800: #2c4458;
+  --soc-blue-900: #273b4c;
+
+  /* Indigo */
+  --soc-indigo-50: #e9eefb;
+  --soc-indigo-100: #e1e7f7;
+  --soc-indigo-200: #c3cee4;
+  --soc-indigo-600: #5971a4;
+  --soc-indigo-700: #335498;
+
+  /* Brand */
+  --soc-brand-feide: #068f8d;
+  --soc-brand-google: #dc4e41;
+  --soc-brand-microsoft: #07a6f0;
+  --soc-brand-showbie: #009fe8;
+  --soc-brand-socrative: #ff602b;
+}

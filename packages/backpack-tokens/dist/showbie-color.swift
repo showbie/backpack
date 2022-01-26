@@ -1,6 +1,6 @@
 ////
 ///   BACKPACK COLOURS
-///   v3.1.1
+///   v3.2.0
 ////
 
 import UIKit

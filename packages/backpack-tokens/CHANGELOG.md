@@ -1,6 +1,14 @@
 # Change Log
 
-## 3.1.1 — 2022-01-20
+## 3.2.0 — 2022-01-26
+
+#### 🎁 Added
+
+- [#194](https://github.com/showbie/backpack/pull/194) Add CSS custom property template
+
+  Thanks [@elidupuis](https://github.com/elidupuis)!
+
+### 3.1.1 — 2022-01-20
 
 #### ♻️ Changed
 
