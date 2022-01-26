@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.author = 'Showbie Inc.'
   s.summary = 'Showbie Backpack design system tokens'
   s.source = { :git => 'https://github.com/showbie/backpack.git',
-               :tag => "v#{s.version.to_s}" }
+               :tag => "@showbie/backpack-tokens@#{s.version.to_s}" }
   s.swift_version = '4.2'
   s.ios.deployment_target = '10.0'
   s.source_files = 'packages/backpack-tokens/dist/*.swift'
