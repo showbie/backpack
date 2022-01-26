@@ -28,6 +28,12 @@
         </dd>
       </div>
       <div class="mv2 mh2">
+        <dt class="f7 fw6 lh-copy ttu">CSS</dt>
+        <dd class="f5 ml0">
+          <code>--{{ variablePrefix }}-{{ hue }}-{{ scale }}</code>
+        </dd>
+      </div>
+      <div class="mv2 mh2">
         <dt class="f7 fw6 lh-copy ttu">SCSS</dt>
         <dd class="f5 ml0">
           <code>${{ variablePrefix }}-{{ hue }}-{{ scale }}</code>
