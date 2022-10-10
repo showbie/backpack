@@ -65,7 +65,7 @@ jobs:
         run: echo ${{ join(fromJson(needs.release.outputs.publishedPackages).*.name, ', ') }}
 
       - name: Send Tokens package notification
-        uses: stormwarning/action-release-notification@v3.1.1
+        uses: stormwarning/action-release-notification@v4.0.1
         if: contains(fromJson(needs.release.outputs.publishedPackages).*.name, '@showbie/backpack-tokens')
         with:
           channel: design
@@ -75,7 +75,7 @@ jobs:
           SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
 
       - name: Send Generator package notification
-        uses: stormwarning/action-release-notification@v3.1.1
+        uses: stormwarning/action-release-notification@v4.0.1
         if: contains(fromJson(needs.release.outputs.publishedPackages).*.name, '@showbie/generator-backpack')
         with:
           channel: socrative-dev
@@ -85,7 +85,7 @@ jobs:
           SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
 
       - name: Send Stickerbomb package notification
-        uses: stormwarning/action-release-notification@v3.1.1
+        uses: stormwarning/action-release-notification@v4.0.1
         if: contains(fromJson(needs.release.outputs.publishedPackages).*.name, 'stickerbomb')
         with:
           channel: socrative-dev
