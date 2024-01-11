@@ -6,18 +6,19 @@ import chroma from 'chroma-js';
  */
 export const colors = {
   grey: {
-    50: '#f8f8f8', // blessed
-    100: '#f2f3f4', // blessed
-    // 100: '#ecedee',
-    // xx1: '#e9e9eb', // replace with 100?
-    200: '#e6e5e7', // blessed
-    300: '#cccccf',
+    0: '#FFFFFF', // a11y
+    5: '#FBFBFB', // a11y
+    50: '#F8F8F8', // a11y
+    100: '#F2F2F3', // a11y
+    200: '#E9E9EB', // a11y
+    300: '#CCCCCF', // a11y
     400: '#c4c4ca', // blessed
-    500: '#b9bbbd', // blessed
+    500: '#696B76', // a11y
     600: '', // '#989fa6',
     700: '', // '#7a8184',
     800: '', // '#545454',
     900: '',
+    1000: '#696B76', // a11y
   },
 
   slate: {
@@ -35,14 +36,14 @@ export const colors = {
   },
 
   red: {
-    50: '#ffeeee', // blessed
-    100: '#fce5e5', // blessed
-    200: '#f9cccc', // blessed
+    50: '#FFEEEE', // a11y
+    100: '#FCE5E5', // a11y
+    200: '#F9CCCC', // a11y
     300: '',
     400: '',
-    500: '#f07f7f', // blessed
-    600: '#eb5f5f', // blessed
-    700: '#e13c3c', // blessed
+    500: '#D5422D', // a11y
+    600: '#CF2810', // a11y
+    700: '#C11D05', // a11y
     800: '#e10000', // blessed
     900: '',
   },
@@ -61,28 +62,29 @@ export const colors = {
   // },
 
   green: {
-    50: '',
-    100: '#daf0de', // blessed
+    50: '#EBF7EB', // a11y
+    100: '#DAF0DA', // a11y
     200: '',
     300: '',
     400: '',
-    500: '#5dbe6e', // blessed
-    600: '#49af5b', // blessed
-    700: '',
+    500: '#158809', // ally
+    600: '#137C08', // a11y
+    700: '#117207', // a11y
     800: '',
     900: '',
   },
 
   blue: {
-    50: '#f1faff', // blessed
-    100: '#dcf3ff', // blessed
-    200: '#cbeeff', // blessed
-    300: '', // '#bae8ff',
-    400: '', // '#8ad8ff',
-    500: '#29b1f0', // blessed
-    600: '#009fe8', // blessed
-    700: '#007ec2', // blessed
-    800: '',
+    5: '#F2F9FF', // a11y
+    50: '#f1faff', // a11y
+    100: '#dcf3ff', // a11y
+    200: '#cbeeff', // a11y
+    300: '#BAE7FE', // a11y
+    400: '#29B1F0', // a11y
+    500: '#107CC0', // a11y
+    600: '#016FB7', // a11y
+    700: '#005E9D', // a11y
+    800: '#003968', // a11y
     900: '',
   },
 
