@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.1.0
+
+### Minor Changes
+
+- [#258](https://github.com/showbie/backpack/pull/258) [`6058c1f`](https://github.com/showbie/backpack/commit/6058c1fa01f1e83b826c3c23eff9d0086e5e4e40) Thanks [@elidupuis](https://github.com/elidupuis)! - Revert Node upgrade
+
 ## 4.0.0
 
 ### Major Changes
