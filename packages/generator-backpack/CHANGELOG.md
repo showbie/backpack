@@ -1,5 +1,11 @@
 # @showbie/generator-backpack
 
+## 2.1.0
+
+### Minor Changes
+
+- [#256](https://github.com/showbie/backpack/pull/256) [`7ece826`](https://github.com/showbie/backpack/commit/7ece826d98e314c9abb6f3680492a210c881ac7f) Thanks [@elidupuis](https://github.com/elidupuis)! - Upgrade to Node 16
+
 ### 2.0.2 — 2021-10-01
 
 #### 🐛 Fixed
