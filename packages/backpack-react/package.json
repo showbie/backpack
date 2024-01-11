@@ -1,6 +1,6 @@
 {
   "name": "@showbie/backpack-react",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/showbie/backpack.git",
@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.11.x",
-    "@showbie/backpack-tokens": "3.2.0",
+    "@showbie/backpack-tokens": "4.0.0",
     "@storybook/addon-a11y": "6.0.21",
     "@storybook/addon-essentials": "6.0.21",
     "@storybook/react": "6.0.21",

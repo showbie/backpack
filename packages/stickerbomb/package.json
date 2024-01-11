@@ -1,6 +1,6 @@
 {
   "name": "stickerbomb",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Generate a pack of icon components from SVG artwork.",
   "repository": {
     "type": "git",

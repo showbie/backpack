@@ -1,17 +1,20 @@
 ////
 ///   BACKPACK COLOURS
-///   v3.2.0
+///   v4.0.0
 ////
 
 ///
 /// Grey
 ///
-$sbe-grey-50: #f8f8f8;
-$sbe-grey-100: #f2f3f4;
-$sbe-grey-200: #e6e5e7;
-$sbe-grey-300: #cccccf;
+$sbe-grey-0: #FFFFFF;
+$sbe-grey-5: #FBFBFB;
+$sbe-grey-50: #F8F8F8;
+$sbe-grey-100: #F2F2F3;
+$sbe-grey-200: #E9E9EB;
+$sbe-grey-300: #CCCCCF;
 $sbe-grey-400: #c4c4ca;
-$sbe-grey-500: #b9bbbd;
+$sbe-grey-500: #696B76;
+$sbe-grey-1000: #696B76;
 
 ///
 /// Slate
@@ -23,30 +26,36 @@ $sbe-slate-900-95: rgba(21,32,36,0.95);
 ///
 /// Red
 ///
-$sbe-red-50: #ffeeee;
-$sbe-red-100: #fce5e5;
-$sbe-red-200: #f9cccc;
-$sbe-red-500: #f07f7f;
-$sbe-red-600: #eb5f5f;
-$sbe-red-700: #e13c3c;
+$sbe-red-50: #FFEEEE;
+$sbe-red-100: #FCE5E5;
+$sbe-red-200: #F9CCCC;
+$sbe-red-500: #D5422D;
+$sbe-red-600: #CF2810;
+$sbe-red-700: #C11D05;
 $sbe-red-800: #e10000;
 
 ///
 /// Green
 ///
-$sbe-green-100: #daf0de;
-$sbe-green-500: #5dbe6e;
-$sbe-green-600: #49af5b;
+$sbe-green-50: #EBF7EB;
+$sbe-green-100: #DAF0DA;
+$sbe-green-500: #158809;
+$sbe-green-600: #137C08;
+$sbe-green-700: #117207;
 
 ///
 /// Blue
 ///
+$sbe-blue-5: #F2F9FF;
 $sbe-blue-50: #f1faff;
 $sbe-blue-100: #dcf3ff;
 $sbe-blue-200: #cbeeff;
-$sbe-blue-500: #29b1f0;
-$sbe-blue-600: #009fe8;
-$sbe-blue-700: #007ec2;
+$sbe-blue-300: #BAE7FE;
+$sbe-blue-400: #29B1F0;
+$sbe-blue-500: #107CC0;
+$sbe-blue-600: #016FB7;
+$sbe-blue-700: #005E9D;
+$sbe-blue-800: #003968;
 
 ///
 /// Brand

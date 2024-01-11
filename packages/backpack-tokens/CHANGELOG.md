@@ -1,5 +1,15 @@
 # Change Log
 
+## 4.0.0
+
+### Major Changes
+
+- [#255](https://github.com/showbie/backpack/pull/255) [`7dbe4aa`](https://github.com/showbie/backpack/commit/7dbe4aa0eb6f1c5a84921b53affa315034630af7) Thanks [@elidupuis](https://github.com/elidupuis)! - Update Showbie colour tokens to latest accessible palette
+
+### Minor Changes
+
+- [#256](https://github.com/showbie/backpack/pull/256) [`7ece826`](https://github.com/showbie/backpack/commit/7ece826d98e314c9abb6f3680492a210c881ac7f) Thanks [@elidupuis](https://github.com/elidupuis)! - Upgrade to Node 16
+
 ## 3.2.0 — 2022-01-26
 
 #### 🎁 Added

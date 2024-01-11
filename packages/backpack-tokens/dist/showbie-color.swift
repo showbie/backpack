@@ -1,6 +1,6 @@
 ////
 ///   BACKPACK COLOURS
-///   v3.2.0
+///   v4.0.0
 ////
 
 import UIKit
@@ -10,18 +10,24 @@ public extension UIColor {
     ///
     /// Grey
     ///
-    // #f8f8f8
+    // #FFFFFF
+    static let sbeGrey0 = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+    // #FBFBFB
+    static let sbeGrey5 = UIColor(red: 0.984313725490196, green: 0.984313725490196, blue: 0.984313725490196, alpha: 1)
+    // #F8F8F8
     static let sbeGrey50 = UIColor(red: 0.9725490196078431, green: 0.9725490196078431, blue: 0.9725490196078431, alpha: 1)
-    // #f2f3f4
-    static let sbeGrey100 = UIColor(red: 0.9490196078431372, green: 0.9529411764705882, blue: 0.9568627450980393, alpha: 1)
-    // #e6e5e7
-    static let sbeGrey200 = UIColor(red: 0.9019607843137255, green: 0.8980392156862745, blue: 0.9058823529411765, alpha: 1)
-    // #cccccf
+    // #F2F2F3
+    static let sbeGrey100 = UIColor(red: 0.9490196078431372, green: 0.9490196078431372, blue: 0.9529411764705882, alpha: 1)
+    // #E9E9EB
+    static let sbeGrey200 = UIColor(red: 0.9137254901960784, green: 0.9137254901960784, blue: 0.9215686274509803, alpha: 1)
+    // #CCCCCF
     static let sbeGrey300 = UIColor(red: 0.8, green: 0.8, blue: 0.8117647058823529, alpha: 1)
     // #c4c4ca
     static let sbeGrey400 = UIColor(red: 0.7686274509803922, green: 0.7686274509803922, blue: 0.792156862745098, alpha: 1)
-    // #b9bbbd
-    static let sbeGrey500 = UIColor(red: 0.7254901960784313, green: 0.7333333333333333, blue: 0.7411764705882353, alpha: 1)
+    // #696B76
+    static let sbeGrey500 = UIColor(red: 0.4117647058823529, green: 0.4196078431372549, blue: 0.4627450980392157, alpha: 1)
+    // #696B76
+    static let sbeGrey1000 = UIColor(red: 0.4117647058823529, green: 0.4196078431372549, blue: 0.4627450980392157, alpha: 1)
 
     ///
     /// Slate
@@ -36,46 +42,58 @@ public extension UIColor {
     ///
     /// Red
     ///
-    // #ffeeee
+    // #FFEEEE
     static let sbeRed50 = UIColor(red: 1, green: 0.9333333333333333, blue: 0.9333333333333333, alpha: 1)
-    // #fce5e5
+    // #FCE5E5
     static let sbeRed100 = UIColor(red: 0.9882352941176471, green: 0.8980392156862745, blue: 0.8980392156862745, alpha: 1)
-    // #f9cccc
+    // #F9CCCC
     static let sbeRed200 = UIColor(red: 0.9764705882352941, green: 0.8, blue: 0.8, alpha: 1)
-    // #f07f7f
-    static let sbeRed500 = UIColor(red: 0.9411764705882353, green: 0.4980392156862745, blue: 0.4980392156862745, alpha: 1)
-    // #eb5f5f
-    static let sbeRed600 = UIColor(red: 0.9215686274509803, green: 0.37254901960784315, blue: 0.37254901960784315, alpha: 1)
-    // #e13c3c
-    static let sbeRed700 = UIColor(red: 0.8823529411764706, green: 0.23529411764705882, blue: 0.23529411764705882, alpha: 1)
+    // #D5422D
+    static let sbeRed500 = UIColor(red: 0.8352941176470589, green: 0.25882352941176473, blue: 0.17647058823529413, alpha: 1)
+    // #CF2810
+    static let sbeRed600 = UIColor(red: 0.8117647058823529, green: 0.1568627450980392, blue: 0.06274509803921569, alpha: 1)
+    // #C11D05
+    static let sbeRed700 = UIColor(red: 0.7568627450980392, green: 0.11372549019607843, blue: 0.0196078431372549, alpha: 1)
     // #e10000
     static let sbeRed800 = UIColor(red: 0.8823529411764706, green: 0, blue: 0, alpha: 1)
 
     ///
     /// Green
     ///
-    // #daf0de
-    static let sbeGreen100 = UIColor(red: 0.8549019607843137, green: 0.9411764705882353, blue: 0.8705882352941177, alpha: 1)
-    // #5dbe6e
-    static let sbeGreen500 = UIColor(red: 0.36470588235294116, green: 0.7450980392156863, blue: 0.43137254901960786, alpha: 1)
-    // #49af5b
-    static let sbeGreen600 = UIColor(red: 0.28627450980392155, green: 0.6862745098039216, blue: 0.3568627450980392, alpha: 1)
+    // #EBF7EB
+    static let sbeGreen50 = UIColor(red: 0.9215686274509803, green: 0.9686274509803922, blue: 0.9215686274509803, alpha: 1)
+    // #DAF0DA
+    static let sbeGreen100 = UIColor(red: 0.8549019607843137, green: 0.9411764705882353, blue: 0.8549019607843137, alpha: 1)
+    // #158809
+    static let sbeGreen500 = UIColor(red: 0.08235294117647059, green: 0.5333333333333333, blue: 0.03529411764705882, alpha: 1)
+    // #137C08
+    static let sbeGreen600 = UIColor(red: 0.07450980392156863, green: 0.48627450980392156, blue: 0.03137254901960784, alpha: 1)
+    // #117207
+    static let sbeGreen700 = UIColor(red: 0.06666666666666667, green: 0.4470588235294118, blue: 0.027450980392156862, alpha: 1)
 
     ///
     /// Blue
     ///
+    // #F2F9FF
+    static let sbeBlue5 = UIColor(red: 0.9490196078431372, green: 0.9764705882352941, blue: 1, alpha: 1)
     // #f1faff
     static let sbeBlue50 = UIColor(red: 0.9450980392156862, green: 0.9803921568627451, blue: 1, alpha: 1)
     // #dcf3ff
     static let sbeBlue100 = UIColor(red: 0.8627450980392157, green: 0.9529411764705882, blue: 1, alpha: 1)
     // #cbeeff
     static let sbeBlue200 = UIColor(red: 0.796078431372549, green: 0.9333333333333333, blue: 1, alpha: 1)
-    // #29b1f0
-    static let sbeBlue500 = UIColor(red: 0.1607843137254902, green: 0.6941176470588235, blue: 0.9411764705882353, alpha: 1)
-    // #009fe8
-    static let sbeBlue600 = UIColor(red: 0, green: 0.6235294117647059, blue: 0.9098039215686274, alpha: 1)
-    // #007ec2
-    static let sbeBlue700 = UIColor(red: 0, green: 0.49411764705882355, blue: 0.7607843137254902, alpha: 1)
+    // #BAE7FE
+    static let sbeBlue300 = UIColor(red: 0.7294117647058823, green: 0.9058823529411765, blue: 0.996078431372549, alpha: 1)
+    // #29B1F0
+    static let sbeBlue400 = UIColor(red: 0.1607843137254902, green: 0.6941176470588235, blue: 0.9411764705882353, alpha: 1)
+    // #107CC0
+    static let sbeBlue500 = UIColor(red: 0.06274509803921569, green: 0.48627450980392156, blue: 0.7529411764705882, alpha: 1)
+    // #016FB7
+    static let sbeBlue600 = UIColor(red: 0.00392156862745098, green: 0.43529411764705883, blue: 0.7176470588235294, alpha: 1)
+    // #005E9D
+    static let sbeBlue700 = UIColor(red: 0, green: 0.3686274509803922, blue: 0.615686274509804, alpha: 1)
+    // #003968
+    static let sbeBlue800 = UIColor(red: 0, green: 0.2235294117647059, blue: 0.40784313725490196, alpha: 1)
 
     ///
     /// Brand
