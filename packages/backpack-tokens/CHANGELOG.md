@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.1.1
+
+### Patch Changes
+
+- [#260](https://github.com/showbie/backpack/pull/260) [`39b7c24`](https://github.com/showbie/backpack/commit/39b7c249f5af8a6c81aaeff16caa835d4a4bf6c4) Thanks [@elidupuis](https://github.com/elidupuis)! - Fix sbe-grey-1000 value
+
 ## 4.1.0
 
 ### Minor Changes
