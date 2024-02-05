@@ -1,6 +1,6 @@
 /**
  *    BACKPACK COLOURS
- *    v4.1.0
+ *    v4.1.1
  */
 
 var colors = {
