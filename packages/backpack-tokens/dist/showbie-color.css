@@ -1,6 +1,6 @@
 /**
  * BACKPACK COLOURS
- * v4.1.0
+ * v4.1.1
  */
 
 :root {
@@ -14,7 +14,7 @@
   --sbe-grey-300: #CCCCCF;
   --sbe-grey-400: #c4c4ca;
   --sbe-grey-500: #696B76;
-  --sbe-grey-1000: #696B76;
+  --sbe-grey-1000: #000000;
 
   /* Slate */
   --sbe-slate-600: #8aa4af;
