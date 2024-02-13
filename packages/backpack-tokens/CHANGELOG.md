@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.1.2
+
+### Patch Changes
+
+- [#273](https://github.com/showbie/backpack/pull/273) [`04d4b0a`](https://github.com/showbie/backpack/commit/04d4b0a32b42df7d12e19c3313e9f1a685e28d56) Thanks [@elidupuis](https://github.com/elidupuis)! - Update sbe-brand-showbie colour to proper value
+
 ## 4.1.1
 
 ### Patch Changes

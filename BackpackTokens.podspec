@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'BackpackTokens'
-  s.version = '4.1.1'
+  s.version = '4.1.2'
   s.license = { :type => 'ISC', :file => 'packages/backpack-tokens/LICENSE.txt' }
   s.homepage = 'https://design.showbie.com'
   s.author = 'Showbie Inc.'
