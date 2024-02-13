@@ -1,6 +1,6 @@
 ////
 ///   BACKPACK COLOURS
-///   v4.1.1
+///   v4.1.2
 ////
 
 import UIKit
@@ -104,8 +104,8 @@ public extension UIColor {
     static let sbeBrandGoogle = UIColor(red: 0.8627450980392157, green: 0.3058823529411765, blue: 0.2549019607843137, alpha: 1)
     // #07a6f0
     static let sbeBrandMicrosoft = UIColor(red: 0.027450980392156862, green: 0.6509803921568628, blue: 0.9411764705882353, alpha: 1)
-    // #009fe8
-    static let sbeBrandShowbie = UIColor(red: 0, green: 0.6235294117647059, blue: 0.9098039215686274, alpha: 1)
+    // #016FB7
+    static let sbeBrandShowbie = UIColor(red: 0.00392156862745098, green: 0.43529411764705883, blue: 0.7176470588235294, alpha: 1)
     // #ff602b
     static let sbeBrandSocrative = UIColor(red: 1, green: 0.3764705882352941, blue: 0.16862745098039217, alpha: 1)
 }
