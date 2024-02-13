@@ -92,7 +92,7 @@ export const colors = {
     feide: '#068f8d',
     google: '#dc4e41',
     microsoft: '#07a6f0',
-    showbie: '#009fe8',
+    showbie: '#016FB7',
     socrative: '#ff602b',
   },
 };
