@@ -1,6 +1,6 @@
 ////
 ///   BACKPACK COLOURS
-///   v4.1.2
+///   v4.2.0
 ////
 
 import UIKit
@@ -58,12 +58,28 @@ public extension UIColor {
     static let sbeRed800 = UIColor(red: 0.8823529411764706, green: 0, blue: 0, alpha: 1)
 
     ///
+    /// Yellow
+    ///
+    // #FEFBED
+    static let sbeYellow50 = UIColor(red: 0.996078431372549, green: 0.984313725490196, blue: 0.9294117647058824, alpha: 1)
+    // #FCF5D4
+    static let sbeYellow100 = UIColor(red: 0.9882352941176471, green: 0.9607843137254902, blue: 0.8313725490196079, alpha: 1)
+    // #FAECA6
+    static let sbeYellow200 = UIColor(red: 0.9803921568627451, green: 0.9254901960784314, blue: 0.6509803921568628, alpha: 1)
+    // #B16301
+    static let sbeYellow500 = UIColor(red: 0.6941176470588235, green: 0.38823529411764707, blue: 0.00392156862745098, alpha: 1)
+    // #A75D00
+    static let sbeYellow600 = UIColor(red: 0.6549019607843137, green: 0.36470588235294116, blue: 0, alpha: 1)
+
+    ///
     /// Green
     ///
     // #EBF7EB
     static let sbeGreen50 = UIColor(red: 0.9215686274509803, green: 0.9686274509803922, blue: 0.9215686274509803, alpha: 1)
     // #DAF0DA
     static let sbeGreen100 = UIColor(red: 0.8549019607843137, green: 0.9411764705882353, blue: 0.8549019607843137, alpha: 1)
+    // #C1E6C7
+    static let sbeGreen200 = UIColor(red: 0.7568627450980392, green: 0.9019607843137255, blue: 0.7803921568627451, alpha: 1)
     // #158809
     static let sbeGreen500 = UIColor(red: 0.08235294117647059, green: 0.5333333333333333, blue: 0.03529411764705882, alpha: 1)
     // #137C08

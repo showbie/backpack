@@ -161,6 +161,49 @@ module.exports = {
       },
     },
 
+    yellow: {
+      '50': {
+        hex: '#FEFBED',
+        rgb: '254, 251, 237',
+        hsl: '49, 89, 96',
+        name: 'Frosting Cream',
+        scss: 'sbe-yellow-50',
+        swift: 'sbeYellow50',
+      },
+      '100': {
+        hex: '#FCF5D4',
+        rgb: '252, 245, 212',
+        hsl: '50, 87, 91',
+        name: 'Perky Tint',
+        scss: 'sbe-yellow-100',
+        swift: 'sbeYellow100',
+      },
+      '200': {
+        hex: '#FAECA6',
+        rgb: '250, 236, 166',
+        hsl: '50, 89, 82',
+        name: 'Sour Lemon',
+        scss: 'sbe-yellow-200',
+        swift: 'sbeYellow200',
+      },
+      '500': {
+        hex: '#B16301',
+        rgb: '177, 99, 1',
+        hsl: '33, 99, 35',
+        name: 'Umber',
+        scss: 'sbe-yellow-500',
+        swift: 'sbeYellow500',
+      },
+      '600': {
+        hex: '#A75D00',
+        rgb: '167, 93, 0',
+        hsl: '33, 100, 33',
+        name: 'Windsor Brown',
+        scss: 'sbe-yellow-600',
+        swift: 'sbeYellow600',
+      },
+    },
+
     green: {
       '50': {
         hex: '#EBF7EB',
@@ -177,6 +220,14 @@ module.exports = {
         name: 'Frostini',
         scss: 'sbe-green-100',
         swift: 'sbeGreen100',
+      },
+      '200': {
+        hex: '#C1E6C7',
+        rgb: '193, 230, 199',
+        hsl: '130, 43, 83',
+        name: 'Sugar Mint',
+        scss: 'sbe-green-200',
+        swift: 'sbeGreen200',
       },
       '500': {
         hex: '#158809',
