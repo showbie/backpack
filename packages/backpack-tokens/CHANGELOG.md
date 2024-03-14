@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.2.0
+
+### Minor Changes
+
+- [#279](https://github.com/showbie/backpack/pull/279) [`b6bbfd2`](https://github.com/showbie/backpack/commit/b6bbfd2dd85bab4f634f643423b9b405229c5ddc) Thanks [@elidupuis](https://github.com/elidupuis)! - Add Showbie green-200 and yellows
+
 ## 4.1.2
 
 ### Patch Changes
