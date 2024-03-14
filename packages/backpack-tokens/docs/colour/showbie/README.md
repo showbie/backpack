@@ -100,62 +100,6 @@ Used for background colours within the previewer, as well as the async
 notification UI. Also available as a 95% opaque value by using
 `slate-900-95`.
 
-## Red
-
-### Red 50
-
-<ColorSwatch hue="red" scale="50" />
-
-### Red 100
-
-<ColorSwatch hue="red" scale="100" />
-
-Used in AudioNote component during recording.
-
-### Red 200
-
-<ColorSwatch hue="red" scale="200" />
-
-### Red 500
-
-<ColorSwatch hue="red" scale="500" />
-
-Used for indicating destructive action, also in AudioNote component
-during recording.
-
-### Red 600
-
-<ColorSwatch hue="red" scale="600" />
-
-Used for text or icons against a background colour of `red-100`. Added
-for async notifications.
-
-### Red 700
-
-<ColorSwatch hue="red" scale="700" />
-
-### Red 800
-
-<ColorSwatch hue="red" scale="800" />
-
-## Green
-
-### Green 100
-
-<ColorSwatch hue="green" scale="100" />
-
-Background colour for positive notification messages.
-
-### Green 500
-
-<ColorSwatch hue="green" scale="500" />
-
-### Green 600
-
-<ColorSwatch hue="green" scale="600" />
-
-Used for text or icons against a background colour of `green-100`. Added
-for async notifications.
 
 ## Blue
 
@@ -209,3 +153,90 @@ stroke, icons). Also used in AudioNote component controls.
 ### Blue 700
 
 <ColorSwatch hue="blue" scale="700" />
+
+## Red
+
+### Red 50
+
+<ColorSwatch hue="red" scale="50" />
+
+### Red 100
+
+<ColorSwatch hue="red" scale="100" />
+
+Used in AudioNote component during recording.
+
+### Red 200
+
+<ColorSwatch hue="red" scale="200" />
+
+### Red 500
+
+<ColorSwatch hue="red" scale="500" />
+
+Used for indicating destructive action, also in AudioNote component
+during recording.
+
+### Red 600
+
+<ColorSwatch hue="red" scale="600" />
+
+Used for text or icons against a background colour of `red-100`. Added
+for async notifications.
+
+### Red 700
+
+<ColorSwatch hue="red" scale="700" />
+
+### Red 800
+
+<ColorSwatch hue="red" scale="800" />
+
+## Green
+
+### Green 100
+
+<ColorSwatch hue="green" scale="100" />
+
+Background colour for positive notification messages.
+
+### Green 200
+
+<ColorSwatch hue="green" scale="200" />
+
+### Green 500
+
+<ColorSwatch hue="green" scale="500" />
+
+### Green 600
+
+<ColorSwatch hue="green" scale="600" />
+
+Used for text or icons against a background colour of `green-100`. Added
+for async notifications.
+
+## Yellow
+
+### Yellow 50
+
+<ColorSwatch hue="yellow" scale="50" />
+
+### Yellow 100
+
+<ColorSwatch hue="yellow" scale="100" />
+
+### Yellow 200
+
+<ColorSwatch hue="yellow" scale="200" />
+
+### Yellow 500
+
+<ColorSwatch hue="yellow" scale="500" />
+
+### Yellow 600
+
+<ColorSwatch hue="yellow" scale="600" />
+
+### Yellow 700
+
+<ColorSwatch hue="yellow" scale="700" />

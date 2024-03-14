@@ -25,6 +25,9 @@
   "prettier": {
     "singleQuote": true
   },
+  "resolutions": {
+    "@babel/compat-data": "^7.9.0"
+  },
   "dependencies": {
     "@changesets/changelog-github": "0.4.0",
     "@changesets/cli": "2.16.0",
