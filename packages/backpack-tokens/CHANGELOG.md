@@ -1,5 +1,13 @@
 # Change Log
 
+## 4.2.1
+
+### Patch Changes
+
+- [#286](https://github.com/showbie/backpack/pull/286) [`6bde3e9`](https://github.com/showbie/backpack/commit/6bde3e96f6f74d823d1ceb5034a11011eca5c91f) Thanks [@elidupuis](https://github.com/elidupuis)! - Upgrade package release workflow; this is just a test release
+
+- [#292](https://github.com/showbie/backpack/pull/292) [`1242a7e`](https://github.com/showbie/backpack/commit/1242a7e349647128c9c281435abfc585267fec55) Thanks [@elidupuis](https://github.com/elidupuis)! - Another patch to the CI release workflow
+
 ## 4.2.0
 
 ### Minor Changes
