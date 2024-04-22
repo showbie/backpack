@@ -25,11 +25,11 @@ jobs:
         with:
           node-version: 16.x
           registry-url: https://npm.pkg.github.com
-          cache: npm
+          cache: yarn
 
       # Bypass husky in CI: https://typicode.github.io/husky/how-to.html#ci-server-and-docker
       - name: Installing dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile --immutable
         env:
           HUSKY: 0
 
