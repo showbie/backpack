@@ -15,23 +15,23 @@ jobs:
     steps:
       # https://github.com/actions/checkout
       - name: Checkout repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       # https://github.com/actions/setup-node/
       - name: Setup Node.js 16.x
-        uses: actions/setup-node@v2.5.1
+        uses: actions/setup-node@v4
         with:
           node-version: 16.x
           registry-url: https://npm.pkg.github.com
+          cache: npm
 
-      # https://github.com/bahmutov/npm-install
-      # Custom install command to prevent husky from installing.
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-        with:
-          install-command: yarn --ignore-scripts --no-audit
+      # Bypass husky in CI: https://typicode.github.io/husky/how-to.html#ci-server-and-docker
+      - name: Installing dependencies
+        run: npm ci
+        env:
+          HUSKY: 0
 
       # Create a temp .npmrc file so changesets doesn't use its default.
       - name: Create CI .npmrc
@@ -84,12 +84,12 @@ jobs:
         env:
           SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
 
-      - name: Send Stickerbomb package notification
-        uses: stormwarning/action-release-notification@v3.1.1
-        if: contains(fromJson(needs.release.outputs.publishedPackages).*.name, 'stickerbomb')
-        with:
-          channel: socrative-dev
-          message: A new version of *stickerbomb* was just released!
-          actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/trunk/packages/stickerbomb/CHANGELOG.md"}]'
-        env:
-          SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
+      # - name: Send Stickerbomb package notification
+      #   uses: stormwarning/action-release-notification@v3.1.1
+      #   if: contains(fromJson(needs.release.outputs.publishedPackages).*.name, 'stickerbomb')
+      #   with:
+      #     channel: socrative-dev
+      #     message: A new version of *stickerbomb* was just released!
+      #     actions: '[{"text": "View changelog 🎉", "url": "https://github.com/showbie/backpack/blob/trunk/packages/stickerbomb/CHANGELOG.md"}]'
+      #   env:
+      #     SLACKBOT_TOKEN: ${{ secrets.SLACKBOT_TOKEN }}
