@@ -5,18 +5,12 @@
     "./packages/*"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "build": "lerna run build",
+    "build": "npm run build --workspaces",
     "changelog": "lerna-changelog",
     "changeset": "changeset add",
     "format": "prettier",
-    "release": "lerna run build && changeset publish",
-    "version:changeset": "changeset version && lerna run version"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn bootstrap && lint-staged"
-    }
+    "prepare": "husky install",
+    "release": "npm run build && changeset publish"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --fix",
@@ -29,8 +23,8 @@
     "@babel/compat-data": "^7.9.0"
   },
   "dependencies": {
-    "@changesets/changelog-github": "0.4.0",
-    "@changesets/cli": "2.16.0",
+    "@changesets/changelog-github": "~0.5.0",
+    "@changesets/cli": "~2.27.0",
     "@showbie/eslint-config": "3.0.x",
     "@typescript-eslint/eslint-plugin": "4.14.x",
     "@typescript-eslint/parser": "4.9.x",
@@ -39,14 +33,15 @@
     "eslint-plugin-jest-dom": "3.2.x",
     "eslint-plugin-react": "7.21.x",
     "eslint-plugin-react-hooks": "4.2.x",
-    "husky": "4.3.x",
     "import-sort-style-python": "1.0.2",
-    "lerna": "3.22.x",
     "lerna-changelog": "1.0.x",
-    "lint-staged": "10.4.x",
+    "lint-staged": "12.2.1",
     "prettier": "2.3.2",
     "prettier-plugin-import-sort": "0.0.7",
     "prettier-plugin-packagejson": "2.2.11"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0"
   },
   "changelog": {
     "repo": "showbie/backpack",

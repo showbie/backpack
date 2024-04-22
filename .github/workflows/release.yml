@@ -49,9 +49,8 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: yarn release
           title: 'Chore: Publish release'
-          version: yarn version:changeset
+          publish: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
