@@ -15,11 +15,12 @@ yarn install
 <details>
   <summary>Dont' have `yarn` installed?</summary>
   
-  Note, if you don't have `yarn`, simply install v1 from npm (this project has not been updated to modern yarn):
+  If yarn doesn't work, try enabling [corepack](https://nodejs.org/api/corepack.html):
 
-  ```sh
-  npm install -g yarn
-  ```
+```sh
+corepack enable
+```
+
 </details>
 
 ### Build
