@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.3.0
+
+### Minor Changes
+
+- [#298](https://github.com/showbie/backpack/pull/298) [`a3c6ef3`](https://github.com/showbie/backpack/commit/a3c6ef34c82d5f36bc5afc03bfb25a7577a0afaf) Thanks [@imtiazraqib](https://github.com/imtiazraqib)! - Add missing socrative colors; orange-900, grey-900, cyan-200
+
 ## 4.2.1
 
 ### Patch Changes
