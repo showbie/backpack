@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.4.0
+
+### Minor Changes
+
+- [#300](https://github.com/showbie/backpack/pull/300) [`8a916ac`](https://github.com/showbie/backpack/commit/8a916ac180d83c42c6c5937bba8f74a8142656a9) Thanks [@imtiazraqib](https://github.com/imtiazraqib)! - Adding new plum color variables required for Numeric question type in ResultsGrid header
+
 ## 4.3.0
 
 ### Minor Changes
